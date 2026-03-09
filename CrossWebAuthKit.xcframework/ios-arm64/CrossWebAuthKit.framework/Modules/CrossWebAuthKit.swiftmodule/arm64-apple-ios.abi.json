@@ -70,6 +70,7 @@
             "moduleName": "CrossWebAuthKit",
             "declAttributes": [
               "AccessControl",
+              "Nonisolated",
               "RawDocComment"
             ],
             "init_kind": "Designated"
@@ -109,6 +110,7 @@
             "mangledName": "$s15CrossWebAuthKit05ASWebC7AdapterC5start3url14callbackScheme23prefersEphemeralSession10Foundation3URLVAJ_SSSbtYaKF",
             "moduleName": "CrossWebAuthKit",
             "declAttributes": [
+              "Custom",
               "Final",
               "AccessControl",
               "RawDocComment"
@@ -132,6 +134,7 @@
             "mangledName": "$s15CrossWebAuthKit05ASWebC7AdapterC6cancelyyF",
             "moduleName": "CrossWebAuthKit",
             "declAttributes": [
+              "Custom",
               "Final",
               "AccessControl"
             ],
@@ -160,6 +163,7 @@
             "mangledName": "$s15CrossWebAuthKit05ASWebC7AdapterC17handleCallbackURLySb10Foundation0I0VF",
             "moduleName": "CrossWebAuthKit",
             "declAttributes": [
+              "Custom",
               "Final",
               "AccessControl",
               "DiscardableResult",
@@ -189,6 +193,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Custom",
               "Override"
             ],
             "init_kind": "Designated"
@@ -234,6 +239,7 @@
         "declAttributes": [
           "Final",
           "AccessControl",
+          "Custom",
           "RawDocComment",
           "ObjC"
         ],
@@ -248,13 +254,6 @@
             "printedName": "WebAuthSession",
             "usr": "s:15CrossWebAuthKit0bC7SessionP",
             "mangledName": "$s15CrossWebAuthKit0bC7SessionP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -318,6 +317,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -1128,6 +1134,7 @@
             "sugared_genericSig": "<Self where Self : CrossWebAuthKit.WebAuthSession>",
             "protocolReq": true,
             "declAttributes": [
+              "Custom",
               "RawDocComment"
             ],
             "throwing": true,
@@ -1153,6 +1160,7 @@
             "sugared_genericSig": "<Self where Self : CrossWebAuthKit.WebAuthSession>",
             "protocolReq": true,
             "declAttributes": [
+              "Custom",
               "RawDocComment"
             ],
             "reqNewWitnessTableEntry": true,
@@ -1189,6 +1197,7 @@
             "genericSig": "<τ_0_0 where τ_0_0 : CrossWebAuthKit.WebAuthSession>",
             "sugared_genericSig": "<Self where Self : CrossWebAuthKit.WebAuthSession>",
             "declAttributes": [
+              "Custom",
               "RawDocComment"
             ],
             "isFromExtension": true,
@@ -1204,6 +1213,7 @@
         "sugared_genericSig": "<Self : Swift.Sendable>",
         "declAttributes": [
           "AccessControl",
+          "Custom",
           "RawDocComment"
         ],
         "conformances": [
@@ -1321,28 +1331,28 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/chuck\/Documents\/GitHub\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/Adapters\/ASWebAuthAdapter.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/Adapters\/ASWebAuthAdapter.swift",
       "kind": "BooleanLiteral",
-      "offset": 658,
+      "offset": 948,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chuck\/Documents\/GitHub\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 837,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chuck\/Documents\/GitHub\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 924,
       "length": 3,
       "value": "300"
     },
     {
-      "filePath": "\/Users\/chuck\/Documents\/GitHub\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/CrossWebAuthKit.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CrossWebAuthKit\/CrossWebAuthKit.swift",
       "kind": "StringLiteral",
       "offset": 1035,
       "length": 7,

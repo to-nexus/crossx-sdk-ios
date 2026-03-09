@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name CrossWebAuthKit -package-name crossy_sdk_ios_develop
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AuthenticationServices
 import Foundation
 import Swift
@@ -9,14 +9,14 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@objc final public class ASWebAuthAdapter : ObjectiveC.NSObject, CrossWebAuthKit.WebAuthSession, @unchecked Swift.Sendable {
+@objc @_Concurrency.MainActor final public class ASWebAuthAdapter : ObjectiveC.NSObject, CrossWebAuthKit.WebAuthSession {
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(window: UIKit.UIWindow? = nil, prefersEphemeralSession: Swift.Bool = true)
+  nonisolated public init(window: UIKit.UIWindow? = nil, prefersEphemeralSession: Swift.Bool = true)
   #endif
-  final public func start(url: Foundation.URL, callbackScheme: Swift.String, prefersEphemeralSession: Swift.Bool) async throws -> Foundation.URL
-  final public func cancel()
+  @_Concurrency.MainActor final public func start(url: Foundation.URL, callbackScheme: Swift.String, prefersEphemeralSession: Swift.Bool) async throws -> Foundation.URL
+  @_Concurrency.MainActor final public func cancel()
   @discardableResult
-  final public func handleCallbackURL(_ url: Foundation.URL) -> Swift.Bool
+  @_Concurrency.MainActor final public func handleCallbackURL(_ url: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
 extension CrossWebAuthKit.ASWebAuthAdapter : AuthenticationServices.ASWebAuthenticationPresentationContextProviding {
@@ -47,12 +47,12 @@ public enum WebAuthError : Foundation.LocalizedError, Swift.Sendable {
     get
   }
 }
-public protocol WebAuthSession : Swift.Sendable {
-  func start(url: Foundation.URL, callbackScheme: Swift.String, prefersEphemeralSession: Swift.Bool) async throws -> Foundation.URL
-  func cancel()
+@_Concurrency.MainActor public protocol WebAuthSession : Swift.Sendable {
+  @_Concurrency.MainActor func start(url: Foundation.URL, callbackScheme: Swift.String, prefersEphemeralSession: Swift.Bool) async throws -> Foundation.URL
+  @_Concurrency.MainActor func cancel()
 }
 extension CrossWebAuthKit.WebAuthSession {
-  public func start(url: Foundation.URL, callbackScheme: Swift.String) async throws -> Foundation.URL
+  @_Concurrency.MainActor public func start(url: Foundation.URL, callbackScheme: Swift.String) async throws -> Foundation.URL
 }
 public enum CrossWebAuthKitInfo {
   public static let version: Swift.String
