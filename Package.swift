@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "CROSSxSDK",
-            targets: ["CROSSxSDK"]
+            targets: ["CROSSxCoreSDK", "CrossWebAuthKit"]
         ),
         .library(
             name: "CrossWebAuthKit",
@@ -19,7 +19,7 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "CROSSxSDK",
+            name: "CROSSxCoreSDK",
             path: "CROSSxSDK.xcframework"
         ),
         .binaryTarget(
