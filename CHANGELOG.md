@@ -16,10 +16,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `AuthResult.walletAddresses` - 다중 주소 지원
 - `EVMTransaction` - Ethereum 전용 트랜잭션 타입
 - `SolanaTransaction`, `BitcoinTransaction`, `CosmosTransaction` 타입 정의 (향후 구현)
-- **`EVMNetworkConfig`** - EVM 네트워크 설정
+- **🔌 `NetworkConfig` Protocol** - 네트워크 설정 인터페이스
+  - 모든 블록체인 네트워크가 준수해야 하는 공통 프로토콜
+  - EVM, Solana, Bitcoin 등 다양한 체인 통합 관리
+  - `NetworkType` enum - 네트워크 타입 식별 (evm, solana, bitcoin, cosmos)
+  - 타입 체크 헬퍼: `isEVM`, `isSolana`, `isBitcoin`, `isCosmos`
+  - Explorer URL 생성 기본 구현 제공
+- **`EVMNetworkConfig`** - EVM 네트워크 설정 (`NetworkConfig` 준수)
   - Cross Mainnet (eip155:612055) 기본 지원
   - Cross Testnet (eip155:612044) 기본 지원
   - Ethereum, Polygon, BSC 등 주요 EVM 체인 지원
+  - EVM 전용 속성: `chainId` (EIP-155)
+- **🔗 체인 관리 API (Chain Management)**
+  - `ChainInfo` - 체인 정보 및 활성 상태 (제네릭 NetworkConfig 지원)
+  - `getChains()` - 설정된 모든 체인 리스트 조회
+  - `getActiveChain()` - 현재 활성 체인 조회
+  - `setActiveChain(_ caip2: String)` - CAIP-2로 활성 체인 변경
+  - `setActiveChain(chainId: Int)` - Chain ID로 활성 체인 변경
+  - Thread-safe 체인 상태 관리 (NSLock 사용)
+  - 네트워크 타입 체크: `isEVM`, `isSolana` 등
 - BIP-44 Derivation Path 지원
   - Ethereum: m/44'/60'/0'/0/0
   - Solana: m/44'/501'/0'/0'
@@ -28,6 +43,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - ✅ **하위 호환성 유지** - 기존 코드 수정 없이 동작
+- **OAuth 세션 쿠키 유지** - `prefersEphemeralSession` 기본값 `false`로 변경
+  - Google 로그인 히스토리가 Safari와 공유됨
+  - 이전 로그인 정보 유지로 재로그인 간소화
 - `AuthResult.walletAddress` deprecated (여전히 사용 가능)
 - JavaScript SDK와 아키텍처 동기화
 
