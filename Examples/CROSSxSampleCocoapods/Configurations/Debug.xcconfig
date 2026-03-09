@@ -1,13 +1,13 @@
-// CROSSx SDK Sample - Debug Configuration
-// 개발/테스트용 Dev 환경 설정
+// CROSSx SDK CocoaPods Sample - Debug Configuration
+#include "../Pods/Target Support Files/Pods-CROSSxSampleCocoapods/Pods-CROSSxSampleCocoapods.debug.xcconfig"
 
-// OAuth 서비스 URL (Dev)
+// OAuth 서비스 URL (Staging)
 CROSSX_OAUTH_SERVICE_URL = https:/$()/stg-cross-wallet-oauth.crosstoken.io
 
-// API Base URL (Dev)
+// API Base URL (Staging)
 CROSSX_API_BASE_URL = https:/$()/stg-cross-auth.crosstoken.io
 
-// Wallet Gateway API Base URL (Dev)
+// Wallet Gateway API Base URL (Staging)
 CROSSX_WALLET_API_BASE_URL = https:/$()/stg-embedded-wallet-gateway.crosstoken.io/api/v1
 
 // Project ID

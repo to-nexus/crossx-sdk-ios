@@ -8,11 +8,10 @@ class MainViewController: UIViewController {
     private var isSignedIn = false
     private var walletAddress: String?
     
-    // MARK: - Test Constants
     private let testRecipient = "0x920A31f0E48739C3FbB790D992b0690f7F5C42ea"
     private let testERC20Contract = "0x9f85c7b5d7637e18f946cc8af9c131318c6833d9"
-    private let testChainId = "eip155:612044" // Cross Testnet (CAIP-2)
-    private let testEvmChainId = "0x956CC" // Cross Testnet hex (612044)
+    private let testChainId = "eip155:612044"
+    private let testEvmChainId = "0x956CC"
     
     // MARK: - UI Components
     private let scrollView: UIScrollView = {
@@ -31,8 +30,8 @@ class MainViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "CROSSx SDK Sample"
-        label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.text = "CROSSx SDK Sample (CocoaPods)"
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textAlignment = .center
         return label
     }()
@@ -71,7 +70,6 @@ class MainViewController: UIViewController {
     
     private lazy var createWalletButton = makeButton(title: "Create Wallet", color: .systemGreen)
     
-    // Wallet Action Buttons
     private let walletActionsStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -195,7 +193,7 @@ class MainViewController: UIViewController {
             log("Scheme: \(config.callbackScheme)")
         } catch {
             activityIndicator.stopAnimating()
-            log("❌ SDK 초기화 실패: \(error.localizedDescription)")
+            log("SDK 초기화 실패: \(error.localizedDescription)")
             updateUI(signedIn: false, user: nil, wallet: nil)
             return
         }
@@ -211,21 +209,21 @@ class MainViewController: UIViewController {
                     activityIndicator.stopAnimating()
                     if let result = result, result.success {
                         updateUI(signedIn: true, user: result.user, wallet: result.walletAddress)
-                        log("✅ 저장된 세션 발견 - 자동 로그인 완료")
+                        log("저장된 세션 발견 - 자동 로그인 완료")
                         log("  사용자: \(result.user?.email ?? result.user?.id ?? "N/A")")
                         log("  지갑: \(result.walletAddress ?? "N/A")")
                         log("")
                         self.checkWallet()
                     } else {
                         updateUI(signedIn: false, user: nil, wallet: nil)
-                        log("ℹ️ 저장된 세션 없음 - 로그인 필요")
+                        log("저장된 세션 없음 - 로그인 필요")
                     }
                 }
             } catch {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     updateUI(signedIn: false, user: nil, wallet: nil)
-                    log("⚠️ 세션 복원 실패: \(error.localizedDescription)")
+                    log("세션 복원 실패: \(error.localizedDescription)")
                 }
             }
         }
@@ -237,7 +235,7 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("🔐 OAuth 로그인 시작...")
+        log("OAuth 로그인 시작...")
         setLoading(true)
         
         Task {
@@ -247,7 +245,7 @@ class MainViewController: UIViewController {
                     setLoading(false)
                     if result.success {
                         updateUI(signedIn: true, user: result.user, wallet: result.walletAddress)
-                        log("✅ 로그인 성공!")
+                        log("로그인 성공!")
                         log("  사용자: \(result.user?.email ?? result.user?.id ?? "N/A")")
                         log("  지갑: \(result.walletAddress ?? "N/A")")
                         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
@@ -260,9 +258,9 @@ class MainViewController: UIViewController {
                     signInButton.isEnabled = true
                     signInButton.alpha = 1.0
                     if let oauthErr = error as? OAuthError, case .userCancelled = oauthErr {
-                        log("ℹ️ 사용자가 로그인을 취소했습니다")
+                        log("사용자가 로그인을 취소했습니다")
                     } else {
-                        log("❌ 로그인 실패: \(error.localizedDescription)")
+                        log("로그인 실패: \(error.localizedDescription)")
                     }
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
@@ -275,7 +273,7 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("🚪 로그아웃 중...")
+        log("로그아웃 중...")
         
         Task {
             do {
@@ -283,43 +281,43 @@ class MainViewController: UIViewController {
                 await MainActor.run {
                     updateUI(signedIn: false, user: nil, wallet: nil)
                     hideWalletActions()
-                    log("✅ 로그아웃 완료")
+                    log("로그아웃 완료")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
             } catch {
                 await MainActor.run {
-                    log("❌ 로그아웃 실패: \(error.localizedDescription)")
+                    log("로그아웃 실패: \(error.localizedDescription)")
                 }
             }
         }
     }
     
-    // MARK: - Wallet Check
+    // MARK: - Wallet
     private func checkWallet() {
         guard let sdk = sdk else { return }
         
-        log("💼 지갑 조회 중...")
+        log("지갑 조회 중...")
         
         Task {
             do {
                 let response = try await sdk.getAddresses()
                 await MainActor.run {
                     if response.addresses.isEmpty {
-                        walletInfoLabel.text = "⚠️ 지갑이 없습니다"
+                        walletInfoLabel.text = "지갑이 없습니다"
                         walletInfoLabel.isHidden = false
                         createWalletButton.isHidden = false
                         walletActionsStack.isHidden = true
                         walletAddress = nil
-                        log("ℹ️ 지갑 없음 - 생성 필요")
+                        log("지갑 없음 - 생성 필요")
                     } else {
                         let addr = response.addresses.first!.address
                         walletAddress = addr
                         let short = String(addr.prefix(6)) + "..." + String(addr.suffix(4))
-                        walletInfoLabel.text = "💼 Wallet: \(short)"
+                        walletInfoLabel.text = "Wallet: \(short)"
                         walletInfoLabel.isHidden = false
                         createWalletButton.isHidden = true
                         showWalletActions()
-                        log("✅ 지갑 확인: \(response.addresses.count)개")
+                        log("지갑 확인: \(response.addresses.count)개")
                         for (i, info) in response.addresses.enumerated() {
                             log("  [\(i)] \(info.address)")
                         }
@@ -331,11 +329,11 @@ class MainViewController: UIViewController {
                 }
             } catch {
                 await MainActor.run {
-                    walletInfoLabel.text = "⚠️ 지갑 조회 실패"
+                    walletInfoLabel.text = "지갑 조회 실패"
                     walletInfoLabel.isHidden = false
                     createWalletButton.isHidden = false
                     walletActionsStack.isHidden = true
-                    log("⚠️ 지갑 조회 실패: \(error.localizedDescription)")
+                    log("지갑 조회 실패: \(error.localizedDescription)")
                 }
             }
         }
@@ -353,17 +351,16 @@ class MainViewController: UIViewController {
             let short = String(address.prefix(6)) + "..." + String(address.suffix(4))
             
             await MainActor.run {
-                walletInfoLabel.text = "💼 \(short)\n💰 \(balanceText) \(currency) (\(networkName))"
-                log("💰 잔액: \(balanceText) \(currency) (\(networkName))")
+                walletInfoLabel.text = "\(short)\n\(balanceText) \(currency) (\(networkName))"
+                log("잔액: \(balanceText) \(currency) (\(networkName))")
             }
         } catch {
             await MainActor.run {
-                log("⚠️ 잔액 조회 실패 (\(networkName)): \(error.localizedDescription)")
+                log("잔액 조회 실패 (\(networkName)): \(error.localizedDescription)")
             }
         }
     }
     
-    /// hex Wei → 소수점 Ether 문자열 (Decimal 사용으로 UInt64 오버플로우 방지)
     private static func weiHexToEther(_ hex: String) -> String {
         let cleaned = (hex.hasPrefix("0x") || hex.hasPrefix("0X"))
             ? String(hex.dropFirst(2))
@@ -403,7 +400,7 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("💼 지갑 생성 중...")
+        log("지갑 생성 중...")
         createWalletButton.isEnabled = false
         createWalletButton.alpha = 0.5
         activityIndicator.startAnimating()
@@ -417,11 +414,11 @@ class MainViewController: UIViewController {
                     createWalletButton.isHidden = true
                     
                     let short = String(response.address.prefix(6)) + "..." + String(response.address.suffix(4))
-                    walletInfoLabel.text = "💼 Wallet: \(short)"
+                    walletInfoLabel.text = "Wallet: \(short)"
                     walletInfoLabel.isHidden = false
                     showWalletActions()
                     
-                    log("✅ 지갑 생성 완료!")
+                    log("지갑 생성 완료!")
                     log("  주소: \(response.address)")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
@@ -430,7 +427,7 @@ class MainViewController: UIViewController {
                     activityIndicator.stopAnimating()
                     createWalletButton.isEnabled = true
                     createWalletButton.alpha = 1.0
-                    log("❌ 지갑 생성 실패: \(error.localizedDescription)")
+                    log("지갑 생성 실패: \(error.localizedDescription)")
                 }
             }
         }
@@ -443,7 +440,7 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("✍️ 트랜잭션 서명 시작...")
+        log("트랜잭션 서명 시작...")
         setWalletActionsEnabled(false)
         activityIndicator.startAnimating()
         
@@ -463,27 +460,23 @@ class MainViewController: UIViewController {
                 
                 log("  To: \(testRecipient)")
                 log("  Value: 0x0")
-                log("  서명 중...")
                 
                 let response = try await sdk.signTransaction(tx, chainId: testChainId)
                 
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("✅ 서명 완료!")
+                    log("서명 완료!")
                     log("  TxHash: \(response.txHash ?? "N/A")")
                     log("  SignedTx: \(String((response.signedTx ?? "").prefix(40)))...")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-                    showAlert(
-                        title: "Sign Transaction",
-                        message: "서명 완료\nTxHash: \(response.txHash ?? "N/A")"
-                    )
+                    showAlert(title: "Sign Transaction", message: "서명 완료\nTxHash: \(response.txHash ?? "N/A")")
                 }
             } catch {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("❌ 서명 실패: \(error.localizedDescription)")
+                    log("서명 실패: \(error.localizedDescription)")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
             }
@@ -497,39 +490,32 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("✍️ 메시지 서명 시작 (personal_sign)...")
+        log("메시지 서명 시작 (personal_sign)...")
         setWalletActionsEnabled(false)
         activityIndicator.startAnimating()
         
         Task {
             do {
-                log("  Message: \(message)")
-                log("  From: \(from)")
-                log("  서명 중...")
-                
                 let response = try await sdk.signMessage(
                     message,
                     chainId: testChainId,
                     from: from,
-                    dappName: "CROSSx Example"
+                    dappName: "CROSSx CocoaPods Example"
                 )
                 
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("✅ 메시지 서명 완료!")
+                    log("메시지 서명 완료!")
                     log("  Signature: \(response.signature ?? "N/A")")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-                    showAlert(
-                        title: "Sign Message",
-                        message: "메시지 서명 완료\nSignature: \(String((response.signature ?? "N/A").prefix(20)))..."
-                    )
+                    showAlert(title: "Sign Message", message: "서명 완료\nSignature: \(String((response.signature ?? "N/A").prefix(20)))...")
                 }
             } catch {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("❌ 메시지 서명 실패: \(error.localizedDescription)")
+                    log("메시지 서명 실패: \(error.localizedDescription)")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
             }
@@ -571,7 +557,7 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("✍️ Typed Data V4 서명 시작 (eth_signTypedData_v4)...")
+        log("Typed Data V4 서명 시작...")
         setWalletActionsEnabled(false)
         activityIndicator.startAnimating()
         
@@ -584,33 +570,27 @@ class MainViewController: UIViewController {
                 
                 log("  PrimaryType: Transfer")
                 log("  From: \(from)")
-                log("  To: 0x920A...42ea")
-                log("  Amount: 1 ETH (1000000000000000000 wei)")
-                log("  서명 중...")
                 
                 let response = try await sdk.signTypedData(
                     jsonString,
                     chainId: testChainId,
                     from: from,
-                    dappName: "CROSSx Example"
+                    dappName: "CROSSx CocoaPods Example"
                 )
                 
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("✅ Typed Data V4 서명 완료!")
+                    log("Typed Data V4 서명 완료!")
                     log("  Signature: \(response.signature ?? "N/A")")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-                    showAlert(
-                        title: "Sign Typed Data V4",
-                        message: "Typed Data 서명 완료\nSignature: \(String((response.signature ?? "N/A").prefix(20)))..."
-                    )
+                    showAlert(title: "Sign Typed Data V4", message: "서명 완료\nSignature: \(String((response.signature ?? "N/A").prefix(20)))...")
                 }
             } catch {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("❌ Typed Data V4 서명 실패: \(error.localizedDescription)")
+                    log("Typed Data V4 서명 실패: \(error.localizedDescription)")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
             }
@@ -624,7 +604,7 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("📤 ERC20 전송 시작 (sendTransactionAndWait)...")
+        log("ERC20 전송 시작...")
         setWalletActionsEnabled(false)
         activityIndicator.startAnimating()
         
@@ -644,8 +624,7 @@ class MainViewController: UIViewController {
                 
                 log("  Contract: \(testERC20Contract)")
                 log("  To (transfer): \(testRecipient)")
-                log("  Amount: 0.01 (0x2386f26fc10000)")
-                log("  전송 + Receipt 대기 중...")
+                log("  Amount: 0.01")
                 
                 let result = try await sdk.sendTransactionAndWait(tx, chainId: testChainId)
                 let success = result.receipt.status == "0x1"
@@ -653,11 +632,7 @@ class MainViewController: UIViewController {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    if success {
-                        log("✅ ERC20 전송 성공!")
-                    } else {
-                        log("❌ ERC20 전송 실패 (REVERTED)")
-                    }
+                    log(success ? "ERC20 전송 성공!" : "ERC20 전송 실패 (REVERTED)")
                     log("  TxHash: \(result.txHash)")
                     log("  Status: \(result.receipt.status)")
                     log("  Block: \(result.receipt.blockNumber)")
@@ -670,7 +645,7 @@ class MainViewController: UIViewController {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("❌ ERC20 전송 실패: \(error.localizedDescription)")
+                    log("ERC20 전송 실패: \(error.localizedDescription)")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
             }
@@ -682,7 +657,7 @@ class MainViewController: UIViewController {
         
         log("")
         log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        log("💰 네이티브 코인 전송 시작 (sendTransactionAndWait)...")
+        log("네이티브 코인 전송 시작...")
         setWalletActionsEnabled(false)
         activityIndicator.startAnimating()
         
@@ -701,8 +676,7 @@ class MainViewController: UIViewController {
                 )
                 
                 log("  To: \(testRecipient)")
-                log("  Value: 0.01 ETH (0x2386f26fc10000)")
-                log("  전송 + Receipt 대기 중...")
+                log("  Value: 0.01 ETH")
                 
                 let result = try await sdk.sendTransactionAndWait(tx, chainId: testChainId)
                 let success = result.receipt.status == "0x1"
@@ -710,11 +684,7 @@ class MainViewController: UIViewController {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    if success {
-                        log("✅ 네이티브 전송 성공!")
-                    } else {
-                        log("❌ 네이티브 전송 실패 (REVERTED)")
-                    }
+                    log(success ? "네이티브 전송 성공!" : "네이티브 전송 실패 (REVERTED)")
                     log("  TxHash: \(result.txHash)")
                     log("  Status: \(result.receipt.status)")
                     log("  Block: \(result.receipt.blockNumber)")
@@ -727,7 +697,7 @@ class MainViewController: UIViewController {
                 await MainActor.run {
                     activityIndicator.stopAnimating()
                     setWalletActionsEnabled(true)
-                    log("❌ 네이티브 전송 실패: \(error.localizedDescription)")
+                    log("네이티브 전송 실패: \(error.localizedDescription)")
                     log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
                 }
             }
@@ -759,19 +729,19 @@ class MainViewController: UIViewController {
         isSignedIn = signedIn
         
         if signedIn {
-            statusLabel.text = "✅ Logged In"
+            statusLabel.text = "Logged In"
             statusLabel.textColor = .systemGreen
             
             var info = ""
             if let email = user?.email {
-                info += "👤 \(email)"
+                info += "\(email)"
             } else if let userId = user?.id {
-                info += "👤 \(userId)"
+                info += "\(userId)"
             }
             if let address = wallet {
                 let short = String(address.prefix(6)) + "..." + String(address.suffix(4))
                 if !info.isEmpty { info += "\n" }
-                info += "💼 Wallet: \(short)"
+                info += "Wallet: \(short)"
             }
             userInfoLabel.text = info
             userInfoLabel.isHidden = info.isEmpty
@@ -783,7 +753,7 @@ class MainViewController: UIViewController {
             signOutButton.isEnabled = true
             signOutButton.alpha = 1.0
         } else {
-            statusLabel.text = "🔓 Not Logged In"
+            statusLabel.text = "Not Logged In"
             statusLabel.textColor = .systemOrange
             userInfoLabel.isHidden = true
             
@@ -806,7 +776,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    // MARK: - Alert
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -824,6 +793,6 @@ class MainViewController: UIViewController {
             logTextView.scrollRangeToVisible(range)
         }
         
-        print("[CROSSxSample] \(message)")
+        print("[CROSSxSampleCocoapods] \(message)")
     }
 }
