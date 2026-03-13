@@ -8,6 +8,24 @@
 		<data>
 		N4G3JobeNFnFLY+JkV8NTqHZ4oY=
 		</data>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H/8juL2pd+9QTC1VUJBLsYHMok0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hbEg+H+0qikNjrIg5mmiXI2bUPc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -21,6 +39,32 @@
 			<data>
 			lgtsSEGVLvWGpdaqqbvU0Z3WG3IGt2DLWE3i4vk8f8w=
 			</data>
+		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H/8juL2pd+9QTC1VUJBLsYHMok0=
+			</data>
+			<key>hash2</key>
+			<data>
+			SJbj1oXRdeTbC62TNn8vvfYCCs1Ef4idDOPI+xqSLI0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hbEg+H+0qikNjrIg5mmiXI2bUPc=
+			</data>
+			<key>hash2</key>
+			<data>
+			stiE7CsjaZsoHPpU5tk5XnS0c1dgNTKLK+NQVSM7eh4=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>

@@ -1,0 +1,136 @@
+/* CROSSxCoreSDK – English (Base) */
+
+// =============================================================================
+// MARK: - Wallet Selector
+// =============================================================================
+
+"wallet_selector.title" = "Select Connected Wallet";
+"wallet_selector.description" = "Please select the wallet you previously used for this game to continue.";
+"wallet_selector.close" = "Close";
+"wallet_selector.info_title" = "Why do I need to select a wallet?";
+"wallet_selector.info_description" = "Identifying your previously linked wallet ensures your game progress and assets are synced correctly.";
+"wallet_selector.selected_badge" = "selected";
+"wallet_selector.add_wallet" = "add a wallet";
+
+// =============================================================================
+// MARK: - Transaction Confirm
+// =============================================================================
+
+"tx_confirm.approve_title" = "Approve transaction";
+"tx_confirm.approve_description_format" = "%@ wants your permission to approve the following transaction.";
+"tx_confirm.approve_button" = "Approve";
+"tx_confirm.label_to" = "To";
+"tx_confirm.label_from" = "From";
+"tx_confirm.label_network" = "Network";
+"tx_confirm.label_est_tx_fee" = "Est. Tx Fee";
+"tx_confirm.label_max_priority_fee" = "Max Priority Fee Per Gas";
+"tx_confirm.label_max_gas_fee" = "Max Gas Fee";
+"tx_confirm.label_gas_price" = "Gas Price";
+"tx_confirm.label_gas_limit" = "Gas Limit";
+"tx_confirm.label_transfer" = "Transfer";
+"tx_confirm.label_tx_hash" = "Tx Hash";
+"tx_confirm.label_tx_fee" = "Tx Fee";
+"tx_confirm.label_total" = "Total";
+"tx_confirm.label_including_fees" = "(including fees)";
+"tx_confirm.label_primary_type" = "Primary Type";
+
+// =============================================================================
+// MARK: - Transaction Flow
+// =============================================================================
+
+"tx_flow.sending_title" = "Sending transaction";
+"tx_flow.sending_message" = "Processing your transaction...";
+"tx_flow.waiting_title" = "Waiting for confirmation";
+"tx_flow.waiting_message" = "Waiting for transaction receipt...";
+"tx_flow.complete_title" = "Transaction complete";
+"tx_flow.failed_title" = "Transaction failed";
+"tx_flow.done_button" = "Done";
+"tx_flow.all_done_button" = "All Done";
+
+// =============================================================================
+// MARK: - Signature Request
+// =============================================================================
+
+"signature.request_title" = "Signature Request";
+"signature.requesting_format" = "%@ is requesting a Signature";
+"signature.warning" = "After you sign, changes or cancellations are not possible.";
+"signature.cancel_button" = "Cancel";
+"signature.confirm_button" = "Confirm";
+
+// =============================================================================
+// MARK: - Login
+// =============================================================================
+
+"login.welcome_title" = "Welcome onboard";
+"login.creating_wallet" = "Creating CROSSx Embedded Wallet";
+"login.sign_in_apple" = "Sign in with  Apple";
+"login.sign_in_google" = "Sign in with  Google";
+"login.terms_prefix" = "By continuing, you agree to NEXUS ";
+"login.terms_of_service" = "Terms of Service";
+"login.terms_middle" = " and consent to its ";
+"login.privacy_policy" = "Privacy Policy.";
+
+// =============================================================================
+// MARK: - Migration
+// =============================================================================
+
+"migration.found_title" = "Wallet Found on Social Account 🎉";
+"migration.found_subtitle" = "We found a wallet linked to your social account.\nEnter your 4-digit PIN to restore your assets.";
+"migration.recovery_title" = "What is a Recovery Wallet?";
+"migration.recovery_description" = "It safely restores and integrates all your previous assets. Simply verify your PIN to get started.";
+"migration.recover_button" = "Recover My Wallet";
+"migration.skip_button" = "Skip for Now";
+"migration.pin_title" = "Recover My Wallet";
+"migration.pin_loading" = "Recovering wallet...";
+"migration.pin_helper" = "Enter your 4-digit PIN to recover your wallet.";
+"migration.pin_incorrect" = "Incorrect PIN. Please try again.";
+
+// =============================================================================
+// MARK: - CROSSxError
+// =============================================================================
+
+"error.crossx.invalid_config" = "Invalid configuration: %@";
+"error.crossx.configuration_missing" = "SDK configuration missing [%@]: %@";
+"error.crossx.not_initialized" = "SDK is not initialized";
+"error.crossx.not_authenticated" = "Not authenticated";
+"error.crossx.auth_failed" = "Authentication failed: %@";
+"error.crossx.token_expired" = "Token has expired";
+"error.crossx.user_rejected" = "User rejected the request";
+"error.crossx.sign_failed" = "Signing failed: %@";
+"error.crossx.transaction_failed" = "Transaction failed: %@";
+"error.crossx.cloud_backup_check_failed" = "Cloud backup check failed: %@";
+"error.crossx.network_error" = "Network error: %@";
+"error.crossx.unknown" = "Unknown error: %@";
+"error.crossx.not_implemented" = "Not implemented";
+"error.crossx.prepare_failed" = "Prepare failed: %@";
+"error.crossx.prepare_expired" = "Prepare UUID has expired. Please try again.";
+"error.crossx.prepare_mismatch" = "Prepare parameter mismatch: %@";
+"error.crossx.migration_backup_exists" = "Existing wallet backup found. Migration is required.";
+"error.crossx.migration_failed" = "Migration failed: %@";
+"error.crossx.migration_skipped" = "Migration was skipped.";
+"error.crossx.unsupported_chain" = "Unsupported chain: %@";
+"error.crossx.invalid_chain_id" = "Invalid chain ID: %@";
+"error.crossx.project_not_registered" = "Unregistered project or app: %@";
+"error.crossx.project_id_missing" = "X-Project-Id header is missing. Set projectId in SDKConfig.";
+"error.crossx.app_identifier_missing" = "X-App-Id header is missing. Check your Bundle Identifier.";
+"error.crossx.invalid_app_type" = "Invalid X-App-Type value: %@";
+"error.crossx.domain_chain_id_mismatch" = "Domain chainId mismatch: %@";
+
+// =============================================================================
+// MARK: - OAuthError
+// =============================================================================
+
+"error.oauth.user_cancelled" = "User cancelled sign-in";
+"error.oauth.auth_session_failed" = "Auth session failed: %@";
+"error.oauth.failed_to_start" = "Failed to start auth session";
+"error.oauth.no_callback_url" = "No callback URL received";
+"error.oauth.invalid_callback" = "Invalid callback: %@";
+"error.oauth.no_token" = "No token in response";
+"error.oauth.server_error" = "Server error [%@]: %@";
+"error.oauth.session_deallocated" = "Auth session was deallocated";
+
+// =============================================================================
+// MARK: - TokenStoreError
+// =============================================================================
+
+"error.token_store.no_tokens" = "No tokens available. Please sign in.";

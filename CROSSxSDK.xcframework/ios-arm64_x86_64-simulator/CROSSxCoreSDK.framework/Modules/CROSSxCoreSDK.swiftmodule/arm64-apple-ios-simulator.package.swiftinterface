@@ -27,6 +27,9 @@ final public class RemoteCloudBackupAdapter : CROSSxCoreSDK.CloudBackupPort {
   final public func showTransactionResult(details: CROSSxCoreSDK.TransactionConfirmationDetails, txHash: Swift.String?, reverted: Swift.Bool = false) async
   #endif
   final public func dismissTransactionFlow() async
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func showWalletSelector(wallets: [CROSSxCoreSDK.WalletAddressInfo], currentAddress: Swift.String?, onAddWallet: @escaping @Sendable (_ nextIndex: Swift.Int) async throws -> CROSSxCoreSDK.WalletAddressInfo) async -> CROSSxCoreSDK.WalletAddressInfo?
+  #endif
   @objc deinit
 }
 final public class JWTDecodeAdapter : CROSSxCoreSDK.CryptoPort, @unchecked Swift.Sendable {
@@ -80,7 +83,7 @@ public enum NetworkError : Foundation.LocalizedError, Swift.Sendable {
   #if compiler(>=5.3) && $NonescapableTypes
   nonisolated public init(window: UIKit.UIWindow? = nil, prefersEphemeralSession: Swift.Bool = false)
   #endif
-  @_Concurrency.MainActor final public func openAuthFlow(authURL: Foundation.URL, callbackScheme: Swift.String) async throws -> Swift.String
+  @_Concurrency.MainActor final public func openAuthFlow(authURL: Foundation.URL, callbackScheme: Swift.String) async throws -> CROSSxCoreSDK.OAuthCallbackResult
   @_Concurrency.MainActor final public func handleCallbackURL(_ url: Foundation.URL) -> Swift.Bool
   @_Concurrency.MainActor final public func closeAuthFlow()
   @objc deinit
@@ -158,6 +161,9 @@ public protocol ConfirmationPort : Swift.Sendable {
   #endif
   func showWaitingForReceipt(txHash: Swift.String) async
   func dismissTransactionFlow() async
+  #if compiler(>=5.3) && $NonescapableTypes
+  func showWalletSelector(wallets: [CROSSxCoreSDK.WalletAddressInfo], currentAddress: Swift.String?, onAddWallet: @escaping @Sendable (_ nextIndex: Swift.Int) async throws -> CROSSxCoreSDK.WalletAddressInfo) async -> CROSSxCoreSDK.WalletAddressInfo?
+  #endif
 }
 extension CROSSxCoreSDK.ConfirmationPort {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -165,6 +171,9 @@ extension CROSSxCoreSDK.ConfirmationPort {
   #endif
   public func showWaitingForReceipt(txHash: Swift.String) async
   public func dismissTransactionFlow() async
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func showWalletSelector(wallets: [CROSSxCoreSDK.WalletAddressInfo], currentAddress: Swift.String?, onAddWallet: @escaping @Sendable (_ nextIndex: Swift.Int) async throws -> CROSSxCoreSDK.WalletAddressInfo) async -> CROSSxCoreSDK.WalletAddressInfo?
+  #endif
 }
 public enum ConfirmationDetails : Swift.Sendable {
   case transaction(CROSSxCoreSDK.TransactionConfirmationDetails)
@@ -252,8 +261,20 @@ public protocol NetworkPort : Swift.Sendable {
   func request(url: Swift.String, method: CROSSxCoreSDK.HTTPMethod, headers: [Swift.String : Swift.String]?, body: Foundation.Data?, timeout: Foundation.TimeInterval) async throws -> Foundation.Data
   #endif
 }
+public struct OAuthCallbackResult : Swift.Sendable {
+  public let idToken: Swift.String
+  public let accessToken: Swift.String?
+  public let sub: Swift.String?
+  public let email: Swift.String?
+  public let provider: Swift.String?
+  public let state: Swift.String?
+  public let status: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(idToken: Swift.String, accessToken: Swift.String? = nil, sub: Swift.String? = nil, email: Swift.String? = nil, provider: Swift.String? = nil, state: Swift.String? = nil, status: Swift.String? = nil)
+  #endif
+}
 public protocol OAuthPort : Swift.Sendable {
-  func openAuthFlow(authURL: Foundation.URL, callbackScheme: Swift.String) async throws -> Swift.String
+  func openAuthFlow(authURL: Foundation.URL, callbackScheme: Swift.String) async throws -> CROSSxCoreSDK.OAuthCallbackResult
   @discardableResult
   func handleCallbackURL(_ url: Foundation.URL) -> Swift.Bool
   func closeAuthFlow()
@@ -291,6 +312,22 @@ public actor TokenStore {
   public func setProviderSub(_ sub: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
   public func getProviderSub() -> Swift.String?
+  #endif
+  public func setIdToken(_ token: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getIdToken() -> Swift.String?
+  #endif
+  public func setAuthState(_ state: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getAuthState() -> Swift.String?
+  #endif
+  public func setEmail(_ email: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getEmail() -> Swift.String?
+  #endif
+  public func setProvider(_ provider: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getProvider() -> Swift.String?
   #endif
   public func clearTokens()
   #if compiler(>=5.3) && $NonescapableTypes
@@ -352,14 +389,20 @@ public struct UserInfo : Swift.Sendable {
   public init(id: Swift.String, email: Swift.String? = nil)
   #endif
 }
-public struct SDKUserInfo : Swift.Sendable {
-  public let id: Swift.String
+public struct SDKUserInfoData : Swift.Sendable {
+  public let provider: Swift.String?
+  public let accessToken: Swift.String
+  public let idToken: Swift.String?
   public let email: Swift.String?
-  public let loginType: Swift.String?
-  public let addresses: [Swift.String]
+  public let sub: Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String, email: Swift.String? = nil, loginType: Swift.String? = nil, addresses: [Swift.String] = [])
+  public init(provider: Swift.String? = nil, accessToken: Swift.String, idToken: Swift.String? = nil, email: Swift.String? = nil, sub: Swift.String)
   #endif
+}
+public struct SDKUserInfo : Swift.Sendable {
+  public let status: Swift.String
+  public let data: CROSSxCoreSDK.SDKUserInfoData
+  public init(status: Swift.String = "success", data: CROSSxCoreSDK.SDKUserInfoData)
 }
 public struct ChainMeta : Swift.Sendable {
   public let caip2: Swift.String
@@ -735,6 +778,7 @@ public struct GetAddressResponse : Swift.Codable, Swift.Sendable {
 public struct WalletAddressInfo : Swift.Codable, Swift.Sendable {
   public let address: Swift.String
   public let index: Swift.Int
+  public init(address: Swift.String, index: Swift.Int)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -915,6 +959,9 @@ public class WithdrawUseCase {
   final public func createWallet() async throws -> CROSSxCoreSDK.CreateWalletResponse
   final public func getAddress(index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetAddressResponse
   final public func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func selectWallet(currentAddress: Swift.String? = nil) async throws -> CROSSxCoreSDK.WalletAddressInfo?
+  #endif
   final public func recoverWallet(shareC: Swift.String) async throws -> CROSSxCoreSDK.RecoverWalletResponse
   final public func getChains() async throws -> [CROSSxCoreSDK.ChainInfo]
   final public func getChain(chainId: Swift.String) async throws -> CROSSxCoreSDK.ChainInfo

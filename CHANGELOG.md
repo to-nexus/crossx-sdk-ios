@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- 🌍 **다국어(i18n) 지원 인프라** 도입
+  - `L10n` 헬퍼 타입 — `Bundle.module` + `NSLocalizedString` 기반 타입-세이프 문자열 접근
+  - `en.lproj/Localizable.strings` — 영어 기본 번역 (82개 키)
+  - `ko.lproj/Localizable.strings` — 한국어 번역 (82개 키)
+  - `Package.swift`에 `defaultLocalization: "en"` 설정 추가
+  - 새 언어 추가 시 `.lproj` 폴더만 추가하면 코드 변경 없이 지원 가능
+
+### Changed
+- **UI 문자열 다국어 전환** — 6개 SwiftUI 뷰의 하드코딩 문자열을 `L10n` 호출로 전환
+  - `WalletSelectorView`, `TransactionConfirmView`, `LoginSelectionSheetView`
+  - `MigrationFoundView`, `MigrationPinInputView`, `MigrationPresenter`
+- **에러 메시지 다국어 전환** — `CROSSxError`, `OAuthError`, `TokenStoreError`의 `errorDescription`을 `L10n` 호출로 전환
+- **내부 로그 및 메시지 영문화** — `Log.d` 디버그 메시지 및 내부 문자열을 한국어에서 영어로 전환 (개발자용 로그는 다국어 대상 아님)
+
 ### Added (v1.0.0 - 다중 체인 기반)
 - 🌐 **다중 체인 지원 아키텍처** 추가
   - `ChainType` enum - 체인 식별자 (ethereum, solana, bitcoin, cosmos)
