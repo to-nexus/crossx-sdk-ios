@@ -1,73 +1,73 @@
 # CROSSx SDK CocoaPods Sample App
 
-CocoaPods를 사용하여 CROSSx iOS SDK를 연동하는 샘플 애플리케이션입니다.
+A sample application demonstrating how to integrate the CROSSx iOS SDK using CocoaPods.
 
-## 요구사항
+## Requirements
 
 - Xcode 15.0+
 - iOS 15.0+
 - Swift 5.9+
-- [CocoaPods](https://cocoapods.org/) 설치
+- [CocoaPods](https://cocoapods.org/) installed
 
-## CocoaPods 설치
+## Installing CocoaPods
 
 ```bash
 sudo gem install cocoapods
 ```
 
-또는 Homebrew로 설치:
+Or install via Homebrew:
 
 ```bash
 brew install cocoapods
 ```
 
-## 프로젝트 설정
+## Project Setup
 
-### 1. Xcode 프로젝트 생성
+### 1. Create the Xcode Project
 
-`xcodeproj` Ruby gem(CocoaPods 의존성으로 자동 설치됨)을 활용한 스크립트로 프로젝트를 생성합니다:
+Use the setup script which leverages the `xcodeproj` Ruby gem (auto-installed as a CocoaPods dependency):
 
 ```bash
 cd Examples/CROSSxSampleCocoapods
 ruby setup.rb
 ```
 
-### 2. Pod 설치
+### 2. Install Pods
 
 ```bash
 pod install
 ```
 
-### 3. Workspace 열기
+### 3. Open the Workspace
 
 ```bash
 open CROSSxSampleCocoapods.xcworkspace
 ```
 
-> **주의**: `.xcodeproj`가 아닌 **`.xcworkspace`**를 열어야 합니다.
+> **Note**: Always open the **`.xcworkspace`** file, not `.xcodeproj`.
 
-## 실행 방법
+## Running the App
 
-1. Xcode에서 `CROSSxSampleCocoapods` 타겟 선택
-2. 시뮬레이터 또는 실제 기기 선택
-3. `Cmd + R` 또는 Run 버튼 클릭
+1. Select the `CROSSxSampleCocoapods` target in Xcode
+2. Choose a simulator or a physical device
+3. Press `Cmd + R` or click the Run button
 
-## 기능
+## Features
 
-샘플 앱은 다음 기능을 제공합니다:
+The sample app demonstrates the following features:
 
-| 기능 | 설명 |
-|------|------|
-| SDK 초기화 | `SDKConfig.fromInfoPlist(projectId:)` |
-| 세션 복원 | `sdk.initialize()` |
-| OAuth 로그인 | `sdk.signIn()` |
-| 로그아웃 | `sdk.signOut()` |
-| 지갑 생성 | `sdk.createWallet()` |
-| 지갑 조회 | `sdk.getAddresses()`, `sdk.getBalance()` |
-| 트랜잭션 서명 | `sdk.signTransaction()` |
-| 메시지 서명 | `sdk.signMessage()`, `sdk.signTypedData()` |
-| ERC20 전송 | `sdk.sendTransactionAndWait()` |
-| 네이티브 전송 | `sdk.sendTransactionAndWait()` |
+| Feature | API |
+|---------|-----|
+| SDK Initialization | `SDKConfig.fromInfoPlist(projectId:)` |
+| Session Restore | `sdk.initialize()` |
+| OAuth Sign-In | `sdk.signIn()` |
+| Sign Out | `sdk.signOut()` |
+| Create Wallet | `sdk.createWallet()` |
+| Query Wallet | `sdk.getAddresses()`, `sdk.getBalance()` |
+| Sign Transaction | `sdk.signTransaction()` |
+| Sign Message | `sdk.signMessage()`, `sdk.signTypedData()` |
+| ERC20 Transfer | `sdk.sendTransactionAndWait()` |
+| Native Transfer | `sdk.sendTransactionAndWait()` |
 
 ## Podfile
 
@@ -82,80 +82,80 @@ target 'CROSSxSampleCocoapods' do
 end
 ```
 
-실제 프로젝트에서는 `:path` 대신 버전을 지정합니다:
+For production projects, specify a version instead of `:path`:
 
 ```ruby
 pod 'CROSSxSDK', '~> 1.0'
 ```
 
-## 설정
+## Configuration
 
-### Project ID 설정
+### Project ID
 
-`Configurations/Debug.xcconfig`에서 Project ID를 변경합니다:
+Set your Project ID in `Configurations/Debug.xcconfig`:
 
 ```
 CROSSX_PROJECT_ID = your-project-id
 ```
 
-### 환경 설정 (Staging vs Production)
+### Environment (Staging vs Production)
 
-| Configuration | 환경 | 설명 |
-|---------------|------|------|
-| Debug | Staging | 개발/테스트용, URL 명시적 설정 |
-| Release | Production | URL 미설정시 자동 Production |
+| Configuration | Environment | Description |
+|---------------|-------------|-------------|
+| Debug | Staging | For development/testing; URLs set explicitly |
+| Release | Production | Uses production URLs by default when unset |
 
-## 디렉토리 구조
+## Directory Structure
 
 ```
 CROSSxSampleCocoapods/
-├── Podfile                       # CocoaPods 의존성 정의
-├── setup.rb                      # Xcode 프로젝트 생성 스크립트
+├── Podfile                       # CocoaPods dependency definitions
+├── setup.rb                      # Xcode project generation script
 ├── README.md
 ├── Configurations/
-│   ├── Debug.xcconfig            # Staging 환경 설정
-│   └── Release.xcconfig          # Production 환경 설정
+│   ├── Debug.xcconfig            # Staging environment config
+│   └── Release.xcconfig          # Production environment config
 ├── Sources/
-│   ├── AppDelegate.swift         # 앱 진입점, URL 핸들링
-│   └── MainViewController.swift  # SDK 사용 예제 UI
+│   ├── AppDelegate.swift         # App entry point, URL handling
+│   └── MainViewController.swift  # SDK usage example UI
 └── Resources/
-    ├── Info.plist                # URL Scheme, SDK 설정
+    ├── Info.plist                # URL Scheme, SDK configuration
     └── LaunchScreen.storyboard
 ```
 
 ## Custom URL Scheme
 
-OAuth 콜백을 위해 다음 URL Scheme이 Info.plist에 설정됩니다:
+The following URL scheme is configured in Info.plist for OAuth callbacks:
 
 - `crossx-{PROJECT_ID}://`
 
-## 문제 해결
+## Troubleshooting
 
-### Pod Install 실패
+### Pod Install Fails
 
 ```bash
 pod repo update
 pod install
 ```
 
-### 빌드 에러
+### Build Errors
 
-1. `.xcworkspace`를 열었는지 확인
-2. Derived Data 삭제 후 재빌드:
+1. Make sure you opened the `.xcworkspace` file
+2. Clean Derived Data and rebuild:
    ```bash
    rm -rf ~/Library/Developer/Xcode/DerivedData
    ```
-3. Pod 재설치:
+3. Reinstall pods:
    ```bash
    pod deintegrate
    ruby setup.rb
    pod install
    ```
 
-## 참고 문서
+## References
 
 - [CROSSx SDK README](../../README.md)
 
 ---
 
-**버전**: 1.0
+**Version**: 1.0
