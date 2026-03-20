@@ -12,13 +12,6 @@
         "moduleName": "CROSSxCoreSDK"
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CROSSxCoreSDK"
-      },
-      {
         "kind": "TypeDecl",
         "name": "RemoteCloudBackupAdapter",
         "printedName": "RemoteCloudBackupAdapter",
@@ -4117,6 +4110,48 @@
           },
           {
             "kind": "Var",
+            "name": "errorWalletInconsistentState",
+            "printedName": "errorWalletInconsistentState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO28errorWalletInconsistentStateSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO28errorWalletInconsistentStateSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO28errorWalletInconsistentStateSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO28errorWalletInconsistentStateSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "oauthUserCancelled",
             "printedName": "oauthUserCancelled",
             "children": [
@@ -4394,6 +4429,13 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CROSSxCoreSDK"
       },
       {
         "kind": "Import",
@@ -7159,6 +7201,47 @@
             "declKind": "Func",
             "usr": "s:13CROSSxCoreSDK17PasswordPresenterC09showEnterD012errorMessageS2SSg_tYaKF",
             "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC09showEnterD012errorMessageS2SSg_tYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showEnterPasswordAndExecute",
+            "printedName": "showEnterPasswordAndExecute(execute:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String) async throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK17PasswordPresenterC09showEnterD10AndExecute7executeyySSYaYbKc_tYaKF",
+            "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC09showEnterD10AndExecute7executeyySSYaYbKc_tYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -21609,6 +21692,46 @@
           },
           {
             "kind": "Var",
+            "name": "walletInconsistentState",
+            "printedName": "walletInconsistentState",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.CROSSxError.Type) -> CROSSxCoreSDK.CROSSxError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CROSSxError",
+                    "printedName": "CROSSxCoreSDK.CROSSxError",
+                    "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.CROSSxError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CROSSxError",
+                        "printedName": "CROSSxCoreSDK.CROSSxError",
+                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK0A5ErrorO23walletInconsistentStateyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK0A5ErrorO23walletInconsistentStateyA2CmF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "unsupportedChain",
             "printedName": "unsupportedChain",
             "children": [
@@ -26185,8 +26308,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "pin",
-            "printedName": "pin",
+            "name": "recoveryPin",
+            "printedName": "recoveryPin",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26196,8 +26319,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV3pinSSvp",
-            "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV3pinSSvp",
+            "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPinSSvp",
+            "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPinSSvp",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "HasStorage",
@@ -26219,8 +26342,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV3pinSSvg",
-                "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV3pinSSvg",
+                "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPinSSvg",
+                "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPinSSvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -26318,7 +26441,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(pin:sub:password:)",
+            "printedName": "init(recoveryPin:sub:password:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26346,8 +26469,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV3pin3sub8passwordACSS_S2Stcfc",
-            "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV3pin3sub8passwordACSS_S2Stcfc",
+            "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPin3sub8passwordACSS_S2Stcfc",
+            "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPin3sub8passwordACSS_S2Stcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl"
@@ -26680,8 +26803,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "pin",
-            "printedName": "pin",
+            "name": "recoveryPin",
+            "printedName": "recoveryPin",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26691,8 +26814,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV3pinSSvp",
-            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV3pinSSvp",
+            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvp",
+            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvp",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "HasStorage",
@@ -26714,8 +26837,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV3pinSSvg",
-                "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV3pinSSvg",
+                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvg",
+                "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -26769,7 +26892,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(pin:sub:)",
+            "printedName": "init(recoveryPin:sub:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26791,8 +26914,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV3pin3subACSS_SStcfc",
-            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV3pin3subACSS_SStcfc",
+            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV08recoveryE03subACSS_SStcfc",
+            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV08recoveryE03subACSS_SStcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl"
@@ -37638,6 +37761,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC05checkD0AA0D11CheckStatusOyYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37682,6 +37806,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC06createD08password12ignoreBackupAA06CreateD8ResponseVSS_SbSgtYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37718,6 +37843,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC10getAddress8password5indexAA03GetI8ResponseVSS_SitYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37741,6 +37867,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC12getAddressesAA03GetI8ResponseVyYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37770,6 +37897,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC9getShareC8passwordAA03GetI9CResponseVSS_tYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37799,6 +37927,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC7prepareyAA15PrepareResponseVAA0I7RequestVYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37846,6 +37975,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC15signTransaction4uuid8password10unsignedTx7chainIdAA04SignI8ResponseVSS_SSAA08UnsignedI0VSStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37893,6 +38023,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC15sendTransaction4uuid8password10unsignedTx7chainIdAA04SendI8ResponseVSS_SSAA08UnsignedI0VSStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37922,6 +38053,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC11signMessageyAA04SignI8ResponseVAA0jI7RequestVYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37957,6 +38089,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC13signTypedData_7chainIdAA04SigniJ8ResponseVAA0miJ7RequestV_SStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -37986,6 +38119,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC14verifyPasswordySbSSYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38015,6 +38149,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC9verifyPinyAA06VerifyI8ResponseVAA0jI7RequestVYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38044,6 +38179,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC07migrateD0yAA07MigrateD8ResponseVAA0iD7RequestVYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38075,6 +38211,7 @@
             "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC10loadShareCSSSgyF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38086,6 +38223,7 @@
         "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC",
         "moduleName": "CROSSxCoreSDK",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "RawDocComment"
         ],
@@ -38103,6 +38241,20 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -40248,60 +40400,39 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 516,
-      "length": 30,
-      "value": "\"crossx-sdk-ios_CROSSxCoreSDK\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 1088,
-      "length": 30,
-      "value": "\"PACKAGE_RESOURCE_BUNDLE_PATH\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 1714,
-      "length": 12,
-      "value": "\".framework\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 1804,
-      "length": 3,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 2241,
-      "length": 4,
-      "value": "\"..\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 2378,
-      "length": 9,
-      "value": "\".bundle\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 2530,
-      "length": 58,
-      "value": "\"unable to find bundle named crossx-sdk-ios_CROSSxCoreSDK\""
-    },
-    {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/CloudBackup\/RemoteCloudBackupAdapter.swift",
       "kind": "IntegerLiteral",
       "offset": 495,
       "length": 1,
       "value": "8"
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/BundleModule.swift",
+      "kind": "StringLiteral",
+      "offset": 607,
+      "length": 30,
+      "value": "\"crossx-sdk-ios_CROSSxCoreSDK\""
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/BundleModule.swift",
+      "kind": "StringLiteral",
+      "offset": 917,
+      "length": 9,
+      "value": "\".bundle\""
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/BundleModule.swift",
+      "kind": "StringLiteral",
+      "offset": 1069,
+      "length": 43,
+      "value": "\"unable to find bundle named \""
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/BundleModule.swift",
+      "kind": "StringLiteral",
+      "offset": 1111,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
@@ -40586,14 +40717,14 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 6351,
+      "offset": 10187,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 6784,
+      "offset": 10620,
       "length": 5,
       "value": "false"
     },
@@ -42000,7 +42131,7 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/UseCases\/WalletManagementUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 2242,
+      "offset": 2269,
       "length": 1,
       "value": "0"
     },
@@ -42161,70 +42292,70 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 48248,
+      "offset": 48256,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 49364,
+      "offset": 49372,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 50724,
+      "offset": 50732,
       "length": 9,
       "value": "\"pending\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 53992,
+      "offset": 54000,
       "length": 22,
       "value": "\"eth_getBlockByNumber\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54045,
+      "offset": 54053,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 54062,
+      "offset": 54070,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54238,
+      "offset": 54246,
       "length": 59,
       "value": "\"getBaseFeePerGas failed: [\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54278,
+      "offset": 54286,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54296,
+      "offset": 54304,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54409,
+      "offset": 54417,
       "length": 37,
       "value": "\"getBaseFeePerGas returned no result\""
     }
