@@ -1331,28 +1331,28 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/CrossWebAuthKit\/Sources\/CrossWebAuthKit\/Adapters\/ASWebAuthAdapter.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-webauthkit\/Sources\/CrossWebAuthKit\/Adapters\/ASWebAuthAdapter.swift",
       "kind": "BooleanLiteral",
       "offset": 948,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/CrossWebAuthKit\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-webauthkit\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 837,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/CrossWebAuthKit\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-webauthkit\/Sources\/CrossWebAuthKit\/Core\/WebAuthConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 924,
       "length": 3,
       "value": "300"
     },
     {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/CrossWebAuthKit\/Sources\/CrossWebAuthKit\/CrossWebAuthKit.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-webauthkit\/Sources\/CrossWebAuthKit\/CrossWebAuthKit.swift",
       "kind": "StringLiteral",
       "offset": 1035,
       "length": 7,
