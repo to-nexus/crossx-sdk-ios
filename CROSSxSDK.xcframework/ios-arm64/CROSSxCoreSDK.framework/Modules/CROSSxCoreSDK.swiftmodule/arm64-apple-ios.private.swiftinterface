@@ -1397,6 +1397,7 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   final public func isLoggedIn() -> Swift.Bool
   final public func ensureLoggedIn() async -> Swift.Bool
   final public func getUserInfo() async throws -> CROSSxCoreSDK.SDKUserInfo
+  final public func checkWallet() async throws -> CROSSxCoreSDK.WalletCheckStatus
   final public func createWallet() async throws -> CROSSxCoreSDK.CreateWalletResponse
   final public func getAddress(index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetAddressResponse
   final public func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
