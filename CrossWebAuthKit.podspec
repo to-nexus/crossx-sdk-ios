@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CrossWebAuthKit'
-  s.version          = '1.1.1'
+  s.version          = '1.2.0'
   s.summary          = 'Web Authentication Kit for CROSSx SDK'
   s.description      = <<-DESC
                        CrossWebAuthKit provides web-based authentication functionality for CROSSx SDK.

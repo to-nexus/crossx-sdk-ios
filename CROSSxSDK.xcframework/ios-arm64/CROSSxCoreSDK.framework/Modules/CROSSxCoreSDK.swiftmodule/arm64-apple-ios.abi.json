@@ -1121,6 +1121,48 @@
           },
           {
             "kind": "Var",
+            "name": "txConfirmLabelData",
+            "printedName": "txConfirmLabelData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO18txConfirmLabelDataSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO18txConfirmLabelDataSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO18txConfirmLabelDataSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO18txConfirmLabelDataSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "txFlowSendingTitle",
             "printedName": "txFlowSendingTitle",
             "children": [
@@ -1627,6 +1669,48 @@
           },
           {
             "kind": "Var",
+            "name": "signatureSignButton",
+            "printedName": "signatureSignButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO19signatureSignButtonSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO19signatureSignButtonSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO19signatureSignButtonSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO19signatureSignButtonSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "loginWelcomeTitle",
             "printedName": "loginWelcomeTitle",
             "children": [
@@ -1964,8 +2048,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordConsentNoticeTitle",
-            "printedName": "passwordConsentNoticeTitle",
+            "name": "pinConsentNoticeTitle",
+            "printedName": "pinConsentNoticeTitle",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1975,8 +2059,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO26passwordConsentNoticeTitleSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO26passwordConsentNoticeTitleSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO21pinConsentNoticeTitleSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO21pinConsentNoticeTitleSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -1997,8 +2081,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO26passwordConsentNoticeTitleSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO26passwordConsentNoticeTitleSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO21pinConsentNoticeTitleSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO21pinConsentNoticeTitleSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2007,8 +2091,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordConsentNoticeDescription",
-            "printedName": "passwordConsentNoticeDescription",
+            "name": "pinConsentNoticeDescription",
+            "printedName": "pinConsentNoticeDescription",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2018,8 +2102,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO32passwordConsentNoticeDescriptionSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO32passwordConsentNoticeDescriptionSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO27pinConsentNoticeDescriptionSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO27pinConsentNoticeDescriptionSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2039,8 +2123,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO32passwordConsentNoticeDescriptionSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO32passwordConsentNoticeDescriptionSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO27pinConsentNoticeDescriptionSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO27pinConsentNoticeDescriptionSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2049,8 +2133,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordConsentItem1",
-            "printedName": "passwordConsentItem1",
+            "name": "pinConsentItem1",
+            "printedName": "pinConsentItem1",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2060,8 +2144,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO20passwordConsentItem1SSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConsentItem1SSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO15pinConsentItem1SSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO15pinConsentItem1SSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2081,8 +2165,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO20passwordConsentItem1SSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConsentItem1SSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO15pinConsentItem1SSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO15pinConsentItem1SSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2091,8 +2175,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordConsentItem2",
-            "printedName": "passwordConsentItem2",
+            "name": "pinConsentItem2",
+            "printedName": "pinConsentItem2",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2102,8 +2186,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO20passwordConsentItem2SSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConsentItem2SSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO15pinConsentItem2SSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO15pinConsentItem2SSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2123,8 +2207,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO20passwordConsentItem2SSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConsentItem2SSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO15pinConsentItem2SSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO15pinConsentItem2SSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2133,8 +2217,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordConsentItem3",
-            "printedName": "passwordConsentItem3",
+            "name": "pinConsentButton",
+            "printedName": "pinConsentButton",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2144,8 +2228,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO20passwordConsentItem3SSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConsentItem3SSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO16pinConsentButtonSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO16pinConsentButtonSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2165,8 +2249,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO20passwordConsentItem3SSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConsentItem3SSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO16pinConsentButtonSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO16pinConsentButtonSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2175,8 +2259,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordConsentButton",
-            "printedName": "passwordConsentButton",
+            "name": "pinCreateTitle",
+            "printedName": "pinCreateTitle",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2186,8 +2270,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO21passwordConsentButtonSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO21passwordConsentButtonSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO14pinCreateTitleSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO14pinCreateTitleSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2207,8 +2291,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO21passwordConsentButtonSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO21passwordConsentButtonSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO14pinCreateTitleSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO14pinCreateTitleSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2217,8 +2301,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordCreateTitle",
-            "printedName": "passwordCreateTitle",
+            "name": "pinEnterTitle",
+            "printedName": "pinEnterTitle",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2228,8 +2312,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO19passwordCreateTitleSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO19passwordCreateTitleSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO13pinEnterTitleSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO13pinEnterTitleSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2249,8 +2333,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO19passwordCreateTitleSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO19passwordCreateTitleSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO13pinEnterTitleSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO13pinEnterTitleSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2259,8 +2343,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordCreateSubtitle",
-            "printedName": "passwordCreateSubtitle",
+            "name": "pinCreateSubtitle",
+            "printedName": "pinCreateSubtitle",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2270,8 +2354,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO22passwordCreateSubtitleSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO22passwordCreateSubtitleSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO17pinCreateSubtitleSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO17pinCreateSubtitleSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2291,8 +2375,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO22passwordCreateSubtitleSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO22passwordCreateSubtitleSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO17pinCreateSubtitleSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO17pinCreateSubtitleSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2301,8 +2385,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordEnterTitle",
-            "printedName": "passwordEnterTitle",
+            "name": "pinEnterSubtitle",
+            "printedName": "pinEnterSubtitle",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2312,8 +2396,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO18passwordEnterTitleSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordEnterTitleSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO16pinEnterSubtitleSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO16pinEnterSubtitleSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2333,260 +2417,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO18passwordEnterTitleSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordEnterTitleSSvgZ",
-                "moduleName": "CROSSxCoreSDK",
-                "static": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "passwordEnterSubtitle",
-            "printedName": "passwordEnterSubtitle",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO21passwordEnterSubtitleSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO21passwordEnterSubtitleSSvpZ",
-            "moduleName": "CROSSxCoreSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO21passwordEnterSubtitleSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO21passwordEnterSubtitleSSvgZ",
-                "moduleName": "CROSSxCoreSDK",
-                "static": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "passwordSubtitle",
-            "printedName": "passwordSubtitle",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO16passwordSubtitleSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO16passwordSubtitleSSvpZ",
-            "moduleName": "CROSSxCoreSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO16passwordSubtitleSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO16passwordSubtitleSSvgZ",
-                "moduleName": "CROSSxCoreSDK",
-                "static": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "passwordNewLabel",
-            "printedName": "passwordNewLabel",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO16passwordNewLabelSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO16passwordNewLabelSSvpZ",
-            "moduleName": "CROSSxCoreSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO16passwordNewLabelSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO16passwordNewLabelSSvgZ",
-                "moduleName": "CROSSxCoreSDK",
-                "static": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "passwordConfirmLabel",
-            "printedName": "passwordConfirmLabel",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO20passwordConfirmLabelSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConfirmLabelSSvpZ",
-            "moduleName": "CROSSxCoreSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO20passwordConfirmLabelSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO20passwordConfirmLabelSSvgZ",
-                "moduleName": "CROSSxCoreSDK",
-                "static": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "passwordVerifyLabel",
-            "printedName": "passwordVerifyLabel",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO19passwordVerifyLabelSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO19passwordVerifyLabelSSvpZ",
-            "moduleName": "CROSSxCoreSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO19passwordVerifyLabelSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO19passwordVerifyLabelSSvgZ",
-                "moduleName": "CROSSxCoreSDK",
-                "static": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "passwordLabel",
-            "printedName": "passwordLabel",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO13passwordLabelSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO13passwordLabelSSvpZ",
-            "moduleName": "CROSSxCoreSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO13passwordLabelSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO13passwordLabelSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO16pinEnterSubtitleSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO16pinEnterSubtitleSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2637,8 +2469,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordRuleLength",
-            "printedName": "passwordRuleLength",
+            "name": "pinCreateHint",
+            "printedName": "pinCreateHint",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2648,8 +2480,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO18passwordRuleLengthSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordRuleLengthSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO13pinCreateHintSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO13pinCreateHintSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2669,8 +2501,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO18passwordRuleLengthSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordRuleLengthSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO13pinCreateHintSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO13pinCreateHintSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2679,8 +2511,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordRuleUppercase",
-            "printedName": "passwordRuleUppercase",
+            "name": "pinConfirmHint",
+            "printedName": "pinConfirmHint",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2690,8 +2522,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO21passwordRuleUppercaseSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO21passwordRuleUppercaseSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO14pinConfirmHintSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO14pinConfirmHintSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2711,8 +2543,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO21passwordRuleUppercaseSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO21passwordRuleUppercaseSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO14pinConfirmHintSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO14pinConfirmHintSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2721,8 +2553,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordRuleNumber",
-            "printedName": "passwordRuleNumber",
+            "name": "pinEnterHint",
+            "printedName": "pinEnterHint",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2732,8 +2564,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO18passwordRuleNumberSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordRuleNumberSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO12pinEnterHintSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO12pinEnterHintSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2753,8 +2585,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO18passwordRuleNumberSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordRuleNumberSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO12pinEnterHintSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO12pinEnterHintSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2763,8 +2595,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordRuleSpecialChar",
-            "printedName": "passwordRuleSpecialChar",
+            "name": "pinMismatch",
+            "printedName": "pinMismatch",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2774,8 +2606,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO23passwordRuleSpecialCharSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO23passwordRuleSpecialCharSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO11pinMismatchSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO11pinMismatchSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2795,8 +2627,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO23passwordRuleSpecialCharSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO23passwordRuleSpecialCharSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO11pinMismatchSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO11pinMismatchSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2805,8 +2637,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordConfirmMismatch",
-            "printedName": "passwordConfirmMismatch",
+            "name": "pinIncorrect",
+            "printedName": "pinIncorrect",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2816,8 +2648,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO23passwordConfirmMismatchSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO23passwordConfirmMismatchSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO12pinIncorrectSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO12pinIncorrectSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2837,8 +2669,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO23passwordConfirmMismatchSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO23passwordConfirmMismatchSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO12pinIncorrectSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO12pinIncorrectSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2847,8 +2679,8 @@
           },
           {
             "kind": "Var",
-            "name": "passwordWrongError",
-            "printedName": "passwordWrongError",
+            "name": "pinValidationConsecutive",
+            "printedName": "pinValidationConsecutive",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2858,8 +2690,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO18passwordWrongErrorSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordWrongErrorSSvpZ",
+            "usr": "s:13CROSSxCoreSDK4L10nO24pinValidationConsecutiveSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO24pinValidationConsecutiveSSvpZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -2879,8 +2711,92 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO18passwordWrongErrorSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO18passwordWrongErrorSSvgZ",
+                "usr": "s:13CROSSxCoreSDK4L10nO24pinValidationConsecutiveSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO24pinValidationConsecutiveSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pinValidationSequential",
+            "printedName": "pinValidationSequential",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO23pinValidationSequentialSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO23pinValidationSequentialSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO23pinValidationSequentialSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO23pinValidationSequentialSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pinValidationPattern",
+            "printedName": "pinValidationPattern",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO20pinValidationPatternSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO20pinValidationPatternSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO20pinValidationPatternSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO20pinValidationPatternSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -2905,7 +2821,8 @@
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "accessors": [
               {
@@ -2923,6 +2840,48 @@
                 "declKind": "Accessor",
                 "usr": "s:13CROSSxCoreSDK4L10nO17passwordIncorrectSSvgZ",
                 "mangledName": "$s13CROSSxCoreSDK4L10nO17passwordIncorrectSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pinLockedWarning",
+            "printedName": "pinLockedWarning",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO16pinLockedWarningSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO16pinLockedWarningSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO16pinLockedWarningSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO16pinLockedWarningSSvgZ",
                 "moduleName": "CROSSxCoreSDK",
                 "static": true,
                 "accessorKind": "get"
@@ -4110,6 +4069,48 @@
           },
           {
             "kind": "Var",
+            "name": "errorBiometricFailed",
+            "printedName": "errorBiometricFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO20errorBiometricFailedSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO20errorBiometricFailedSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO20errorBiometricFailedSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO20errorBiometricFailedSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "errorWalletInconsistentState",
             "printedName": "errorWalletInconsistentState",
             "children": [
@@ -4744,6 +4745,13 @@
         "moduleName": "CROSSxCoreSDK"
       },
       {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "CROSSxCoreSDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "JWTDecodeAdapter",
         "printedName": "JWTDecodeAdapter",
@@ -4924,6 +4932,35 @@
             "declAttributes": [
               "Final",
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sha256",
+            "printedName": "sha256(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK16JWTDecodeAdapterC6sha2564data10Foundation4DataVAH_tF",
+            "mangledName": "$s13CROSSxCoreSDK16JWTDecodeAdapterC6sha2564data10Foundation4DataVAH_tF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -6995,6 +7032,40 @@
           },
           {
             "kind": "Function",
+            "name": "savePassword",
+            "printedName": "savePassword(_:useBiometric:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK28KeychainPasswordStoreAdapterC04saveE0_12useBiometricySS_SbtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK28KeychainPasswordStoreAdapterC04saveE0_12useBiometricySS_SbtYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "loadPassword",
             "printedName": "loadPassword()",
             "children": [
@@ -7095,6 +7166,346 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "PasswordStoreError",
+        "printedName": "PasswordStoreError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "encodingFailed",
+            "printedName": "encodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.PasswordStoreError.Type) -> CROSSxCoreSDK.PasswordStoreError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PasswordStoreError",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                    "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PasswordStoreError",
+                        "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                        "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO14encodingFailedyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO14encodingFailedyA2CmF",
+            "moduleName": "CROSSxCoreSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "decodingFailed",
+            "printedName": "decodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.PasswordStoreError.Type) -> CROSSxCoreSDK.PasswordStoreError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PasswordStoreError",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                    "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PasswordStoreError",
+                        "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                        "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO14decodingFailedyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO14decodingFailedyA2CmF",
+            "moduleName": "CROSSxCoreSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "biometricCancelled",
+            "printedName": "biometricCancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.PasswordStoreError.Type) -> CROSSxCoreSDK.PasswordStoreError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PasswordStoreError",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                    "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PasswordStoreError",
+                        "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                        "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO18biometricCancelledyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO18biometricCancelledyA2CmF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "biometricFailed",
+            "printedName": "biometricFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.PasswordStoreError.Type) -> CROSSxCoreSDK.PasswordStoreError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PasswordStoreError",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                    "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PasswordStoreError",
+                        "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                        "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO15biometricFailedyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO15biometricFailedyA2CmF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keychainError",
+            "printedName": "keychainError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.PasswordStoreError.Type) -> (Swift.Int32, Swift.String?) -> CROSSxCoreSDK.PasswordStoreError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int32, Swift.String?) -> CROSSxCoreSDK.PasswordStoreError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PasswordStoreError",
+                        "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                        "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(status: Swift.Int32, detail: Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int32",
+                            "printedName": "Swift.Int32",
+                            "usr": "s:s5Int32V"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.PasswordStoreError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PasswordStoreError",
+                        "printedName": "CROSSxCoreSDK.PasswordStoreError",
+                        "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO08keychainF0yACs5Int32V_SSSgtcACmF",
+            "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO08keychainF0yACs5Int32V_SSSgtcACmF",
+            "moduleName": "CROSSxCoreSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO16errorDescriptionSSSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO16errorDescriptionSSSgvg",
+                "moduleName": "CROSSxCoreSDK",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13CROSSxCoreSDK18PasswordStoreErrorO",
+        "mangledName": "$s13CROSSxCoreSDK18PasswordStoreErrorO",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
@@ -7149,8 +7560,8 @@
           },
           {
             "kind": "Function",
-            "name": "showCreatePassword",
-            "printedName": "showCreatePassword()",
+            "name": "showCreatePin",
+            "printedName": "showCreatePin()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7160,8 +7571,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK17PasswordPresenterC010showCreateD0SSyYaKF",
-            "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC010showCreateD0SSyYaKF",
+            "usr": "s:13CROSSxCoreSDK17PasswordPresenterC13showCreatePinSSyYaKF",
+            "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC13showCreatePinSSyYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -7173,8 +7584,8 @@
           },
           {
             "kind": "Function",
-            "name": "showEnterPassword",
-            "printedName": "showEnterPassword(errorMessage:)",
+            "name": "showEnterPin",
+            "printedName": "showEnterPin(errorMessage:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7199,8 +7610,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK17PasswordPresenterC09showEnterD012errorMessageS2SSg_tYaKF",
-            "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC09showEnterD012errorMessageS2SSg_tYaKF",
+            "usr": "s:13CROSSxCoreSDK17PasswordPresenterC12showEnterPin12errorMessageS2SSg_tYaKF",
+            "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC12showEnterPin12errorMessageS2SSg_tYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -7212,8 +7623,8 @@
           },
           {
             "kind": "Function",
-            "name": "showEnterPasswordAndExecute",
-            "printedName": "showEnterPasswordAndExecute(execute:)",
+            "name": "showEnterPinAndExecute",
+            "printedName": "showEnterPinAndExecute(execute:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7240,8 +7651,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK17PasswordPresenterC09showEnterD10AndExecute7executeyySSYaYbKc_tYaKF",
-            "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC09showEnterD10AndExecute7executeyySSYaYbKc_tYaKF",
+            "usr": "s:13CROSSxCoreSDK17PasswordPresenterC22showEnterPinAndExecute7executeyySSYaYbKc_tYaKF",
+            "mangledName": "$s13CROSSxCoreSDK17PasswordPresenterC22showEnterPinAndExecute7executeyySSYaYbKc_tYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -7919,25 +8330,25 @@
           },
           {
             "kind": "Function",
-            "name": "verifyPin",
-            "printedName": "verifyPin(_:)",
+            "name": "verifyRecoveryPin",
+            "printedName": "verifyRecoveryPin(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinResponse",
-                "printedName": "CROSSxCoreSDK.VerifyPinResponse",
-                "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV"
+                "name": "VerifyRecoveryPinResponse",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinResponse",
+                "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinRequest",
-                "printedName": "CROSSxCoreSDK.VerifyPinRequest",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV"
+                "name": "VerifyRecoveryPinRequest",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinRequest",
+                "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK23WalletRepositoryAdapterC9verifyPinyAA06VerifyH8ResponseVAA0iH7RequestVYaKF",
-            "mangledName": "$s13CROSSxCoreSDK23WalletRepositoryAdapterC9verifyPinyAA06VerifyH8ResponseVAA0iH7RequestVYaKF",
+            "usr": "s:13CROSSxCoreSDK23WalletRepositoryAdapterC17verifyRecoveryPinyAA06VerifyhI8ResponseVAA0jhI7RequestVYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletRepositoryAdapterC17verifyRecoveryPinyAA06VerifyhI8ResponseVAA0jhI7RequestVYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -11623,6 +12034,37 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sha256",
+            "printedName": "sha256(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK10CryptoPortP6sha2564data10Foundation4DataVAH_tF",
+            "mangledName": "$s13CROSSxCoreSDK10CryptoPortP6sha2564data10Foundation4DataVAH_tF",
+            "moduleName": "CROSSxCoreSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.CryptoPort>",
+            "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.CryptoPort>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -12589,6 +13031,67 @@
           },
           {
             "kind": "Var",
+            "name": "nonce",
+            "printedName": "nonce",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK19OAuthCallbackResultV5nonceSSSgvp",
+            "mangledName": "$s13CROSSxCoreSDK19OAuthCallbackResultV5nonceSSSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK19OAuthCallbackResultV5nonceSSSgvg",
+                "mangledName": "$s13CROSSxCoreSDK19OAuthCallbackResultV5nonceSSSgvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "status",
             "printedName": "status",
             "children": [
@@ -12651,7 +13154,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(idToken:accessToken:sub:email:provider:state:status:)",
+            "printedName": "init(idToken:accessToken:sub:email:provider:state:nonce:status:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12754,11 +13257,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK19OAuthCallbackResultV7idToken06accessH03sub5email8provider5state6statusACSS_SSSgA5Ktcfc",
-            "mangledName": "$s13CROSSxCoreSDK19OAuthCallbackResultV7idToken06accessH03sub5email8provider5state6statusACSS_SSSgA5Ktcfc",
+            "usr": "s:13CROSSxCoreSDK19OAuthCallbackResultV7idToken06accessH03sub5email8provider5state5nonce6statusACSS_SSSgA6Ltcfc",
+            "mangledName": "$s13CROSSxCoreSDK19OAuthCallbackResultV7idToken06accessH03sub5email8provider5state5nonce6statusACSS_SSSgA6Ltcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl"
@@ -12991,6 +13509,43 @@
           },
           {
             "kind": "Function",
+            "name": "savePassword",
+            "printedName": "savePassword(_:useBiometric:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK17PasswordStorePortP04saveD0_12useBiometricySS_SbtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK17PasswordStorePortP04saveD0_12useBiometricySS_SbtYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.PasswordStorePort>",
+            "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.PasswordStorePort>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "loadPassword",
             "printedName": "loadPassword()",
             "children": [
@@ -13046,6 +13601,42 @@
             ],
             "throwing": true,
             "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "savePassword",
+            "printedName": "savePassword(_:useBiometric:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK17PasswordStorePortPAAE04saveD0_12useBiometricySS_SbtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK17PasswordStorePortPAAE04saveD0_12useBiometricySS_SbtYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.PasswordStorePort>",
+            "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.PasswordStorePort>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -13755,25 +14346,25 @@
           },
           {
             "kind": "Function",
-            "name": "verifyPin",
-            "printedName": "verifyPin(_:)",
+            "name": "verifyRecoveryPin",
+            "printedName": "verifyRecoveryPin(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinResponse",
-                "printedName": "CROSSxCoreSDK.VerifyPinResponse",
-                "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV"
+                "name": "VerifyRecoveryPinResponse",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinResponse",
+                "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinRequest",
-                "printedName": "CROSSxCoreSDK.VerifyPinRequest",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV"
+                "name": "VerifyRecoveryPinRequest",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinRequest",
+                "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK20WalletRepositoryPortP9verifyPinyAA06VerifyH8ResponseVAA0iH7RequestVYaKF",
-            "mangledName": "$s13CROSSxCoreSDK20WalletRepositoryPortP9verifyPinyAA06VerifyH8ResponseVAA0iH7RequestVYaKF",
+            "usr": "s:13CROSSxCoreSDK20WalletRepositoryPortP17verifyRecoveryPinyAA06VerifyhI8ResponseVAA0jhI7RequestVYaKF",
+            "mangledName": "$s13CROSSxCoreSDK20WalletRepositoryPortP17verifyRecoveryPinyAA06VerifyhI8ResponseVAA0jhI7RequestVYaKF",
             "moduleName": "CROSSxCoreSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.WalletRepositoryPort>",
             "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.WalletRepositoryPort>",
@@ -21692,6 +22283,99 @@
           },
           {
             "kind": "Var",
+            "name": "passwordLocked",
+            "printedName": "passwordLocked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.CROSSxError.Type) -> (CROSSxCoreSDK.PinLockInfo) -> CROSSxCoreSDK.CROSSxError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CROSSxCoreSDK.PinLockInfo) -> CROSSxCoreSDK.CROSSxError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CROSSxError",
+                        "printedName": "CROSSxCoreSDK.CROSSxError",
+                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PinLockInfo",
+                        "printedName": "CROSSxCoreSDK.PinLockInfo",
+                        "usr": "s:13CROSSxCoreSDK11PinLockInfoV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.CROSSxError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CROSSxError",
+                        "printedName": "CROSSxCoreSDK.CROSSxError",
+                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK0A5ErrorO14passwordLockedyAcA11PinLockInfoVcACmF",
+            "mangledName": "$s13CROSSxCoreSDK0A5ErrorO14passwordLockedyAcA11PinLockInfoVcACmF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "biometricFailed",
+            "printedName": "biometricFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.CROSSxError.Type) -> CROSSxCoreSDK.CROSSxError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CROSSxError",
+                    "printedName": "CROSSxCoreSDK.CROSSxError",
+                    "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.CROSSxError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CROSSxError",
+                        "printedName": "CROSSxCoreSDK.CROSSxError",
+                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK0A5ErrorO15biometricFailedyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK0A5ErrorO15biometricFailedyA2CmF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "walletInconsistentState",
             "printedName": "walletInconsistentState",
             "children": [
@@ -23660,6 +24344,67 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "nonce",
+            "printedName": "nonce",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK10JWTPayloadV5nonceSSSgvp",
+            "mangledName": "$s13CROSSxCoreSDK10JWTPayloadV5nonceSSSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK10JWTPayloadV5nonceSSSgvg",
+                "mangledName": "$s13CROSSxCoreSDK10JWTPayloadV5nonceSSSgvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -23690,7 +24435,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(sub:exp:iat:email:iss:aud:providerSub:)",
+            "printedName": "init(sub:exp:iat:email:iss:aud:providerSub:nonce:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -23784,11 +24529,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK10JWTPayloadV3sub3exp3iat5email3iss3aud11providerSubACSS_S2dSgSSSgA3Ltcfc",
-            "mangledName": "$s13CROSSxCoreSDK10JWTPayloadV3sub3exp3iat5email3iss3aud11providerSubACSS_S2dSgSSSgA3Ltcfc",
+            "usr": "s:13CROSSxCoreSDK10JWTPayloadV3sub3exp3iat5email3iss3aud11providerSub5nonceACSS_S2dSgSSSgA4Mtcfc",
+            "mangledName": "$s13CROSSxCoreSDK10JWTPayloadV3sub3exp3iat5email3iss3aud11providerSub5nonceACSS_S2dSgSSSgA4Mtcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl"
@@ -26798,8 +27558,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "VerifyPinRequest",
-        "printedName": "VerifyPinRequest",
+        "name": "VerifyRecoveryPinRequest",
+        "printedName": "VerifyRecoveryPinRequest",
         "children": [
           {
             "kind": "Var",
@@ -26814,8 +27574,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvp",
-            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvp",
+            "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV08recoveryF0SSvp",
+            "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV08recoveryF0SSvp",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "HasStorage",
@@ -26837,8 +27597,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvg",
-                "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV08recoveryE0SSvg",
+                "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV08recoveryF0SSvg",
+                "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV08recoveryF0SSvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -26858,8 +27618,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV3subSSvp",
-            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV3subSSvp",
+            "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV3subSSvp",
+            "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV3subSSvp",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "HasStorage",
@@ -26881,8 +27641,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV3subSSvg",
-                "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV3subSSvg",
+                "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV3subSSvg",
+                "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV3subSSvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -26896,9 +27656,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinRequest",
-                "printedName": "CROSSxCoreSDK.VerifyPinRequest",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV"
+                "name": "VerifyRecoveryPinRequest",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinRequest",
+                "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV"
               },
               {
                 "kind": "TypeNominal",
@@ -26914,8 +27674,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV08recoveryE03subACSS_SStcfc",
-            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV08recoveryE03subACSS_SStcfc",
+            "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV08recoveryF03subACSS_SStcfc",
+            "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV08recoveryF03subACSS_SStcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl"
@@ -26929,9 +27689,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinRequest",
-                "printedName": "CROSSxCoreSDK.VerifyPinRequest",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV"
+                "name": "VerifyRecoveryPinRequest",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinRequest",
+                "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV"
               },
               {
                 "kind": "TypeNominal",
@@ -26941,8 +27701,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV4fromACs7Decoder_p_tKcfc",
             "moduleName": "CROSSxCoreSDK",
             "implicit": true,
             "throwing": true,
@@ -26966,8 +27726,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV6encode2toys7Encoder_p_tKF",
+            "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV6encode2toys7Encoder_p_tKF",
             "moduleName": "CROSSxCoreSDK",
             "implicit": true,
             "throwing": true,
@@ -26975,8 +27735,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV",
-        "mangledName": "$s13CROSSxCoreSDK16VerifyPinRequestV",
+        "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV",
+        "mangledName": "$s13CROSSxCoreSDK24VerifyRecoveryPinRequestV",
         "moduleName": "CROSSxCoreSDK",
         "declAttributes": [
           "AccessControl",
@@ -27029,8 +27789,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "VerifyPinResponse",
-        "printedName": "VerifyPinResponse",
+        "name": "VerifyRecoveryPinResponse",
+        "printedName": "VerifyRecoveryPinResponse",
         "children": [
           {
             "kind": "Var",
@@ -27045,8 +27805,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV5validSbvp",
-            "mangledName": "$s13CROSSxCoreSDK17VerifyPinResponseV5validSbvp",
+            "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV5validSbvp",
+            "mangledName": "$s13CROSSxCoreSDK25VerifyRecoveryPinResponseV5validSbvp",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "HasStorage",
@@ -27068,8 +27828,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV5validSbvg",
-                "mangledName": "$s13CROSSxCoreSDK17VerifyPinResponseV5validSbvg",
+                "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV5validSbvg",
+                "mangledName": "$s13CROSSxCoreSDK25VerifyRecoveryPinResponseV5validSbvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -27097,8 +27857,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV9pinStatusAA0E8LockInfoVSgvp",
-            "mangledName": "$s13CROSSxCoreSDK17VerifyPinResponseV9pinStatusAA0E8LockInfoVSgvp",
+            "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV9pinStatusAA0F8LockInfoVSgvp",
+            "mangledName": "$s13CROSSxCoreSDK25VerifyRecoveryPinResponseV9pinStatusAA0F8LockInfoVSgvp",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "HasStorage",
@@ -27128,8 +27888,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV9pinStatusAA0E8LockInfoVSgvg",
-                "mangledName": "$s13CROSSxCoreSDK17VerifyPinResponseV9pinStatusAA0E8LockInfoVSgvg",
+                "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV9pinStatusAA0F8LockInfoVSgvg",
+                "mangledName": "$s13CROSSxCoreSDK25VerifyRecoveryPinResponseV9pinStatusAA0F8LockInfoVSgvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -27143,9 +27903,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinResponse",
-                "printedName": "CROSSxCoreSDK.VerifyPinResponse",
-                "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV"
+                "name": "VerifyRecoveryPinResponse",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinResponse",
+                "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV"
               },
               {
                 "kind": "TypeNominal",
@@ -27155,8 +27915,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s13CROSSxCoreSDK17VerifyPinResponseV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK25VerifyRecoveryPinResponseV4fromACs7Decoder_p_tKcfc",
             "moduleName": "CROSSxCoreSDK",
             "implicit": true,
             "throwing": true,
@@ -27180,8 +27940,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s13CROSSxCoreSDK17VerifyPinResponseV6encode2toys7Encoder_p_tKF",
+            "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK25VerifyRecoveryPinResponseV6encode2toys7Encoder_p_tKF",
             "moduleName": "CROSSxCoreSDK",
             "implicit": true,
             "throwing": true,
@@ -27189,8 +27949,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV",
-        "mangledName": "$s13CROSSxCoreSDK17VerifyPinResponseV",
+        "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV",
+        "mangledName": "$s13CROSSxCoreSDK25VerifyRecoveryPinResponseV",
         "moduleName": "CROSSxCoreSDK",
         "declAttributes": [
           "AccessControl",
@@ -37609,6 +38369,127 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "JWTSignInUseCase",
+        "printedName": "JWTSignInUseCase",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(crypto:storage:tokenStore:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JWTSignInUseCase",
+                "printedName": "CROSSxCoreSDK.JWTSignInUseCase",
+                "usr": "s:13CROSSxCoreSDK16JWTSignInUseCaseC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CryptoPort",
+                "printedName": "any CROSSxCoreSDK.CryptoPort",
+                "usr": "s:13CROSSxCoreSDK10CryptoPortP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StoragePort",
+                "printedName": "any CROSSxCoreSDK.StoragePort",
+                "usr": "s:13CROSSxCoreSDK11StoragePortP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TokenStore",
+                "printedName": "CROSSxCoreSDK.TokenStore",
+                "usr": "s:13CROSSxCoreSDK10TokenStoreC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK16JWTSignInUseCaseC6crypto7storage10tokenStoreAcA10CryptoPort_p_AA07StorageM0_pAA05TokenK0Ctcfc",
+            "mangledName": "$s13CROSSxCoreSDK16JWTSignInUseCaseC6crypto7storage10tokenStoreAcA10CryptoPort_p_AA07StorageM0_pAA05TokenK0Ctcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "execute",
+            "printedName": "execute(accessToken:refreshToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthResult",
+                "printedName": "CROSSxCoreSDK.AuthResult",
+                "usr": "s:13CROSSxCoreSDK10AuthResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK16JWTSignInUseCaseC7execute11accessToken07refreshJ0AA10AuthResultVSS_SSSgtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK16JWTSignInUseCaseC7execute11accessToken07refreshJ0AA10AuthResultVSS_SSSgtYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13CROSSxCoreSDK16JWTSignInUseCaseC",
+        "mangledName": "$s13CROSSxCoreSDK16JWTSignInUseCaseC",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CROSSxCoreSDK"
+      },
+      {
+        "kind": "TypeDecl",
         "name": "SignOutUseCase",
         "printedName": "SignOutUseCase",
         "children": [
@@ -38128,25 +39009,25 @@
           },
           {
             "kind": "Function",
-            "name": "verifyPin",
-            "printedName": "verifyPin(_:)",
+            "name": "verifyRecoveryPin",
+            "printedName": "verifyRecoveryPin(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinResponse",
-                "printedName": "CROSSxCoreSDK.VerifyPinResponse",
-                "usr": "s:13CROSSxCoreSDK17VerifyPinResponseV"
+                "name": "VerifyRecoveryPinResponse",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinResponse",
+                "usr": "s:13CROSSxCoreSDK25VerifyRecoveryPinResponseV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "VerifyPinRequest",
-                "printedName": "CROSSxCoreSDK.VerifyPinRequest",
-                "usr": "s:13CROSSxCoreSDK16VerifyPinRequestV"
+                "name": "VerifyRecoveryPinRequest",
+                "printedName": "CROSSxCoreSDK.VerifyRecoveryPinRequest",
+                "usr": "s:13CROSSxCoreSDK24VerifyRecoveryPinRequestV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK23WalletManagementUseCaseC9verifyPinyAA06VerifyI8ResponseVAA0jI7RequestVYaKF",
-            "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC9verifyPinyAA06VerifyI8ResponseVAA0jI7RequestVYaKF",
+            "usr": "s:13CROSSxCoreSDK23WalletManagementUseCaseC17verifyRecoveryPinyAA06VerifyiJ8ResponseVAA0kiJ7RequestVYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC17verifyRecoveryPinyAA06VerifyiJ8ResponseVAA0kiJ7RequestVYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -38667,6 +39548,51 @@
           },
           {
             "kind": "Function",
+            "name": "signInWithJWT",
+            "printedName": "signInWithJWT(accessToken:refreshToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthResult",
+                "printedName": "CROSSxCoreSDK.AuthResult",
+                "usr": "s:13CROSSxCoreSDK10AuthResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK0aC0C13signInWithJWT11accessToken07refreshI0AA10AuthResultVSS_SSSgtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C13signInWithJWT11accessToken07refreshI0AA10AuthResultVSS_SSSgtYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "signOut",
             "printedName": "signOut()",
             "children": [
@@ -39055,10 +39981,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39107,8 +40041,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C15signTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SignE8ResponseVAA08UnsignedE0V_S3SSgA2NtYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C15signTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SignE8ResponseVAA08UnsignedE0V_S3SSgA2NtYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C15signTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SignE8ResponseVAA08UnsignedE0V_S2SSgA3NtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C15signTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SignE8ResponseVAA08UnsignedE0V_S2SSgA3NtYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -39143,10 +40077,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39195,8 +40137,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C15sendTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SendE8ResponseVAA08UnsignedE0V_S3SSgA2NtYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C15sendTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SendE8ResponseVAA08UnsignedE0V_S3SSgA2NtYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C15sendTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SendE8ResponseVAA08UnsignedE0V_S2SSgA3NtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C15sendTransaction_7chainId8dappName07networkI012estimatedFee6amountAA04SendE8ResponseVAA08UnsignedE0V_S2SSgA3NtYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -39231,10 +40173,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39290,8 +40240,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C22sendTransactionAndWait_7chainId8dappName07networkK012estimatedFee6amount7optionsAA04SendefG8ResponseVAA08UnsignedE0V_S3SSgA2oA14PollingOptionsVtYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C22sendTransactionAndWait_7chainId8dappName07networkK012estimatedFee6amount7optionsAA04SendefG8ResponseVAA08UnsignedE0V_S3SSgA2oA14PollingOptionsVtYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C22sendTransactionAndWait_7chainId8dappName07networkK012estimatedFee6amount7optionsAA04SendefG8ResponseVAA08UnsignedE0V_S2SSgA3oA14PollingOptionsVtYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C22sendTransactionAndWait_7chainId8dappName07networkK012estimatedFee6amount7optionsAA04SendefG8ResponseVAA08UnsignedE0V_S2SSgA3oA14PollingOptionsVtYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -39341,10 +40291,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39355,8 +40313,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C11signMessage_7chainId4from8dappName07accountJ0AA04SignE8ResponseVSS_S2SSgS2StYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C11signMessage_7chainId4from8dappName07accountJ0AA04SignE8ResponseVSS_S2SSgS2StYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C11signMessage_7chainId4from8dappName07accountJ0AA04SignE8ResponseVSS_S2SSgAKSStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C11signMessage_7chainId4from8dappName07accountJ0AA04SignE8ResponseVSS_S2SSgAKSStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -39406,10 +40364,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39420,8 +40386,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseVSS_S2SSgS2StYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseVSS_S2SSgS2StYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseVSS_S2SSgAKSStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseVSS_S2SSgAKSStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -39471,10 +40437,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39485,8 +40459,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseV10Foundation0F0V_S2SSgS2StYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseV10Foundation0F0V_S2SSgS2StYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseV10Foundation0F0V_S2SSgANSStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C13signTypedData_7chainId4from8dappName07accountK0AA04SigneF8ResponseV10Foundation0F0V_S2SSgANSStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -39530,10 +40504,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39544,8 +40526,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseVSS_SSSgS2StYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseVSS_SSSgS2StYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseVSS_SSSgAJSStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseVSS_SSSgAJSStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -39589,10 +40571,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "s:SS"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -39603,8 +40593,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseV10Foundation0F0V_SSSgS2StYaKF",
-            "mangledName": "$s13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseV10Foundation0F0V_SSSgS2StYaKF",
+            "usr": "s:13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseV10Foundation0F0V_SSSgAMSStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C21signTypedDataOffchain_4from8dappName07accountJ0AA04SigneF8ResponseV10Foundation0F0V_SSSgAMSStYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -40467,106 +41457,120 @@
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1285,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1982,
+      "offset": 2080,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2015,
+      "offset": 2113,
       "length": 3,
       "value": "560"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2150,
+      "offset": 2248,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2188,
+      "offset": 2286,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
       "kind": "Array",
-      "offset": 4077,
+      "offset": 4251,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Common\/ModalController.swift",
       "kind": "Array",
-      "offset": 4137,
+      "offset": 4311,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1257,
+      "offset": 1846,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1788,
+      "offset": 2377,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "StringLiteral",
-      "offset": 3320,
+      "offset": 3909,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "StringLiteral",
-      "offset": 3349,
+      "offset": 3938,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3412,
+      "offset": 4001,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11892,
+      "offset": 12624,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "BooleanLiteral",
-      "offset": 19015,
+      "offset": 17960,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "BooleanLiteral",
-      "offset": 22146,
+      "offset": 25083,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
       "kind": "BooleanLiteral",
-      "offset": 25794,
+      "offset": 28214,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/TransactionConfirmView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 31862,
       "length": 5,
       "value": "false"
     },
@@ -40580,14 +41584,14 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/UIKitConfirmationAdapter.swift",
       "kind": "BooleanLiteral",
-      "offset": 9882,
+      "offset": 10319,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Confirmation\/UIKitConfirmationAdapter.swift",
       "kind": "BooleanLiteral",
-      "offset": 10333,
+      "offset": 10770,
       "length": 5,
       "value": "false"
     },
@@ -40636,7 +41640,7 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Migration\/MigrationPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 15242,
+      "offset": 15258,
       "length": 5,
       "value": "false"
     },
@@ -40699,56 +41703,49 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
       "kind": "BooleanLiteral",
-      "offset": 960,
+      "offset": 136,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 432,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
       "kind": "StringLiteral",
-      "offset": 1531,
+      "offset": 3454,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
-      "kind": "StringLiteral",
-      "offset": 1575,
-      "length": 2,
-      "value": "\"\""
+      "kind": "IntegerLiteral",
+      "offset": 3940,
+      "length": 1,
+      "value": "6"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1616,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1667,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8599,
+      "offset": 11713,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 10187,
+      "offset": 10944,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 10620,
+      "offset": 11377,
       "length": 5,
       "value": "false"
     },
@@ -40791,13 +41788,6 @@
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordConsentView.swift",
       "kind": "BooleanLiteral",
       "offset": 550,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordConsentView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 590,
       "length": 5,
       "value": "false"
     },
@@ -41910,7 +42900,7 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/JWTPayload.swift",
       "kind": "IntegerLiteral",
-      "offset": 2343,
+      "offset": 2720,
       "length": 2,
       "value": "30"
     },
@@ -42022,28 +43012,35 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/StorageKeys.swift",
       "kind": "StringLiteral",
-      "offset": 608,
+      "offset": 614,
+      "length": 22,
+      "value": "\"crossx_pending_nonce\""
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/StorageKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 726,
       "length": 19,
       "value": "\"crossx_auth_state\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/StorageKeys.swift",
       "kind": "StringLiteral",
-      "offset": 651,
+      "offset": 769,
       "length": 14,
       "value": "\"crossx_email\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/StorageKeys.swift",
       "kind": "StringLiteral",
-      "offset": 692,
+      "offset": 810,
       "length": 17,
       "value": "\"crossx_provider\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/StorageKeys.swift",
       "kind": "StringLiteral",
-      "offset": 873,
+      "offset": 991,
       "length": 23,
       "value": "\"crossx_wallet_share_c\""
     },
@@ -42164,222 +43161,166 @@
       "kind": "StringLiteral",
       "offset": 443,
       "length": 7,
-      "value": "\"1.1.0\""
+      "value": "\"1.2.0\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2602,
+      "offset": 2943,
       "length": 42,
       "value": "\"https:\/\/cross-wallet-oauth.crosstoken.io\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2726,
+      "offset": 3067,
       "length": 34,
       "value": "\"https:\/\/cross-auth.crosstoken.io\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2848,
+      "offset": 3189,
       "length": 54,
       "value": "\"https:\/\/embedded-wallet-gateway.crosstoken.io\/api\/v1\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2992,
+      "offset": 3333,
       "length": 43,
       "value": "\"https:\/\/cross-storage-a.crosstoken.io\/api\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 3125,
+      "offset": 3466,
       "length": 43,
       "value": "\"https:\/\/cross-storage-b.crosstoken.io\/api\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 21582,
+      "offset": 23565,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 27115,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 28749,
+      "offset": 30746,
       "length": 12,
       "value": "\"0x3B9ACA00\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 28834,
+      "offset": 30831,
       "length": 12,
       "value": "\"0x77359400\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 35816,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 38887,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 42110,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 42151,
+      "offset": 44171,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 43720,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 43761,
+      "offset": 45795,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 44982,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 45023,
+      "offset": 47071,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 46636,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 46677,
+      "offset": 48739,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 47569,
-      "length": 9,
-      "value": "\"Request\""
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 47610,
+      "offset": 49686,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 48913,
+      "offset": 51008,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 50029,
+      "offset": 52124,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 51389,
+      "offset": 53484,
       "length": 9,
       "value": "\"pending\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54657,
+      "offset": 56752,
       "length": 22,
       "value": "\"eth_getBlockByNumber\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54710,
+      "offset": 56805,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 54727,
+      "offset": 56822,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54903,
+      "offset": 56998,
       "length": 59,
       "value": "\"getBaseFeePerGas failed: [\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54943,
+      "offset": 57038,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 54961,
+      "offset": 57056,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 55074,
+      "offset": 57169,
       "length": 37,
       "value": "\"getBaseFeePerGas returned no result\""
     }
