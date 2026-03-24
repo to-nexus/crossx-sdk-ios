@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CROSSxSDK'
-  s.version          = '1.2.1'
+  s.version          = '1.2.2'
   s.summary          = 'CROSSx SDK for iOS'
   s.description      = <<-DESC
                        CROSSx SDK provides secure authentication and blockchain functionality for iOS applications.
@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   
   s.vendored_frameworks = 'CROSSxSDK.xcframework'
   
-  s.dependency 'CrossWebAuthKit', '~> 1.2.1'
+  s.dependency 'CrossWebAuthKit', '~> 1.2.2'
 end
