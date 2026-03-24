@@ -345,6 +345,22 @@ final public class JWTDecodeAdapter : CROSSxCoreSDK.CryptoPort, @unchecked Swift
   final public func sha256(data: Foundation.Data) -> Foundation.Data
   @objc deinit
 }
+final public class MigrationPresenter : @unchecked Swift.Sendable {
+  public enum PromptResult {
+    case recover
+    case skip
+    public static func == (a: CROSSxCoreSDK.MigrationPresenter.PromptResult, b: CROSSxCoreSDK.MigrationPresenter.PromptResult) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(themeProvider: CROSSxCoreSDK.ThemeProvider)
+  final public func showMigrationFound() async throws -> CROSSxCoreSDK.MigrationPresenter.PromptResult
+  final public func showPinInputForVerification(verify: @escaping (Swift.String) async throws -> Swift.Void) async throws -> Swift.String
+  final public func showPinInputForMigration(migrate: @escaping (Swift.String) async throws -> CROSSxCoreSDK.MigrateWalletResponse) async throws -> CROSSxCoreSDK.MigrateWalletResponse
+  @objc deinit
+}
 final public class AuthenticatedNetworkAdapter : CROSSxCoreSDK.NetworkPort, @unchecked Swift.Sendable {
   public init(baseNetwork: any CROSSxCoreSDK.NetworkPort, tokenStore: CROSSxCoreSDK.TokenStore, maxRetries: Swift.Int = 1)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1099,16 +1115,17 @@ public struct PinLockInfo : Swift.Codable, Swift.Sendable {
 public struct SDKConfig : Swift.Sendable {
   public let bundle: Foundation.Bundle
   public let projectId: Swift.String
+  public let appName: Swift.String
   public let callbackScheme: Swift.String
   public let httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig?
   public let theme: CROSSxCoreSDK.CROSSxTheme
   public let themeTokens: CROSSxCoreSDK.CROSSxThemeConfig?
   public let debug: Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(bundle: Foundation.Bundle = .main, projectId: Swift.String, callbackScheme: Swift.String? = nil, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil, theme: CROSSxCoreSDK.CROSSxTheme = .system, themeTokens: CROSSxCoreSDK.CROSSxThemeConfig? = nil, debug: Swift.Bool = true)
+  public init(bundle: Foundation.Bundle = .main, projectId: Swift.String, appName: Swift.String, callbackScheme: Swift.String? = nil, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil, theme: CROSSxCoreSDK.CROSSxTheme = .system, themeTokens: CROSSxCoreSDK.CROSSxThemeConfig? = nil, debug: Swift.Bool = true)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public static func fromInfoPlist(projectId: Swift.String, bundle: Foundation.Bundle = .main, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil) throws -> CROSSxCoreSDK.SDKConfig
+  public static func fromInfoPlist(projectId: Swift.String, appName: Swift.String, bundle: Foundation.Bundle = .main, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil) throws -> CROSSxCoreSDK.SDKConfig
   #endif
   public static func defaultScheme(for projectId: Swift.String) -> Swift.String
 }
@@ -1213,6 +1230,9 @@ public struct CreateWalletRequest : Swift.Codable, Swift.Sendable {
 public struct CreateWalletResponse : Swift.Codable, Swift.Sendable {
   public let address: Swift.String
   public let shareC: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(address: Swift.String, shareC: Swift.String?)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1485,6 +1505,8 @@ public struct CROSSxSDKContext : Swift.Sendable {
   public let storage: any CROSSxCoreSDK.StoragePort
   public let passwordStore: any CROSSxCoreSDK.PasswordStorePort
   public let passwordPresenter: CROSSxCoreSDK.PasswordPresenter
+  public let migrationPresenter: CROSSxCoreSDK.MigrationPresenter
+  public let providerSubResolver: @Sendable () async throws -> Swift.String
   public let withdrawUseCase: CROSSxCoreSDK.WithdrawUseCase
   public let walletManagementUseCase: CROSSxCoreSDK.WalletManagementUseCase
   public let walletApiBaseUrl: Swift.String
@@ -1493,6 +1515,8 @@ public struct CROSSxSDKContext : Swift.Sendable {
 extension CROSSxCoreSDK.CROSSxSDK {
   final public func makePrivateContext() -> CROSSxCoreSDK.CROSSxSDKContext
 }
+extension CROSSxCoreSDK.MigrationPresenter.PromptResult : Swift.Equatable {}
+extension CROSSxCoreSDK.MigrationPresenter.PromptResult : Swift.Hashable {}
 extension CROSSxCoreSDK.TransactionConfirmationDetails.ActionType : Swift.Equatable {}
 extension CROSSxCoreSDK.TransactionConfirmationDetails.ActionType : Swift.Hashable {}
 extension CROSSxCoreSDK.HTTPMethod : Swift.Equatable {}

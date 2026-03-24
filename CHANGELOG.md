@@ -5,22 +5,24 @@ All notable changes to CROSSx iOS SDK will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2.1] - 2026-03-24
 
 ### Added
-- 🌍 **다국어(i18n) 지원 인프라** 도입
-  - `L10n` 헬퍼 타입 — `Bundle.module` + `NSLocalizedString` 기반 타입-세이프 문자열 접근
-  - `en.lproj/Localizable.strings` — 영어 기본 번역 (82개 키)
-  - `ko.lproj/Localizable.strings` — 한국어 번역 (82개 키)
-  - `Package.swift`에 `defaultLocalization: "en"` 설정 추가
-  - 새 언어 추가 시 `.lproj` 폴더만 추가하면 코드 변경 없이 지원 가능
+- **`SDKConfig.appName` 필수 항목 추가** — 서명 요청 다이얼로그에 표시할 앱 이름을 SDK 초기화 시 명시적으로 지정하도록 변경
+  - `init(projectId:appName:...)` 및 `fromInfoPlist(projectId:appName:...)` 모두 `appName` 파라미터 필수화
+  - 기존에 Bundle 자동 감지(`CFBundleDisplayName` / `CFBundleName`)에 의존하던 방식 대체
+- **`CreateWalletResponse` public init 추가** — 외부 모듈(`CROSSxPrivateSDK`)에서 직접 생성 가능하도록 `public init(address:shareC:)` 명시
 
 ### Changed
-- **UI 문자열 다국어 전환** — 6개 SwiftUI 뷰의 하드코딩 문자열을 `L10n` 호출로 전환
-  - `WalletSelectorView`, `TransactionConfirmView`, `LoginSelectionSheetView`
-  - `MigrationFoundView`, `MigrationPinInputView`, `MigrationPresenter`
-- **에러 메시지 다국어 전환** — `CROSSxError`, `OAuthError`, `TokenStoreError`의 `errorDescription`을 `L10n` 호출로 전환
-- **내부 로그 및 메시지 영문화** — `Log.d` 디버그 메시지 및 내부 문자열을 한국어에서 영어로 전환 (개발자용 로그는 다국어 대상 아님)
+- **서명 UI 앱 이름 표기** — `signTransaction`, `sendTransaction`, `sendTransactionAndWait`, `signMessage`, `signTypedData`, `signTypedDataOffchain` 호출 시 `dappName` 미지정이면 `SDKConfig.appName`을 기본값으로 사용
+- **`MigrationPresenter` 접근 수준 공개** — `CROSSxPrivateSDK`에서 재사용할 수 있도록 클래스 및 메서드에 `public` 접근 수준 추가
+
+### Fixed
+- **햅틱 피드백 누락 수정** — PIN·Migration·Consent UI 전반에 걸쳐 누락된 햅틱 피드백 추가
+  - `MigrationFoundView`: Recover / Skip 버튼 탭 시 햅틱 추가
+  - `MigrationPinInputView`: 숫자 입력 시 light, PIN 완성 시 success 햅틱 추가
+  - `PasswordConsentView`: 체크박스 토글 시 light, 최종 확인 버튼 시 success 햅틱 추가
+  - `PasswordInputView`: PIN 유효성 실패 시 error, 단계 전환·완성 시 success 햅틱 추가
 
 ### Added (v1.0.0 - 다중 체인 기반)
 - 🌐 **다중 체인 지원 아키텍처** 추가
