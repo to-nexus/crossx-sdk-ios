@@ -265,6 +265,9 @@ public enum L10n {
   public static var errorTokenExpired: Swift.String {
     get
   }
+  public static var errorSessionExpired: Swift.String {
+    get
+  }
   public static var errorUserRejected: Swift.String {
     get
   }
@@ -914,6 +917,7 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case notAuthenticated
   case authFailed(Swift.String)
   case tokenExpired
+  case sessionExpired
   case userRejected
   case signFailed(Swift.String)
   case transactionFailed(Swift.String)
@@ -1376,6 +1380,13 @@ public class ChainManagementUseCase {
   public func invalidateCache()
   @objc deinit
 }
+public class JWTSignInUseCase {
+  public init(crypto: any CROSSxCoreSDK.CryptoPort, storage: any CROSSxCoreSDK.StoragePort, tokenStore: CROSSxCoreSDK.TokenStore)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func execute(accessToken: Swift.String, refreshToken: Swift.String? = nil) async throws -> CROSSxCoreSDK.AuthResult
+  #endif
+  @objc deinit
+}
 public class MigrationCloudBackupUseCase {
   public init(cloudBackup: any CROSSxCoreSDK.CloudBackupPort)
   public func checkBackup(userId: Swift.String) async throws -> CROSSxCoreSDK.CloudBackupStatus
@@ -1387,13 +1398,6 @@ public class SignInUseCase {
   public func loadStoredToken() throws -> Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
   public func restoreSession() async throws -> CROSSxCoreSDK.AuthResult?
-  #endif
-  @objc deinit
-}
-public class JWTSignInUseCase {
-  public init(crypto: any CROSSxCoreSDK.CryptoPort, storage: any CROSSxCoreSDK.StoragePort, tokenStore: CROSSxCoreSDK.TokenStore)
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func execute(accessToken: Swift.String, refreshToken: Swift.String? = nil) async throws -> CROSSxCoreSDK.AuthResult
   #endif
   @objc deinit
 }
