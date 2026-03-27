@@ -434,6 +434,8 @@ final public class KeychainPasswordStoreAdapter : CROSSxCoreSDK.PasswordStorePor
   final public func loadPassword() async throws -> Swift.String?
   #endif
   final public func clearPassword() async throws
+  final public func isBiometricAvailable() -> Swift.Bool
+  final public func isBiometricEnabled() -> Swift.Bool
   @objc deinit
 }
 public enum PasswordStoreError : Foundation.LocalizedError {
@@ -651,9 +653,13 @@ public protocol PasswordStorePort : Swift.Sendable {
   func loadPassword() async throws -> Swift.String?
   #endif
   func clearPassword() async throws
+  func isBiometricAvailable() -> Swift.Bool
+  func isBiometricEnabled() -> Swift.Bool
 }
 extension CROSSxCoreSDK.PasswordStorePort {
   public func savePassword(_ password: Swift.String, useBiometric: Swift.Bool) async throws
+  public func isBiometricAvailable() -> Swift.Bool
+  public func isBiometricEnabled() -> Swift.Bool
 }
 public protocol StoragePort : Swift.Sendable {
   func save(_ data: Foundation.Data, forKey key: Swift.String) throws
@@ -755,14 +761,14 @@ public enum TokenStoreError : Foundation.LocalizedError, Swift.Sendable {
     get
   }
 }
-public enum LoginProvider : Swift.Equatable, Swift.Sendable {
+public enum SDKSignInProvider : Swift.Equatable, Swift.Sendable {
   case all
   case google
   case apple
   public var loginPath: Swift.String {
     get
   }
-  public static func == (a: CROSSxCoreSDK.LoginProvider, b: CROSSxCoreSDK.LoginProvider) -> Swift.Bool
+  public static func == (a: CROSSxCoreSDK.SDKSignInProvider, b: CROSSxCoreSDK.SDKSignInProvider) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -798,7 +804,35 @@ public struct SDKUserInfoData : Swift.Sendable {
 public struct SDKUserInfo : Swift.Sendable {
   public let status: Swift.String
   public let data: CROSSxCoreSDK.SDKUserInfoData
-  public init(status: Swift.String = "success", data: CROSSxCoreSDK.SDKUserInfoData)
+  public let loginType: Swift.String?
+  public let addresses: [CROSSxCoreSDK.WalletAddressInfo]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(status: Swift.String = "success", data: CROSSxCoreSDK.SDKUserInfoData, loginType: Swift.String? = nil, addresses: [CROSSxCoreSDK.WalletAddressInfo] = [])
+  #endif
+  public var id: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var email: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var provider: Swift.String? {
+    get
+  }
+  #endif
+  public var accessToken: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var idToken: Swift.String? {
+    get
+  }
+  #endif
+  public var sub: Swift.String {
+    get
+  }
 }
 public struct ChainMeta : Swift.Sendable {
   public let caip2: Swift.String
@@ -1122,11 +1156,11 @@ public struct SDKConfig : Swift.Sendable {
   public let appName: Swift.String
   public let callbackScheme: Swift.String
   public let httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig?
-  public let theme: CROSSxCoreSDK.CROSSxTheme
-  public let themeTokens: CROSSxCoreSDK.CROSSxThemeConfig?
+  public let theme: CROSSxCoreSDK.SDKThemeMode
+  public let themeTokens: CROSSxCoreSDK.SDKThemeTokens?
   public let debug: Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(bundle: Foundation.Bundle = .main, projectId: Swift.String, appName: Swift.String, callbackScheme: Swift.String? = nil, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil, theme: CROSSxCoreSDK.CROSSxTheme = .system, themeTokens: CROSSxCoreSDK.CROSSxThemeConfig? = nil, debug: Swift.Bool = true)
+  public init(bundle: Foundation.Bundle = .main, projectId: Swift.String, appName: Swift.String, callbackScheme: Swift.String? = nil, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil, theme: CROSSxCoreSDK.SDKThemeMode = .system, themeTokens: CROSSxCoreSDK.SDKThemeTokens? = nil, debug: Swift.Bool = true)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public static func fromInfoPlist(projectId: Swift.String, appName: Swift.String, bundle: Foundation.Bundle = .main, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil) throws -> CROSSxCoreSDK.SDKConfig
@@ -1151,7 +1185,7 @@ public struct SignTransactionResult : Swift.Sendable {
   public let txHash: Swift.String
   public init(chainId: Swift.String, signedTx: Swift.String, txHash: Swift.String)
 }
-public enum CROSSxTheme : Swift.String, Swift.Sendable {
+public enum SDKThemeMode : Swift.String, Swift.Sendable {
   case light
   case dark
   case system
@@ -1163,7 +1197,7 @@ public enum CROSSxTheme : Swift.String, Swift.Sendable {
     get
   }
 }
-public struct CROSSxThemeTokens : Swift.Sendable {
+public struct SDKColorOverrides : Swift.Sendable {
   public var primary: Swift.String?
   public var secondary: Swift.String?
   public var onPrimary: Swift.String?
@@ -1179,11 +1213,11 @@ public struct CROSSxThemeTokens : Swift.Sendable {
   public init(primary: Swift.String? = nil, secondary: Swift.String? = nil, onPrimary: Swift.String? = nil, borderDefault: Swift.String? = nil, borderSubtle: Swift.String? = nil, textPrimary: Swift.String? = nil, textSecondary: Swift.String? = nil, textTertiary: Swift.String? = nil, surfaceDefault: Swift.String? = nil, surfaceSubtle: Swift.String? = nil, background: Swift.String? = nil)
   #endif
 }
-public struct CROSSxThemeConfig : Swift.Sendable {
-  public var light: CROSSxCoreSDK.CROSSxThemeTokens?
-  public var dark: CROSSxCoreSDK.CROSSxThemeTokens?
+public struct SDKThemeTokens : Swift.Sendable {
+  public var light: CROSSxCoreSDK.SDKColorOverrides?
+  public var dark: CROSSxCoreSDK.SDKColorOverrides?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(light: CROSSxCoreSDK.CROSSxThemeTokens? = nil, dark: CROSSxCoreSDK.CROSSxThemeTokens? = nil)
+  public init(light: CROSSxCoreSDK.SDKColorOverrides? = nil, dark: CROSSxCoreSDK.SDKColorOverrides? = nil)
   #endif
 }
 public struct TransactionReceipt : Swift.Sendable, Swift.Decodable {
@@ -1438,7 +1472,7 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   final public let config: CROSSxCoreSDK.SDKConfig
   public init(config: CROSSxCoreSDK.SDKConfig) throws
   #if compiler(>=5.3) && $NonescapableTypes
-  final public func applyTheme(themeMode: CROSSxCoreSDK.CROSSxTheme? = nil, themeTokens: CROSSxCoreSDK.CROSSxThemeConfig? = nil)
+  final public func applyTheme(themeMode: CROSSxCoreSDK.SDKThemeMode? = nil, themeTokens: CROSSxCoreSDK.SDKThemeTokens? = nil)
   #endif
   @discardableResult
   final public func handleURL(_ url: Foundation.URL) -> Swift.Bool
@@ -1446,17 +1480,22 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   @discardableResult
   final public func initialize() async throws -> CROSSxCoreSDK.AuthResult?
   #endif
-  final public func signIn(provider: CROSSxCoreSDK.LoginProvider = .all) async throws -> CROSSxCoreSDK.AuthResult
+  final public func signIn(provider: CROSSxCoreSDK.SDKSignInProvider = .all) async throws -> CROSSxCoreSDK.AuthResult
+  final public func signInWithCreate(provider: CROSSxCoreSDK.SDKSignInProvider = .all) async throws -> CROSSxCoreSDK.AuthResult
   #if compiler(>=5.3) && $NonescapableTypes
   final public func signInWithJWT(accessToken: Swift.String, refreshToken: Swift.String? = nil) async throws -> CROSSxCoreSDK.AuthResult
   #endif
   final public func signOut() async throws
+  final public func refreshToken() async throws -> Swift.String
   final public func verifyPassword(_ password: Swift.String) async throws -> Swift.Bool
   final public func isLoggedIn() -> Swift.Bool
   final public func ensureLoggedIn() async -> Swift.Bool
   final public func getUserInfo() async throws -> CROSSxCoreSDK.SDKUserInfo
+  final public func canUseBiometric() -> Swift.Bool
+  final public func isBiometricEnabled() -> Swift.Bool
+  final public func setBiometricEnabled(_ enabled: Swift.Bool) async throws
   final public func checkWallet() async throws -> CROSSxCoreSDK.WalletCheckStatus
-  final public func createWallet() async throws -> CROSSxCoreSDK.CreateWalletResponse
+  final public func createWallet(migrateAutomatically: Swift.Bool = true) async throws -> CROSSxCoreSDK.CreateWalletResponse
   final public func getAddress(index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetAddressResponse
   final public func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1475,6 +1514,9 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   final public func sendTransactionAndWait(_ unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String, dappName: Swift.String? = nil, networkName: Swift.String? = nil, estimatedFee: Swift.String? = nil, amount: Swift.String? = nil, options: CROSSxCoreSDK.PollingOptions = PollingOptions()) async throws -> CROSSxCoreSDK.SendTransactionAndWaitResponse
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  final public func sendTransactionWithWaitForReceipt(_ unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String, dappName: Swift.String? = nil, networkName: Swift.String? = nil, estimatedFee: Swift.String? = nil, amount: Swift.String? = nil, timeoutMs: Swift.Int = 30_000, pollIntervalMs: Swift.Int = 1_000) async throws -> CROSSxCoreSDK.TransactionReceipt
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func signMessage(_ message: Swift.String, chainId: Swift.String, from: Swift.String? = nil, dappName: Swift.String? = nil, accountName: Swift.String = "Account") async throws -> CROSSxCoreSDK.SignMessageResponse
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1489,6 +1531,7 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   #if compiler(>=5.3) && $NonescapableTypes
   final public func signTypedDataOffchain(_ typedDataJSON: Foundation.Data, from: Swift.String? = nil, dappName: Swift.String? = nil, accountName: Swift.String = "Account") async throws -> CROSSxCoreSDK.SignTypedDataResponse
   #endif
+  final public func walletRpc(request: CROSSxCoreSDK.JsonRpcRequest, chainId: Swift.String) async throws -> Swift.String
   final public func getBalance(address: Swift.String, chainId: Swift.String, blockTag: Swift.String = "latest") async throws -> Swift.String
   final public func getTokenBalance(contractAddress: Swift.String, ownerAddress: Swift.String, chainId: Swift.String, blockTag: Swift.String = "latest") async throws -> Swift.String
   final public func getNonce(address: Swift.String, chainId: Swift.String, blockTag: Swift.String = "pending") async throws -> Swift.String
@@ -1502,6 +1545,7 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   #endif
   final public func estimateGas(_ unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String) async throws -> Swift.String
   final public func waitForTransaction(txHash: Swift.String, chainId: Swift.String, options: CROSSxCoreSDK.PollingOptions = PollingOptions()) async throws -> CROSSxCoreSDK.TransactionReceipt
+  final public func waitForTxAndGetReceipt(txHash: Swift.String, chainId: Swift.String, timeoutMs: Swift.Int = 30_000, pollIntervalMs: Swift.Int = 1_000) async throws -> CROSSxCoreSDK.TransactionReceipt
   @objc deinit
 }
 public struct CROSSxSDKContext : Swift.Sendable {
@@ -1528,13 +1572,13 @@ extension CROSSxCoreSDK.HTTPMethod : Swift.Hashable {}
 extension CROSSxCoreSDK.HTTPMethod : Swift.RawRepresentable {}
 extension CROSSxCoreSDK.TokenStoreError : Swift.Equatable {}
 extension CROSSxCoreSDK.TokenStoreError : Swift.Hashable {}
-extension CROSSxCoreSDK.LoginProvider : Swift.Hashable {}
+extension CROSSxCoreSDK.SDKSignInProvider : Swift.Hashable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.Equatable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.Hashable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.RawRepresentable {}
-extension CROSSxCoreSDK.CROSSxTheme : Swift.Equatable {}
-extension CROSSxCoreSDK.CROSSxTheme : Swift.Hashable {}
-extension CROSSxCoreSDK.CROSSxTheme : Swift.RawRepresentable {}
+extension CROSSxCoreSDK.SDKThemeMode : Swift.Equatable {}
+extension CROSSxCoreSDK.SDKThemeMode : Swift.Hashable {}
+extension CROSSxCoreSDK.SDKThemeMode : Swift.RawRepresentable {}
 extension CROSSxCoreSDK.WalletCheckStatus : Swift.Equatable {}
 extension CROSSxCoreSDK.WalletCheckStatus : Swift.Hashable {}
 extension CROSSxCoreSDK.WalletCheckStatus : Swift.RawRepresentable {}
