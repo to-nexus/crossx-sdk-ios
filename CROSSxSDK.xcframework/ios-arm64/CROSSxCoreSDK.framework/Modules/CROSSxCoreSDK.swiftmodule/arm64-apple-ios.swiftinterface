@@ -307,6 +307,15 @@ public enum L10n {
   public static var errorWalletInconsistentState: Swift.String {
     get
   }
+  public static var errorHmacSignatureMissing: Swift.String {
+    get
+  }
+  public static var errorHmacSignatureInvalid: Swift.String {
+    get
+  }
+  public static var errorHmacKeyNotConfigured: Swift.String {
+    get
+  }
   public static var oauthUserCancelled: Swift.String {
     get
   }
@@ -466,7 +475,7 @@ final public class ChainRepositoryAdapter : CROSSxCoreSDK.ChainRepositoryPort {
   @objc deinit
 }
 final public class WalletRepositoryAdapter : CROSSxCoreSDK.WalletRepositoryPort {
-  public init(apiBaseUrl: Swift.String, network: any CROSSxCoreSDK.NetworkPort, tokenStore: CROSSxCoreSDK.TokenStore)
+  public init(apiBaseUrl: Swift.String, network: any CROSSxCoreSDK.NetworkPort, tokenStore: CROSSxCoreSDK.TokenStore, hmacKeyHolder: CROSSxCoreSDK.HMACKeyHolder = HMACKeyHolder())
   final public func checkWallet() async throws -> CROSSxCoreSDK.WalletCheckStatus
   #if compiler(>=5.3) && $NonescapableTypes
   final public func createWallet(password: Swift.String, ignoreBackup: Swift.Bool? = nil) async throws -> CROSSxCoreSDK.CreateWalletResponse
@@ -479,6 +488,7 @@ final public class WalletRepositoryAdapter : CROSSxCoreSDK.WalletRepositoryPort 
   final public func signMessage(_ request: CROSSxCoreSDK.SignMessageRequest) async throws -> CROSSxCoreSDK.SignMessageResponse
   final public func signTypedData(_ request: CROSSxCoreSDK.SignTypedDataRequest, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTypedDataResponse
   final public func verifyPassword(_ password: Swift.String) async throws -> Swift.Bool
+  final public func recoverWallet(password: Swift.String, shareC: Swift.String) async throws -> CROSSxCoreSDK.RecoverWalletResponse
   final public func getShareC(password: Swift.String) async throws -> CROSSxCoreSDK.GetShareCResponse
   final public func withdrawWallet(password: Swift.String) async throws
   final public func verifyRecoveryPin(_ request: CROSSxCoreSDK.VerifyRecoveryPinRequest) async throws -> CROSSxCoreSDK.VerifyRecoveryPinResponse
@@ -683,6 +693,7 @@ public protocol WalletRepositoryPort : Swift.Sendable {
   func signMessage(_ request: CROSSxCoreSDK.SignMessageRequest) async throws -> CROSSxCoreSDK.SignMessageResponse
   func signTypedData(_ request: CROSSxCoreSDK.SignTypedDataRequest, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTypedDataResponse
   func getShareC(password: Swift.String) async throws -> CROSSxCoreSDK.GetShareCResponse
+  func recoverWallet(password: Swift.String, shareC: Swift.String) async throws -> CROSSxCoreSDK.RecoverWalletResponse
   func verifyPassword(_ password: Swift.String) async throws -> Swift.Bool
   func withdrawWallet(password: Swift.String) async throws
   func verifyRecoveryPin(_ request: CROSSxCoreSDK.VerifyRecoveryPinRequest) async throws -> CROSSxCoreSDK.VerifyRecoveryPinResponse
@@ -975,6 +986,9 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case walletInconsistentState
   case unsupportedChain(Swift.String)
   case invalidChainId(Swift.String)
+  case hmacSignatureMissing
+  case hmacSignatureInvalid
+  case hmacKeyNotConfigured
   case projectNotRegistered(Swift.String)
   case projectIdMissing
   case appIdentifierMissing
@@ -1117,7 +1131,6 @@ public struct MigrateWalletRequest : Swift.Codable, Swift.Sendable {
 }
 public struct MigrateWalletResponse : Swift.Codable, Swift.Sendable {
   public let address: Swift.String
-  public let shareC: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1149,6 +1162,16 @@ public struct PinLockInfo : Swift.Codable, Swift.Sendable {
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+final public class HMACKeyHolder : @unchecked Swift.Sendable {
+  public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public var key: Swift.String? {
+    get
+    set
+  }
+  #endif
+  @objc deinit
 }
 public struct SDKConfig : Swift.Sendable {
   public let bundle: Foundation.Bundle
@@ -1267,10 +1290,20 @@ public struct CreateWalletRequest : Swift.Codable, Swift.Sendable {
 }
 public struct CreateWalletResponse : Swift.Codable, Swift.Sendable {
   public let address: Swift.String
-  public let shareC: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(address: Swift.String, shareC: Swift.String?)
-  #endif
+  public init(address: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RecoverWalletRequest : Swift.Codable, Swift.Sendable {
+  public let password: Swift.String
+  public let shareC: Swift.String
+  public init(password: Swift.String, shareC: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RecoverWalletResponse : Swift.Codable, Swift.Sendable {
+  public let address: Swift.String
+  public let newShareC: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1448,6 +1481,7 @@ final public class WalletManagementUseCase : @unchecked Swift.Sendable {
   #endif
   final public func getAddress(password: Swift.String, index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetAddressResponse
   final public func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
+  final public func recoverWallet(password: Swift.String, shareC: Swift.String) async throws -> CROSSxCoreSDK.RecoverWalletResponse
   final public func getShareC(password: Swift.String) async throws -> CROSSxCoreSDK.GetShareCResponse
   final public func prepare(_ request: CROSSxCoreSDK.PrepareRequest) async throws -> CROSSxCoreSDK.PrepareResponse
   final public func signTransaction(uuid: Swift.String, password: Swift.String, unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTransactionResponse
@@ -1558,6 +1592,7 @@ public struct CROSSxSDKContext : Swift.Sendable {
   public let withdrawUseCase: CROSSxCoreSDK.WithdrawUseCase
   public let walletManagementUseCase: CROSSxCoreSDK.WalletManagementUseCase
   public let walletApiBaseUrl: Swift.String
+  public let hmacKeyHolder: CROSSxCoreSDK.HMACKeyHolder
   public let themeProvider: CROSSxCoreSDK.ThemeProvider
 }
 extension CROSSxCoreSDK.CROSSxSDK {

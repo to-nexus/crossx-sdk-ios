@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.5] - 2026-03-27
+
+민감 API에 HMAC 서명 미들웨어 추가, Share-C 기반 지갑 복구 API 신규, Create/Migrate 응답 변경.
+
+### Added
+- `POST /mnemonic/recover` — Share-C 기반 지갑 복구 API (`CROSSxPrivateSDK.recoverWallet(shareC:)`)
+- HMAC-SHA256 서명 미들웨어 — `withdraw`, `recover`, `share-c`, `change-password` API에 `X-HMAC-Signature` 헤더 자동 포함
+- `CROSSxPrivateSDK.init(sdk:hmacKey:)` — HMAC 키를 Private SDK 초기화 시 설정
+- `HMACKeyHolder` — thread-safe HMAC 키 공유 홀더
+- `CROSSxError.hmacSignatureMissing`, `.hmacSignatureInvalid`, `.hmacKeyNotConfigured` 에러 코드
+
+### Changed
+- `CreateWalletResponse`에서 `shareC` 필드 제거 (별도 `POST /mnemonic/share-c` 호출 필요)
+- `MigrateWalletResponse`에서 `shareC` 필드 제거
+- `SDKConfig`에서 `hmacKey` 제거 — Private SDK 전용으로 이동
+
+### Breaking Changes
+- `CROSSxPrivateSDK.init(sdk:)` → `CROSSxPrivateSDK.init(sdk:hmacKey:)` (hmacKey 파라미터 필수)
+- `CreateWalletResponse.shareC`, `MigrateWalletResponse.shareC` 제거
+
 ## [1.2.4] - 2026-03-27
 
 Android SDK API 통일을 위한 리네이밍 및 신규 API 추가.
