@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.6] - 2026-03-27
+
+`getUserInfo()`에 OAuth 제공자 고유 식별자(providerSub) 노출.
+
+### Added
+- `SDKUserInfoData.providerSub` — Google/Apple OAuth subject identifier 필드 추가
+- `SDKUserInfo.providerSub` — 편의 접근자 추가
+
 ## [1.2.5] - 2026-03-27
 
 민감 API에 HMAC 서명 미들웨어 추가, Share-C 기반 지갑 복구 API 신규, Create/Migrate 응답 변경.

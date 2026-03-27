@@ -808,8 +808,9 @@ public struct SDKUserInfoData : Swift.Sendable {
   public let idToken: Swift.String?
   public let email: Swift.String?
   public let sub: Swift.String
+  public let providerSub: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(provider: Swift.String? = nil, accessToken: Swift.String, idToken: Swift.String? = nil, email: Swift.String? = nil, sub: Swift.String)
+  public init(provider: Swift.String? = nil, accessToken: Swift.String, idToken: Swift.String? = nil, email: Swift.String? = nil, sub: Swift.String, providerSub: Swift.String? = nil)
   #endif
 }
 public struct SDKUserInfo : Swift.Sendable {
@@ -844,6 +845,11 @@ public struct SDKUserInfo : Swift.Sendable {
   public var sub: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var providerSub: Swift.String? {
+    get
+  }
+  #endif
 }
 public struct ChainMeta : Swift.Sendable {
   public let caip2: Swift.String
