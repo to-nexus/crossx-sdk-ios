@@ -348,7 +348,9 @@ public enum L10n {
   @objc deinit
 }
 final public class JWTDecodeAdapter : CROSSxCoreSDK.CryptoPort, @unchecked Swift.Sendable {
-  public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(jwksUrl: Swift.String? = nil, network: (any CROSSxCoreSDK.NetworkPort)? = nil)
+  #endif
   final public func verifyJWT(token: Swift.String) async throws -> CROSSxCoreSDK.JWTVerifyResult
   final public func decodeJWT(token: Swift.String) throws -> CROSSxCoreSDK.JWTPayload
   final public func encrypt(data: Foundation.Data, key: Foundation.Data) throws -> Foundation.Data
@@ -398,11 +400,11 @@ public enum NetworkError : Foundation.LocalizedError, Swift.Sendable {
   case invalidResponse
   case connectionFailed(Foundation.URLError)
   case unauthorized
-  case forbidden(body: Swift.String?)
+  case forbidden
   case notFound(Swift.String)
   case rateLimited
-  case serverError(statusCode: Swift.Int, body: Swift.String?)
-  case httpError(statusCode: Swift.Int, body: Swift.String?)
+  case serverError(statusCode: Swift.Int)
+  case httpError(statusCode: Swift.Int)
   case decodingFailed(Swift.String)
   case unknown(any Swift.Error)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -700,7 +702,10 @@ public protocol WalletRepositoryPort : Swift.Sendable {
   func migrateWallet(_ request: CROSSxCoreSDK.MigrateWalletRequest) async throws -> CROSSxCoreSDK.MigrateWalletResponse
 }
 public enum Log {
-  nonisolated(unsafe) public static var isEnabled: Swift.Bool
+  public static var isEnabled: Swift.Bool {
+    get
+    set
+  }
   public static func d(_ tag: Swift.String, _ message: @autoclosure () -> Swift.String)
 }
 @_hasMissingDesignatedInitializers final public class PasswordMemoryStore : CROSSxCoreSDK.PasswordStorePort, @unchecked Swift.Sendable {
@@ -1033,7 +1038,9 @@ public struct AddressInfo : Swift.Sendable {
   #endif
 }
 final public class HMACKeyHolder : @unchecked Swift.Sendable {
-  public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(storage: (any CROSSxCoreSDK.StoragePort)? = nil)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   final public var key: Swift.String? {
     get
@@ -1041,6 +1048,24 @@ final public class HMACKeyHolder : @unchecked Swift.Sendable {
   }
   #endif
   @objc deinit
+}
+public struct JWK : Swift.Codable, Swift.Sendable {
+  public let kty: Swift.String
+  public let kid: Swift.String?
+  public let alg: Swift.String?
+  public let use: Swift.String?
+  public let rsaModulus: Swift.String?
+  public let rsaExponent: Swift.String?
+  public let crv: Swift.String?
+  public let ecX: Swift.String?
+  public let ecY: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct JWKSet : Swift.Codable, Swift.Sendable {
+  public let keys: [CROSSxCoreSDK.JWK]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct JWTPayload : Swift.Codable, Swift.Sendable {
   public let sub: Swift.String

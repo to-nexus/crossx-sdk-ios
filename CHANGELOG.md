@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.2.8] - 2026-03-30
+
+보안 평가 리포트 기반 취약점 수정 및 JWKS 기반 JWT 서명 검증 구현.
+
+### Security Fixes (P0–P3)
+- **IOS-001**: `encrypt`/`decrypt`에 AES-GCM 실제 구현 추가
+- **IOS-002**: JWT 구조 검증 강화 (sub/iss claim 유효성 검사) 및 JWKS 기반 서명 검증 구현 (graceful degradation)
+- **IOS-005**: HMAC 키를 Keychain(StoragePort) 저장으로 전환
+- **IOS-007**: 로그에서 email·state·provider PII 리다크션
+- **IOS-010/011**: TokenStore 만료 처리 개선 및 세션 복원 시 JWT exp claim 파싱
+- **IOS-012**: chainId path traversal 방어를 위한 형식 검증 추가
+- **IOS-013/REVIEW-005**: NetworkError에서 서버 응답 본문 제거
+- **IOS-015**: SignOut 시 Share-C 삭제 키 수정
+- **IOS-016**: getMnemonic/getPrivateKey에 HMAC 서명 추가
+- **IOS-017**: base64Decode의 위험한 UTF-8 fallback 제거
+- **IOS-018**: Keychain accessibility를 `kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly`로 강화
+- **IOS-019**: PIN 재시도 시 2초 클라이언트 측 지연 추가
+- **IOS-020**: `Log.isEnabled`를 NSLock 기반 thread-safe 접근으로 변경
+- **IOS-021**: HMACKeyHolder `@unchecked Sendable` thread-safety 문서화
+- **IOS-022**: BSC RPC URL에서 API 키(hex 접미사) 제거
+
+### Added
+- `JWK`, `JWKSet` 타입 (RFC 7517) — JWKS 기반 JWT 서명 검증 지원
+- RS256 (`SecKeyVerifySignature`) / ES256 (`CryptoKit P256`) 서명 검증
+- JWKS lazy fetch 및 메모리 캐싱
+
 ## [1.2.7] - 2026-03-30
 
 `CROSSxPrivateSDK.changePassword`를 UI 포함/미포함 두 가지 타입으로 분리.
