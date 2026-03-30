@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.7] - 2026-03-30
+
+`CROSSxPrivateSDK.changePassword`를 UI 포함/미포함 두 가지 타입으로 분리.
+
+### Added
+- `CROSSxPrivateSDK.changePassword(password:newPassword:)` — UI 없이 호출자가 비밀번호를 직접 전달하는 비밀번호 변경 API
+
+### Changed
+- 기존 `changePassword()` (파라미터 없음)는 그대로 PIN 팝업 UI를 표시하는 방식으로 유지
+
 ## [1.2.6] - 2026-03-27
 
 `getUserInfo()`에 OAuth 제공자 고유 식별자(providerSub) 노출.

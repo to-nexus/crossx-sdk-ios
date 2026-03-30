@@ -1032,6 +1032,16 @@ public struct AddressInfo : Swift.Sendable {
   public init(address: Swift.String, derivationPath: Swift.String, publicKey: Swift.String? = nil)
   #endif
 }
+final public class HMACKeyHolder : @unchecked Swift.Sendable {
+  public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public var key: Swift.String? {
+    get
+    set
+  }
+  #endif
+  @objc deinit
+}
 public struct JWTPayload : Swift.Codable, Swift.Sendable {
   public let sub: Swift.String
   public let providerSub: Swift.String?
@@ -1168,16 +1178,6 @@ public struct PinLockInfo : Swift.Codable, Swift.Sendable {
   #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-final public class HMACKeyHolder : @unchecked Swift.Sendable {
-  public init()
-  #if compiler(>=5.3) && $NonescapableTypes
-  final public var key: Swift.String? {
-    get
-    set
-  }
-  #endif
-  @objc deinit
 }
 public struct SDKConfig : Swift.Sendable {
   public let bundle: Foundation.Bundle
