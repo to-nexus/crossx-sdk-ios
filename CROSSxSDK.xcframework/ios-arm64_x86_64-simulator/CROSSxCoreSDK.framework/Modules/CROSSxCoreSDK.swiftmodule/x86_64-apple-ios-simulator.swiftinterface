@@ -319,6 +319,15 @@ public enum L10n {
   public static var errorHmacKeyNotConfigured: Swift.String {
     get
   }
+  public static var errorWalletAlreadyExists: Swift.String {
+    get
+  }
+  public static var errorWalletNotFound: Swift.String {
+    get
+  }
+  public static var errorOperationInProgress: Swift.String {
+    get
+  }
   public static var oauthUserCancelled: Swift.String {
     get
   }
@@ -726,6 +735,11 @@ public enum Log {
   final public func clearPassword() async throws
   @objc deinit
 }
+public enum SdkErrorMapper {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func mapBackendError(code: Swift.Int, message: Swift.String, rawJSON: [Swift.String : Any]? = nil) -> CROSSxCoreSDK.CROSSxError
+  #endif
+}
 public actor TokenStore {
   #if compiler(>=5.3) && $NonescapableTypes
   public init(storage: (any CROSSxCoreSDK.StoragePort)? = nil, refreshHandler: @escaping (Swift.String, Swift.String) async throws -> CROSSxCoreSDK.RefreshResult)
@@ -990,9 +1004,18 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case networkError(any Swift.Error)
   case unknown(any Swift.Error)
   case notImplemented
-  case prepareFailed(Swift.String)
+  case requestBindingFailed(Swift.String)
+  case internalServerError(Swift.String)
+  case walletAlreadyExists
+  case walletNotFound
+  case signerCommunicationFailed(Swift.String)
+  case broadcastFailed(Swift.String)
+  case operationInProgress
+  case addressNotFoundInCache(Swift.String)
+  case withdrawFailed(Swift.String)
+  case prepareFailed(code: Swift.Int, message: Swift.String)
   case prepareExpired
-  case prepareMismatch(Swift.String)
+  case prepareMismatch(code: Swift.Int, message: Swift.String)
   case migrationBackupExists
   case migrationFailed(Swift.String)
   case migrationSkipped
@@ -1015,12 +1038,21 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case appIdentifierMissing
   case invalidAppType(Swift.String)
   case domainChainIdMismatch(Swift.String)
+  case apiError(code: Swift.Int, message: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
   #endif
   public var errorCode: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var code: Swift.Int? {
+    get
+  }
+  #endif
+  public var requiresSignOut: Swift.Bool {
     get
   }
 }
