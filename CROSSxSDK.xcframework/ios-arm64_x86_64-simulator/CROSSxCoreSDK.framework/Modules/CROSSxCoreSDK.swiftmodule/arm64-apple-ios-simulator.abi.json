@@ -4076,6 +4076,48 @@
           },
           {
             "kind": "Var",
+            "name": "errorPasswordRepeatedPattern",
+            "printedName": "errorPasswordRepeatedPattern",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK4L10nO28errorPasswordRepeatedPatternSSvpZ",
+            "mangledName": "$s13CROSSxCoreSDK4L10nO28errorPasswordRepeatedPatternSSvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK4L10nO28errorPasswordRepeatedPatternSSvgZ",
+                "mangledName": "$s13CROSSxCoreSDK4L10nO28errorPasswordRepeatedPatternSSvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "errorPasswordCancelled",
             "printedName": "errorPasswordCancelled",
             "children": [
@@ -8865,6 +8907,109 @@
             "declKind": "Func",
             "usr": "s:13CROSSxCoreSDK23WalletRepositoryAdapterC14verifyPasswordySbSSYaKF",
             "mangledName": "$s13CROSSxCoreSDK23WalletRepositoryAdapterC14verifyPasswordySbSSYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "changePassword",
+            "printedName": "changePassword(password:newPassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordResponse",
+                "printedName": "CROSSxCoreSDK.ChangePasswordResponse",
+                "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK23WalletRepositoryAdapterC14changePassword8password03newH0AA06ChangeH8ResponseVSS_SStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletRepositoryAdapterC14changePassword8password03newH0AA06ChangeH8ResponseVSS_SStYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportMnemonic",
+            "printedName": "exportMnemonic(password:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetMnemonicResponse",
+                "printedName": "CROSSxCoreSDK.GetMnemonicResponse",
+                "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK23WalletRepositoryAdapterC14exportMnemonic8passwordAA03GetH8ResponseVSS_tYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletRepositoryAdapterC14exportMnemonic8passwordAA03GetH8ResponseVSS_tYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportPrivateKey",
+            "printedName": "exportPrivateKey(password:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetPrivateKeyResponse",
+                "printedName": "CROSSxCoreSDK.GetPrivateKeyResponse",
+                "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK23WalletRepositoryAdapterC16exportPrivateKey8password5indexAA03GethI8ResponseVSS_SitYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletRepositoryAdapterC16exportPrivateKey8password5indexAA03GethI8ResponseVSS_SitYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -14971,6 +15116,114 @@
             "declKind": "Func",
             "usr": "s:13CROSSxCoreSDK20WalletRepositoryPortP13signTypedData_7chainIdAA04SignhI8ResponseVAA0lhI7RequestV_SStYaKF",
             "mangledName": "$s13CROSSxCoreSDK20WalletRepositoryPortP13signTypedData_7chainIdAA04SignhI8ResponseVAA0lhI7RequestV_SStYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.WalletRepositoryPort>",
+            "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.WalletRepositoryPort>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "changePassword",
+            "printedName": "changePassword(password:newPassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordResponse",
+                "printedName": "CROSSxCoreSDK.ChangePasswordResponse",
+                "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK20WalletRepositoryPortP14changePassword8password03newH0AA06ChangeH8ResponseVSS_SStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK20WalletRepositoryPortP14changePassword8password03newH0AA06ChangeH8ResponseVSS_SStYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.WalletRepositoryPort>",
+            "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.WalletRepositoryPort>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportMnemonic",
+            "printedName": "exportMnemonic(password:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetMnemonicResponse",
+                "printedName": "CROSSxCoreSDK.GetMnemonicResponse",
+                "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK20WalletRepositoryPortP14exportMnemonic8passwordAA03GetH8ResponseVSS_tYaKF",
+            "mangledName": "$s13CROSSxCoreSDK20WalletRepositoryPortP14exportMnemonic8passwordAA03GetH8ResponseVSS_tYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.WalletRepositoryPort>",
+            "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.WalletRepositoryPort>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportPrivateKey",
+            "printedName": "exportPrivateKey(password:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetPrivateKeyResponse",
+                "printedName": "CROSSxCoreSDK.GetPrivateKeyResponse",
+                "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK20WalletRepositoryPortP16exportPrivateKey8password5indexAA03GethI8ResponseVSS_SitYaKF",
+            "mangledName": "$s13CROSSxCoreSDK20WalletRepositoryPortP16exportPrivateKey8password5indexAA03GethI8ResponseVSS_SitYaKF",
             "moduleName": "CROSSxCoreSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CROSSxCoreSDK.WalletRepositoryPort>",
             "sugared_genericSig": "<Self where Self : CROSSxCoreSDK.WalletRepositoryPort>",
@@ -23626,6 +23879,46 @@
           },
           {
             "kind": "Var",
+            "name": "passwordRepeatedPattern",
+            "printedName": "passwordRepeatedPattern",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.CROSSxError.Type) -> CROSSxCoreSDK.CROSSxError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CROSSxError",
+                    "printedName": "CROSSxCoreSDK.CROSSxError",
+                    "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.CROSSxError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CROSSxError",
+                        "printedName": "CROSSxCoreSDK.CROSSxError",
+                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK0A5ErrorO23passwordRepeatedPatternyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK0A5ErrorO23passwordRepeatedPatternyA2CmF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "passwordCancelled",
             "printedName": "passwordCancelled",
             "children": [
@@ -30648,6 +30941,67 @@
                 "declKind": "Accessor",
                 "usr": "s:13CROSSxCoreSDK11PinLockInfoV17remainingAttemptsSivg",
                 "mangledName": "$s13CROSSxCoreSDK11PinLockInfoV17remainingAttemptsSivg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totalMaxAttempts",
+            "printedName": "totalMaxAttempts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK11PinLockInfoV16totalMaxAttemptsSiSgvp",
+            "mangledName": "$s13CROSSxCoreSDK11PinLockInfoV16totalMaxAttemptsSiSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK11PinLockInfoV16totalMaxAttemptsSiSgvg",
+                "mangledName": "$s13CROSSxCoreSDK11PinLockInfoV16totalMaxAttemptsSiSgvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -39174,8 +39528,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "verified",
-            "printedName": "verified",
+            "name": "valid",
+            "printedName": "valid",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -39185,8 +39539,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK22VerifyPasswordResponseV8verifiedSbvp",
-            "mangledName": "$s13CROSSxCoreSDK22VerifyPasswordResponseV8verifiedSbvp",
+            "usr": "s:13CROSSxCoreSDK22VerifyPasswordResponseV5validSbvp",
+            "mangledName": "$s13CROSSxCoreSDK22VerifyPasswordResponseV5validSbvp",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "HasStorage",
@@ -39208,8 +39562,69 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK22VerifyPasswordResponseV8verifiedSbvg",
-                "mangledName": "$s13CROSSxCoreSDK22VerifyPasswordResponseV8verifiedSbvg",
+                "usr": "s:13CROSSxCoreSDK22VerifyPasswordResponseV5validSbvg",
+                "mangledName": "$s13CROSSxCoreSDK22VerifyPasswordResponseV5validSbvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "passwordStatus",
+            "printedName": "passwordStatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CROSSxCoreSDK.PinLockInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PinLockInfo",
+                    "printedName": "CROSSxCoreSDK.PinLockInfo",
+                    "usr": "s:13CROSSxCoreSDK11PinLockInfoV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK22VerifyPasswordResponseV14passwordStatusAA11PinLockInfoVSgvp",
+            "mangledName": "$s13CROSSxCoreSDK22VerifyPasswordResponseV14passwordStatusAA11PinLockInfoVSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CROSSxCoreSDK.PinLockInfo?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PinLockInfo",
+                        "printedName": "CROSSxCoreSDK.PinLockInfo",
+                        "usr": "s:13CROSSxCoreSDK11PinLockInfoV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK22VerifyPasswordResponseV14passwordStatusAA11PinLockInfoVSgvg",
+                "mangledName": "$s13CROSSxCoreSDK22VerifyPasswordResponseV14passwordStatusAA11PinLockInfoVSgvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -39271,6 +39686,1136 @@
         "declKind": "Struct",
         "usr": "s:13CROSSxCoreSDK22VerifyPasswordResponseV",
         "mangledName": "$s13CROSSxCoreSDK22VerifyPasswordResponseV",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChangePasswordRequest",
+        "printedName": "ChangePasswordRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "password",
+            "printedName": "password",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV8passwordSSvp",
+            "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV8passwordSSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV8passwordSSvg",
+                "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV8passwordSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "newPassword",
+            "printedName": "newPassword",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV03newE0SSvp",
+            "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV03newE0SSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV03newE0SSvg",
+                "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV03newE0SSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(password:newPassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordRequest",
+                "printedName": "CROSSxCoreSDK.ChangePasswordRequest",
+                "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV8password03newE0ACSS_SStcfc",
+            "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV8password03newE0ACSS_SStcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordRequest",
+                "printedName": "CROSSxCoreSDK.ChangePasswordRequest",
+                "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV6encode2toys7Encoder_p_tKF",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13CROSSxCoreSDK21ChangePasswordRequestV",
+        "mangledName": "$s13CROSSxCoreSDK21ChangePasswordRequestV",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChangePasswordResponse",
+        "printedName": "ChangePasswordResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV7successSbvp",
+            "mangledName": "$s13CROSSxCoreSDK22ChangePasswordResponseV7successSbvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV7successSbvg",
+                "mangledName": "$s13CROSSxCoreSDK22ChangePasswordResponseV7successSbvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordResponse",
+                "printedName": "CROSSxCoreSDK.ChangePasswordResponse",
+                "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK22ChangePasswordResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK22ChangePasswordResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV",
+        "mangledName": "$s13CROSSxCoreSDK22ChangePasswordResponseV",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GetMnemonicRequest",
+        "printedName": "GetMnemonicRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "password",
+            "printedName": "password",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV8passwordSSvp",
+            "mangledName": "$s13CROSSxCoreSDK18GetMnemonicRequestV8passwordSSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV8passwordSSvg",
+                "mangledName": "$s13CROSSxCoreSDK18GetMnemonicRequestV8passwordSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(password:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetMnemonicRequest",
+                "printedName": "CROSSxCoreSDK.GetMnemonicRequest",
+                "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV8passwordACSS_tcfc",
+            "mangledName": "$s13CROSSxCoreSDK18GetMnemonicRequestV8passwordACSS_tcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetMnemonicRequest",
+                "printedName": "CROSSxCoreSDK.GetMnemonicRequest",
+                "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK18GetMnemonicRequestV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK18GetMnemonicRequestV6encode2toys7Encoder_p_tKF",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13CROSSxCoreSDK18GetMnemonicRequestV",
+        "mangledName": "$s13CROSSxCoreSDK18GetMnemonicRequestV",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GetMnemonicResponse",
+        "printedName": "GetMnemonicResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "mnemonic",
+            "printedName": "mnemonic",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV8mnemonicSSvp",
+            "mangledName": "$s13CROSSxCoreSDK19GetMnemonicResponseV8mnemonicSSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV8mnemonicSSvg",
+                "mangledName": "$s13CROSSxCoreSDK19GetMnemonicResponseV8mnemonicSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetMnemonicResponse",
+                "printedName": "CROSSxCoreSDK.GetMnemonicResponse",
+                "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK19GetMnemonicResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK19GetMnemonicResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV",
+        "mangledName": "$s13CROSSxCoreSDK19GetMnemonicResponseV",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GetPrivateKeyRequest",
+        "printedName": "GetPrivateKeyRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "password",
+            "printedName": "password",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV8passwordSSvp",
+            "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV8passwordSSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV8passwordSSvg",
+                "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV8passwordSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "index",
+            "printedName": "index",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV5indexSiSgvp",
+            "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV5indexSiSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV5indexSiSgvg",
+                "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV5indexSiSgvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(password:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetPrivateKeyRequest",
+                "printedName": "CROSSxCoreSDK.GetPrivateKeyRequest",
+                "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV8password5indexACSS_SiSgtcfc",
+            "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV8password5indexACSS_SiSgtcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetPrivateKeyRequest",
+                "printedName": "CROSSxCoreSDK.GetPrivateKeyRequest",
+                "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV6encode2toys7Encoder_p_tKF",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13CROSSxCoreSDK20GetPrivateKeyRequestV",
+        "mangledName": "$s13CROSSxCoreSDK20GetPrivateKeyRequestV",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GetPrivateKeyResponse",
+        "printedName": "GetPrivateKeyResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "privateKey",
+            "printedName": "privateKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV07privateF0SSvp",
+            "mangledName": "$s13CROSSxCoreSDK21GetPrivateKeyResponseV07privateF0SSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV07privateF0SSvg",
+                "mangledName": "$s13CROSSxCoreSDK21GetPrivateKeyResponseV07privateF0SSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetPrivateKeyResponse",
+                "printedName": "CROSSxCoreSDK.GetPrivateKeyResponse",
+                "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13CROSSxCoreSDK21GetPrivateKeyResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13CROSSxCoreSDK21GetPrivateKeyResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV",
+        "mangledName": "$s13CROSSxCoreSDK21GetPrivateKeyResponseV",
         "moduleName": "CROSSxCoreSDK",
         "declAttributes": [
           "AccessControl",
@@ -41966,6 +43511,109 @@
           },
           {
             "kind": "Function",
+            "name": "changePassword",
+            "printedName": "changePassword(password:newPassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordResponse",
+                "printedName": "CROSSxCoreSDK.ChangePasswordResponse",
+                "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK23WalletManagementUseCaseC14changePassword8password03newI0AA06ChangeI8ResponseVSS_SStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC14changePassword8password03newI0AA06ChangeI8ResponseVSS_SStYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportMnemonic",
+            "printedName": "exportMnemonic(password:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetMnemonicResponse",
+                "printedName": "CROSSxCoreSDK.GetMnemonicResponse",
+                "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK23WalletManagementUseCaseC14exportMnemonic8passwordAA03GetI8ResponseVSS_tYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC14exportMnemonic8passwordAA03GetI8ResponseVSS_tYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportPrivateKey",
+            "printedName": "exportPrivateKey(password:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetPrivateKeyResponse",
+                "printedName": "CROSSxCoreSDK.GetPrivateKeyResponse",
+                "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK23WalletManagementUseCaseC16exportPrivateKey8password5indexAA03GetiJ8ResponseVSS_SitYaKF",
+            "mangledName": "$s13CROSSxCoreSDK23WalletManagementUseCaseC16exportPrivateKey8password5indexAA03GetiJ8ResponseVSS_SitYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "verifyRecoveryPin",
             "printedName": "verifyRecoveryPin(_:)",
             "children": [
@@ -42647,6 +44295,109 @@
             "declKind": "Func",
             "usr": "s:13CROSSxCoreSDK0aC0C14verifyPasswordySbSSYaKF",
             "mangledName": "$s13CROSSxCoreSDK0aC0C14verifyPasswordySbSSYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "changePassword",
+            "printedName": "changePassword(password:newPassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordResponse",
+                "printedName": "CROSSxCoreSDK.ChangePasswordResponse",
+                "usr": "s:13CROSSxCoreSDK22ChangePasswordResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK0aC0C14changePassword8password03newE0AA06ChangeE8ResponseVSS_SStYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C14changePassword8password03newE0AA06ChangeE8ResponseVSS_SStYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportMnemonic",
+            "printedName": "exportMnemonic(password:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetMnemonicResponse",
+                "printedName": "CROSSxCoreSDK.GetMnemonicResponse",
+                "usr": "s:13CROSSxCoreSDK19GetMnemonicResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK0aC0C14exportMnemonic8passwordAA03GetE8ResponseVSS_tYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C14exportMnemonic8passwordAA03GetE8ResponseVSS_tYaKF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "exportPrivateKey",
+            "printedName": "exportPrivateKey(password:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetPrivateKeyResponse",
+                "printedName": "CROSSxCoreSDK.GetPrivateKeyResponse",
+                "usr": "s:13CROSSxCoreSDK21GetPrivateKeyResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK0aC0C16exportPrivateKey8password5indexAA03GeteF8ResponseVSS_SitYaKF",
+            "mangledName": "$s13CROSSxCoreSDK0aC0C16exportPrivateKey8password5indexAA03GeteF8ResponseVSS_SitYaKF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "Final",
@@ -45267,6 +47018,13 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Repository\/WalletRepositoryAdapter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15498,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Storage\/KeychainStorageAdapter.swift",
       "kind": "StringLiteral",
       "offset": 862,
@@ -46606,21 +48364,21 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 8053,
+      "offset": 9411,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "Array",
-      "offset": 8091,
+      "offset": 9449,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 8301,
+      "offset": 9659,
       "length": 1,
       "value": "1"
     },
@@ -46667,11 +48425,18 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/UseCases\/WalletManagementUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9926,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
       "offset": 443,
       "length": 7,
-      "value": "\"1.2.8\""
+      "value": "\"1.2.9\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
@@ -46710,162 +48475,169 @@
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21780,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 26205,
+      "offset": 27932,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 28122,
+      "offset": 29849,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 35303,
+      "offset": 37030,
       "length": 12,
       "value": "\"0x3B9ACA00\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 35388,
+      "offset": 37115,
       "length": 12,
       "value": "\"0x77359400\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 49201,
+      "offset": 50928,
       "length": 6,
       "value": "30000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 49239,
+      "offset": 50966,
       "length": 5,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 50484,
+      "offset": 52211,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 52108,
+      "offset": 53835,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 53384,
+      "offset": 55111,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 55052,
+      "offset": 56779,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 55999,
+      "offset": 57726,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 58841,
+      "offset": 60568,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 59957,
+      "offset": 61684,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 61317,
+      "offset": 63044,
       "length": 9,
       "value": "\"pending\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 64585,
+      "offset": 66312,
       "length": 22,
       "value": "\"eth_getBlockByNumber\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 64638,
+      "offset": 66365,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 64655,
+      "offset": 66382,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 64831,
+      "offset": 66558,
       "length": 59,
       "value": "\"getBaseFeePerGas failed: [\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 64871,
+      "offset": 66598,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 64889,
+      "offset": 66616,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 65002,
+      "offset": 66729,
       "length": 37,
       "value": "\"getBaseFeePerGas returned no result\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 69224,
+      "offset": 70951,
       "length": 6,
       "value": "30000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 69262,
+      "offset": 70989,
       "length": 5,
       "value": "1000"
     }

@@ -298,6 +298,9 @@ public enum L10n {
   public static var errorPasswordTooWeak: Swift.String {
     get
   }
+  public static var errorPasswordRepeatedPattern: Swift.String {
+    get
+  }
   public static var errorPasswordCancelled: Swift.String {
     get
   }
@@ -490,6 +493,9 @@ final public class WalletRepositoryAdapter : CROSSxCoreSDK.WalletRepositoryPort 
   final public func signMessage(_ request: CROSSxCoreSDK.SignMessageRequest) async throws -> CROSSxCoreSDK.SignMessageResponse
   final public func signTypedData(_ request: CROSSxCoreSDK.SignTypedDataRequest, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTypedDataResponse
   final public func verifyPassword(_ password: Swift.String) async throws -> Swift.Bool
+  final public func changePassword(password: Swift.String, newPassword: Swift.String) async throws -> CROSSxCoreSDK.ChangePasswordResponse
+  final public func exportMnemonic(password: Swift.String) async throws -> CROSSxCoreSDK.GetMnemonicResponse
+  final public func exportPrivateKey(password: Swift.String, index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetPrivateKeyResponse
   final public func recoverWallet(password: Swift.String, shareC: Swift.String) async throws -> CROSSxCoreSDK.RecoverWalletResponse
   final public func getShareC(password: Swift.String) async throws -> CROSSxCoreSDK.GetShareCResponse
   final public func withdrawWallet(password: Swift.String) async throws
@@ -694,6 +700,9 @@ public protocol WalletRepositoryPort : Swift.Sendable {
   func sendTransaction(uuid: Swift.String, password: Swift.String, unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String) async throws -> CROSSxCoreSDK.SendTransactionResponse
   func signMessage(_ request: CROSSxCoreSDK.SignMessageRequest) async throws -> CROSSxCoreSDK.SignMessageResponse
   func signTypedData(_ request: CROSSxCoreSDK.SignTypedDataRequest, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTypedDataResponse
+  func changePassword(password: Swift.String, newPassword: Swift.String) async throws -> CROSSxCoreSDK.ChangePasswordResponse
+  func exportMnemonic(password: Swift.String) async throws -> CROSSxCoreSDK.GetMnemonicResponse
+  func exportPrivateKey(password: Swift.String, index: Swift.Int) async throws -> CROSSxCoreSDK.GetPrivateKeyResponse
   func getShareC(password: Swift.String) async throws -> CROSSxCoreSDK.GetShareCResponse
   func recoverWallet(password: Swift.String, shareC: Swift.String) async throws -> CROSSxCoreSDK.RecoverWalletResponse
   func verifyPassword(_ password: Swift.String) async throws -> Swift.Bool
@@ -991,6 +1000,7 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case migrationPinLocked(CROSSxCoreSDK.PinLockInfo)
   case passwordWrong
   case passwordTooWeak
+  case passwordRepeatedPattern
   case passwordCancelled
   case passwordLocked(CROSSxCoreSDK.PinLockInfo)
   case biometricFailed
@@ -1193,6 +1203,7 @@ public struct PinLockInfo : Swift.Codable, Swift.Sendable {
   public let lockExpiresAt: Swift.Int
   public let maxAttempts: Swift.Int
   public let remainingAttempts: Swift.Int
+  public let totalMaxAttempts: Swift.Int?
   public var isLocked: Swift.Bool {
     get
   }
@@ -1415,7 +1426,45 @@ public struct VerifyPasswordRequest : Swift.Codable, Swift.Sendable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct VerifyPasswordResponse : Swift.Codable, Swift.Sendable {
-  public let verified: Swift.Bool
+  public let valid: Swift.Bool
+  public let passwordStatus: CROSSxCoreSDK.PinLockInfo?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ChangePasswordRequest : Swift.Codable, Swift.Sendable {
+  public let password: Swift.String
+  public let newPassword: Swift.String
+  public init(password: Swift.String, newPassword: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ChangePasswordResponse : Swift.Codable, Swift.Sendable {
+  public let success: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GetMnemonicRequest : Swift.Codable, Swift.Sendable {
+  public let password: Swift.String
+  public init(password: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GetMnemonicResponse : Swift.Codable, Swift.Sendable {
+  public let mnemonic: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GetPrivateKeyRequest : Swift.Codable, Swift.Sendable {
+  public let password: Swift.String
+  public let index: Swift.Int?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(password: Swift.String, index: Swift.Int? = nil)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GetPrivateKeyResponse : Swift.Codable, Swift.Sendable {
+  public let privateKey: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1520,6 +1569,9 @@ final public class WalletManagementUseCase : @unchecked Swift.Sendable {
   final public func signMessage(_ request: CROSSxCoreSDK.SignMessageRequest) async throws -> CROSSxCoreSDK.SignMessageResponse
   final public func signTypedData(_ request: CROSSxCoreSDK.SignTypedDataRequest, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTypedDataResponse
   final public func verifyPassword(_ password: Swift.String) async throws -> Swift.Bool
+  final public func changePassword(password: Swift.String, newPassword: Swift.String) async throws -> CROSSxCoreSDK.ChangePasswordResponse
+  final public func exportMnemonic(password: Swift.String) async throws -> CROSSxCoreSDK.GetMnemonicResponse
+  final public func exportPrivateKey(password: Swift.String, index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetPrivateKeyResponse
   final public func verifyRecoveryPin(_ request: CROSSxCoreSDK.VerifyRecoveryPinRequest) async throws -> CROSSxCoreSDK.VerifyRecoveryPinResponse
   final public func migrateWallet(_ request: CROSSxCoreSDK.MigrateWalletRequest) async throws -> CROSSxCoreSDK.MigrateWalletResponse
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1553,6 +1605,9 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   final public func signOut() async throws
   final public func refreshToken() async throws -> Swift.String
   final public func verifyPassword(_ password: Swift.String) async throws -> Swift.Bool
+  final public func changePassword(password: Swift.String, newPassword: Swift.String) async throws -> CROSSxCoreSDK.ChangePasswordResponse
+  final public func exportMnemonic(password: Swift.String) async throws -> CROSSxCoreSDK.GetMnemonicResponse
+  final public func exportPrivateKey(password: Swift.String, index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetPrivateKeyResponse
   final public func isLoggedIn() -> Swift.Bool
   final public func ensureLoggedIn() async -> Swift.Bool
   final public func getUserInfo() async throws -> CROSSxCoreSDK.SDKUserInfo

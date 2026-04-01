@@ -48,7 +48,7 @@ CROSSx iOS SDK는 OAuth 기반 인증과 Embedded Wallet 기능을 제공하는 
 2. File > Add Packages...
 3. 다음 URL 입력:
    ```
-   https://github.com/crosstoken/crossy-sdk-ios
+   https://github.com/to-nexus/crossx-sdk-ios
    ```
 4. 버전 선택 및 설치
 
@@ -56,7 +56,7 @@ CROSSx iOS SDK는 OAuth 기반 인증과 Embedded Wallet 기능을 제공하는 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/crosstoken/crossy-sdk-ios", from: "1.0.0")
+    .package(url: "https://github.com/to-nexus/crossx-sdk-ios", from: "1.0.0")
 ]
 ```
 
@@ -67,10 +67,10 @@ dependencies: [
 #### 간편 초기화 (권장)
 
 ```swift
-import CROSSxSDK
+import CROSSxCoreSDK
 
 // 가장 간단한 초기화
-let sdk = try CROSSx(config: SDKConfig(
+let sdk = try CROSSxSDK(config: SDKConfig(
     projectId: "your-project-id"
 ))
 
@@ -82,7 +82,7 @@ try await sdk.initialize()
 
 ```swift
 // Info.plist에서 엔드포인트를 읽고, projectId는 직접 전달
-let sdk = try CROSSx(config: SDKConfig.fromInfoPlist(projectId: "your-project-id"))
+let sdk = try CROSSxSDK(config: SDKConfig.fromInfoPlist(projectId: "your-project-id"))
 ```
 
 ### 2. Custom URL Scheme 설정
@@ -131,7 +131,7 @@ let chainId = ChainId.ethereumMainnet // "eip155:1"
 `signTransaction()` / `sendTransaction()` / `sendTransactionAndWait()` 호출 시 SDK가 자동으로 사용자 승인 다이얼로그를 표시합니다. DApp 개발자가 우회할 수 있는 공개 API는 없습니다.
 
 ```swift
-import CROSSxSDK
+import CROSSxCoreSDK
 
 do {
     let result = try await sdk.sendTransactionAndWait(
@@ -205,7 +205,7 @@ open CROSSxSample.xcworkspace
 CROSSx SDK는 **Clean Architecture + Hexagonal Architecture (Ports & Adapters)** 패턴을 사용합니다.
 
 ```
-Sources/CROSSxSDK/
+Sources/CROSSxCoreSDK/
  ├─ Core/          # 순수 비즈니스 로직
  │   ├─ UseCases/  # Use Cases
  │   ├─ Ports/     # Protocols (Ports)
@@ -264,9 +264,10 @@ L10n.swift (타입-세이프 헬퍼)
 crossy-sdk-ios-develop/          ← 이 레포 (개발)
   Package.swift                  ← CROSSxCoreSDK (iOS 15)
   Sources/CROSSxCoreSDK/
-  CrossWebAuthKit/               ← 독립 하위 패키지
-    Package.swift                ← CrossWebAuthKit (iOS 13)
-    Sources/CrossWebAuthKit/
+
+crossy-sdk-ios-webauthkit/       ← 별도 레포 (외부 의존성)
+  Package.swift                  ← CrossWebAuthKit (iOS 13)
+  Sources/CrossWebAuthKit/
 ```
 
 ### 릴리즈 절차
@@ -287,7 +288,7 @@ crossy-sdk-ios-develop/          ← 이 레포 (개발)
 # Sources/CROSSxCoreSDK/SDK/CROSSxSDK.swift
 public static let version = "1.x.x"
 
-# CrossWebAuthKit/Sources/CrossWebAuthKit/CrossWebAuthKit.swift
+# crossy-sdk-ios-webauthkit (별도 레포) Sources/CrossWebAuthKit/CrossWebAuthKit.swift
 public static let version = "1.x.x"
 ```
 
@@ -330,5 +331,5 @@ MIT License. 자세한 내용은 [LICENSE](LICENSE) 파일을 참고하세요.
 
 ---
 
-**버전**: 1.0.1  
-**최종 수정일**: 2026-03-13
+**버전**: 1.2.8  
+**최종 수정일**: 2026-03-31
