@@ -3824,48 +3824,6 @@
           },
           {
             "kind": "Var",
-            "name": "errorMigrationSkipped",
-            "printedName": "errorMigrationSkipped",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13CROSSxCoreSDK4L10nO21errorMigrationSkippedSSvpZ",
-            "mangledName": "$s13CROSSxCoreSDK4L10nO21errorMigrationSkippedSSvpZ",
-            "moduleName": "CROSSxCoreSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13CROSSxCoreSDK4L10nO21errorMigrationSkippedSSvgZ",
-                "mangledName": "$s13CROSSxCoreSDK4L10nO21errorMigrationSkippedSSvgZ",
-                "moduleName": "CROSSxCoreSDK",
-                "static": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "errorMigrationRequired",
             "printedName": "errorMigrationRequired",
             "children": [
@@ -7697,23 +7655,59 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init()",
+            "printedName": "init(biometricReuseDuration:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "KeychainPasswordStoreAdapter",
                 "printedName": "CROSSxCoreSDK.KeychainPasswordStoreAdapter",
                 "usr": "s:13CROSSxCoreSDK28KeychainPasswordStoreAdapterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK28KeychainPasswordStoreAdapterCACycfc",
-            "mangledName": "$s13CROSSxCoreSDK28KeychainPasswordStoreAdapterCACycfc",
+            "usr": "s:13CROSSxCoreSDK28KeychainPasswordStoreAdapterC22biometricReuseDurationACSd_tcfc",
+            "mangledName": "$s13CROSSxCoreSDK28KeychainPasswordStoreAdapterC22biometricReuseDurationACSd_tcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setBiometricReuseDuration",
+            "printedName": "setBiometricReuseDuration(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CROSSxCoreSDK28KeychainPasswordStoreAdapterC25setBiometricReuseDurationyySdF",
+            "mangledName": "$s13CROSSxCoreSDK28KeychainPasswordStoreAdapterC25setBiometricReuseDurationyySdF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -24363,46 +24357,6 @@
           },
           {
             "kind": "Var",
-            "name": "migrationSkipped",
-            "printedName": "migrationSkipped",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(CROSSxCoreSDK.CROSSxError.Type) -> CROSSxCoreSDK.CROSSxError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CROSSxError",
-                    "printedName": "CROSSxCoreSDK.CROSSxError",
-                    "usr": "s:13CROSSxCoreSDK0A5ErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "CROSSxCoreSDK.CROSSxError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CROSSxError",
-                        "printedName": "CROSSxCoreSDK.CROSSxError",
-                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:13CROSSxCoreSDK0A5ErrorO16migrationSkippedyA2CmF",
-            "mangledName": "$s13CROSSxCoreSDK0A5ErrorO16migrationSkippedyA2CmF",
-            "moduleName": "CROSSxCoreSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "migrationRequired",
             "printedName": "migrationRequired",
             "children": [
@@ -24489,6 +24443,59 @@
             "declKind": "EnumElement",
             "usr": "s:13CROSSxCoreSDK0A5ErrorO18migrationPinLockedyAcA0F8LockInfoVcACmF",
             "mangledName": "$s13CROSSxCoreSDK0A5ErrorO18migrationPinLockedyAcA0F8LockInfoVcACmF",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "migrationMaxIndexExceeded",
+            "printedName": "migrationMaxIndexExceeded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.CROSSxError.Type) -> (Swift.String) -> CROSSxCoreSDK.CROSSxError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> CROSSxCoreSDK.CROSSxError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CROSSxError",
+                        "printedName": "CROSSxCoreSDK.CROSSxError",
+                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.CROSSxError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CROSSxError",
+                        "printedName": "CROSSxCoreSDK.CROSSxError",
+                        "usr": "s:13CROSSxCoreSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK0A5ErrorO25migrationMaxIndexExceededyACSScACmF",
+            "mangledName": "$s13CROSSxCoreSDK0A5ErrorO25migrationMaxIndexExceededyACSScACmF",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "RawDocComment"
@@ -30883,9 +30890,69 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "maxIndex",
+            "printedName": "maxIndex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV8maxIndexSiSgvp",
+            "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV8maxIndexSiSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV8maxIndexSiSgvg",
+                "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV8maxIndexSiSgvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(recoveryPin:sub:password:)",
+            "printedName": "init(recoveryPin:sub:password:maxIndex:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -30910,11 +30977,26 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPin3sub8passwordACSS_S2Stcfc",
-            "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPin3sub8passwordACSS_S2Stcfc",
+            "usr": "s:13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPin3sub8password8maxIndexACSS_S2SSiSgtcfc",
+            "mangledName": "$s13CROSSxCoreSDK20MigrateWalletRequestV11recoveryPin3sub8password8maxIndexACSS_S2SSiSgtcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl"
@@ -31069,6 +31151,83 @@
                 "declKind": "Accessor",
                 "usr": "s:13CROSSxCoreSDK21MigrateWalletResponseV7addressSSvg",
                 "mangledName": "$s13CROSSxCoreSDK21MigrateWalletResponseV7addressSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addresses",
+            "printedName": "addresses",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[CROSSxCoreSDK.WalletAddressInfo]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CROSSxCoreSDK.WalletAddressInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WalletAddressInfo",
+                        "printedName": "CROSSxCoreSDK.WalletAddressInfo",
+                        "usr": "s:13CROSSxCoreSDK17WalletAddressInfoV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK21MigrateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvp",
+            "mangledName": "$s13CROSSxCoreSDK21MigrateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[CROSSxCoreSDK.WalletAddressInfo]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[CROSSxCoreSDK.WalletAddressInfo]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "WalletAddressInfo",
+                            "printedName": "CROSSxCoreSDK.WalletAddressInfo",
+                            "usr": "s:13CROSSxCoreSDK17WalletAddressInfoV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK21MigrateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvg",
+                "mangledName": "$s13CROSSxCoreSDK21MigrateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -36939,9 +37098,86 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "addresses",
+            "printedName": "addresses",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[CROSSxCoreSDK.WalletAddressInfo]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CROSSxCoreSDK.WalletAddressInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WalletAddressInfo",
+                        "printedName": "CROSSxCoreSDK.WalletAddressInfo",
+                        "usr": "s:13CROSSxCoreSDK17WalletAddressInfoV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK20CreateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvp",
+            "mangledName": "$s13CROSSxCoreSDK20CreateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[CROSSxCoreSDK.WalletAddressInfo]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[CROSSxCoreSDK.WalletAddressInfo]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "WalletAddressInfo",
+                            "printedName": "CROSSxCoreSDK.WalletAddressInfo",
+                            "usr": "s:13CROSSxCoreSDK17WalletAddressInfoV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK20CreateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvg",
+                "mangledName": "$s13CROSSxCoreSDK20CreateWalletResponseV9addressesSayAA0E11AddressInfoVGSgvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(address:)",
+            "printedName": "init(address:addresses:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -36954,11 +37190,34 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[CROSSxCoreSDK.WalletAddressInfo]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CROSSxCoreSDK.WalletAddressInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WalletAddressInfo",
+                        "printedName": "CROSSxCoreSDK.WalletAddressInfo",
+                        "usr": "s:13CROSSxCoreSDK17WalletAddressInfoV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK20CreateWalletResponseV7addressACSS_tcfc",
-            "mangledName": "$s13CROSSxCoreSDK20CreateWalletResponseV7addressACSS_tcfc",
+            "usr": "s:13CROSSxCoreSDK20CreateWalletResponseV7address9addressesACSS_SayAA0E11AddressInfoVGSgtcfc",
+            "mangledName": "$s13CROSSxCoreSDK20CreateWalletResponseV7address9addressesACSS_SayAA0E11AddressInfoVGSgtcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl"
@@ -47783,6 +48042,13 @@
       "value": "\"wallet_password\""
     },
     {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/KeychainPasswordStoreAdapter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1534,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordConsentView.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
@@ -49199,49 +49465,49 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5133,
+      "offset": 5343,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5156,
+      "offset": 5366,
       "length": 6,
       "value": "60000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5308,
+      "offset": 5518,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5376,
+      "offset": 5586,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 9411,
+      "offset": 9621,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "Array",
-      "offset": 9449,
+      "offset": 9659,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/WalletTypes.swift",
       "kind": "IntegerLiteral",
-      "offset": 9659,
+      "offset": 9869,
       "length": 1,
       "value": "1"
     },
@@ -49299,7 +49565,7 @@
       "kind": "StringLiteral",
       "offset": 443,
       "length": 7,
-      "value": "\"1.3.0\""
+      "value": "\"1.3.1\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
@@ -49346,161 +49612,161 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 27990,
+      "offset": 27931,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 29907,
+      "offset": 29848,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 37088,
+      "offset": 37029,
       "length": 12,
       "value": "\"0x3B9ACA00\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 37173,
+      "offset": 37114,
       "length": 12,
       "value": "\"0x77359400\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 50986,
+      "offset": 50927,
       "length": 6,
       "value": "30000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 51024,
+      "offset": 50965,
       "length": 5,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 52269,
+      "offset": 52210,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 53893,
+      "offset": 53834,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 55169,
+      "offset": 55110,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 56837,
+      "offset": 56778,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 57784,
+      "offset": 57725,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 60626,
+      "offset": 60609,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 61742,
+      "offset": 61725,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 63102,
+      "offset": 63085,
       "length": 9,
       "value": "\"pending\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 66370,
+      "offset": 66353,
       "length": 22,
       "value": "\"eth_getBlockByNumber\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 66423,
+      "offset": 66406,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 66440,
+      "offset": 66423,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 66616,
+      "offset": 66599,
       "length": 59,
       "value": "\"getBaseFeePerGas failed: [\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 66656,
+      "offset": 66639,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 66674,
+      "offset": 66657,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 66787,
+      "offset": 66770,
       "length": 37,
       "value": "\"getBaseFeePerGas returned no result\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 71009,
+      "offset": 70992,
       "length": 6,
       "value": "30000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 71047,
+      "offset": 71030,
       "length": 5,
       "value": "1000"
     }

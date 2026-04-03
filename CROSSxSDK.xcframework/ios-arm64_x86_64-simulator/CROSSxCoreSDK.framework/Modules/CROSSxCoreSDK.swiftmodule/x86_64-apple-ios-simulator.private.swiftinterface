@@ -280,9 +280,6 @@ public enum L10n {
   public static var errorMigrationBackupExists: Swift.String {
     get
   }
-  public static var errorMigrationSkipped: Swift.String {
-    get
-  }
   public static var errorMigrationRequired: Swift.String {
     get
   }
@@ -450,7 +447,8 @@ public enum OAuthError : Foundation.LocalizedError, Swift.Sendable {
   #endif
 }
 final public class KeychainPasswordStoreAdapter : CROSSxCoreSDK.PasswordStorePort, @unchecked Swift.Sendable {
-  public init()
+  public init(biometricReuseDuration: Foundation.TimeInterval = 0)
+  final public func setBiometricReuseDuration(_ duration: Foundation.TimeInterval)
   final public func savePassword(_ password: Swift.String) async throws
   final public func savePassword(_ password: Swift.String, useBiometric: Swift.Bool) async throws
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1018,9 +1016,9 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case prepareMismatch(code: Swift.Int, message: Swift.String)
   case migrationBackupExists
   case migrationFailed(Swift.String)
-  case migrationSkipped
   case migrationRequired
   case migrationPinLocked(CROSSxCoreSDK.PinLockInfo)
+  case migrationMaxIndexExceeded(Swift.String)
   case passwordWrong
   case passwordTooWeak
   case passwordRepeatedPattern
@@ -1208,12 +1206,16 @@ public struct MigrateWalletRequest : Swift.Codable, Swift.Sendable {
   public let recoveryPin: Swift.String
   public let sub: Swift.String
   public let password: Swift.String
-  public init(recoveryPin: Swift.String, sub: Swift.String, password: Swift.String)
+  public let maxIndex: Swift.Int?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(recoveryPin: Swift.String, sub: Swift.String, password: Swift.String, maxIndex: Swift.Int? = nil)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct MigrateWalletResponse : Swift.Codable, Swift.Sendable {
   public let address: Swift.String
+  public let addresses: [CROSSxCoreSDK.WalletAddressInfo]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1364,7 +1366,10 @@ public struct CreateWalletRequest : Swift.Codable, Swift.Sendable {
 }
 public struct CreateWalletResponse : Swift.Codable, Swift.Sendable {
   public let address: Swift.String
-  public init(address: Swift.String)
+  public let addresses: [CROSSxCoreSDK.WalletAddressInfo]?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(address: Swift.String, addresses: [CROSSxCoreSDK.WalletAddressInfo]? = nil)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
