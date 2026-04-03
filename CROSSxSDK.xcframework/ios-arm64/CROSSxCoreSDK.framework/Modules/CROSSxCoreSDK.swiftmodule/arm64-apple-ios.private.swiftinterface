@@ -298,7 +298,7 @@ public enum L10n {
   public static var errorPasswordRepeatedPattern: Swift.String {
     get
   }
-  public static var errorPasswordCancelled: Swift.String {
+  public static var errorUserReject: Swift.String {
     get
   }
   public static var errorBiometricFailed: Swift.String {
@@ -1022,7 +1022,7 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case passwordWrong
   case passwordTooWeak
   case passwordRepeatedPattern
-  case passwordCancelled
+  case userReject
   case passwordLocked(CROSSxCoreSDK.PinLockInfo)
   case biometricFailed
   case walletInconsistentState
