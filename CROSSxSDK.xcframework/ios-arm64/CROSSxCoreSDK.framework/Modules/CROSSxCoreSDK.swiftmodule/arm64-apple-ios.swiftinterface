@@ -211,9 +211,6 @@ public enum L10n {
   public static var passwordIncorrect: Swift.String {
     get
   }
-  public static var pinLockedWarning: Swift.String {
-    get
-  }
   public static var biometricPrompt: Swift.String {
     get
   }
@@ -477,7 +474,8 @@ final public class PasswordPresenter : @unchecked Swift.Sendable {
   #if compiler(>=5.3) && $NonescapableTypes
   final public func showEnterPin(errorMessage: Swift.String? = nil) async throws -> Swift.String
   #endif
-  final public func showEnterPinAndExecute(execute: @escaping @Sendable (Swift.String) async throws -> Swift.Void) async throws
+  final public func showCreatePinAndExecute<T>(execute: @escaping @Sendable (Swift.String) async throws -> T) async throws -> T where T : Swift.Sendable
+  final public func showEnterPinAndExecute<T>(execute: @escaping @Sendable (Swift.String) async throws -> T) async throws -> T where T : Swift.Sendable
   @objc deinit
 }
 final public class ChainRepositoryAdapter : CROSSxCoreSDK.ChainRepositoryPort {
