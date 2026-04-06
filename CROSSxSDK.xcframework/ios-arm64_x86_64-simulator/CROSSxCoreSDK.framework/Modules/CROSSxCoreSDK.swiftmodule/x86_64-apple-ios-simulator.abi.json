@@ -48126,16 +48126,23 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordPresenter.swift",
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordInputView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10895,
+      "offset": 13411,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 11328,
+      "offset": 10993,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/PasswordPresenter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11426,
       "length": 5,
       "value": "false"
     },
@@ -49565,7 +49572,7 @@
       "kind": "StringLiteral",
       "offset": 443,
       "length": 7,
-      "value": "\"1.3.3\""
+      "value": "\"1.3.4\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
