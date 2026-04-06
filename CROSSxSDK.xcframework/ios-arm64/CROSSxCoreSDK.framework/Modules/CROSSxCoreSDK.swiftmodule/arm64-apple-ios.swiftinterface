@@ -993,6 +993,7 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case authFailed(Swift.String)
   case tokenExpired
   case sessionExpired
+  case accountMismatch
   case userRejected
   case signFailed(Swift.String)
   case transactionFailed(Swift.String)
@@ -1574,6 +1575,11 @@ public class MigrationCloudBackupUseCase {
   public func checkBackup(userId: Swift.String) async throws -> CROSSxCoreSDK.CloudBackupStatus
   @objc deinit
 }
+final public class SignInAgainUseCase {
+  public init(oauthServiceUrl: Swift.String, apiBaseUrl: Swift.String, callbackScheme: Swift.String, crypto: any CROSSxCoreSDK.CryptoPort, storage: any CROSSxCoreSDK.StoragePort, network: any CROSSxCoreSDK.NetworkPort, oauth: any CROSSxCoreSDK.OAuthPort, tokenStore: CROSSxCoreSDK.TokenStore)
+  final public func execute() async throws -> CROSSxCoreSDK.AuthResult
+  @objc deinit
+}
 public class SignInUseCase {
   public init(oauthServiceUrl: Swift.String, apiBaseUrl: Swift.String, callbackScheme: Swift.String, crypto: any CROSSxCoreSDK.CryptoPort, storage: any CROSSxCoreSDK.StoragePort, network: any CROSSxCoreSDK.NetworkPort, oauth: any CROSSxCoreSDK.OAuthPort, tokenStore: CROSSxCoreSDK.TokenStore)
   public func execute(loginPath: Swift.String = "/google") async throws -> CROSSxCoreSDK.AuthResult
@@ -1633,6 +1639,7 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   final public func initialize() async throws -> CROSSxCoreSDK.AuthResult?
   #endif
   final public func signIn(provider: CROSSxCoreSDK.SDKSignInProvider = .all) async throws -> CROSSxCoreSDK.AuthResult
+  final public func signInAgain() async throws -> CROSSxCoreSDK.AuthResult
   final public func signInWithCreate(provider: CROSSxCoreSDK.SDKSignInProvider = .all) async throws -> CROSSxCoreSDK.AuthResult
   #if compiler(>=5.3) && $NonescapableTypes
   final public func signInWithJWT(accessToken: Swift.String, refreshToken: Swift.String? = nil) async throws -> CROSSxCoreSDK.AuthResult
