@@ -199,6 +199,12 @@ public enum L10n {
   public static var pinIncorrect: Swift.String {
     get
   }
+  public static var pinFailureWarning: Swift.String {
+    get
+  }
+  public static var pinLockedNotice: Swift.String {
+    get
+  }
   public static var pinValidationConsecutive: Swift.String {
     get
   }
@@ -1605,7 +1611,7 @@ final public class WalletManagementUseCase : @unchecked Swift.Sendable {
   @objc deinit
 }
 public class WithdrawUseCase : @unchecked Swift.Sendable {
-  public init(walletRepository: any CROSSxCoreSDK.WalletRepositoryPort, crypto: any CROSSxCoreSDK.CryptoPort, storage: any CROSSxCoreSDK.StoragePort)
+  public init(walletRepository: any CROSSxCoreSDK.WalletRepositoryPort, storage: any CROSSxCoreSDK.StoragePort)
   public func execute(password: Swift.String) async throws
   @objc deinit
 }
