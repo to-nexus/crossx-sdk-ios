@@ -337,9 +337,6 @@ public enum L10n {
   public static var oauthSessionDeallocated: Swift.String {
     get
   }
-  public static var tokenStoreNoTokens: Swift.String {
-    get
-  }
 }
 @_hasMissingDesignatedInitializers final public class UIKitConfirmationAdapter : CROSSxCoreSDK.ConfirmationPort, @unchecked Swift.Sendable {
   final public func requestConfirmation(details: CROSSxCoreSDK.ConfirmationDetails) async throws
@@ -782,19 +779,6 @@ public struct RefreshResult : Swift.Sendable {
   #if compiler(>=5.3) && $NonescapableTypes
   public init(accessToken: Swift.String, refreshToken: Swift.String? = nil, expiresAt: Swift.Double? = nil)
   #endif
-}
-public enum TokenStoreError : Foundation.LocalizedError, Swift.Sendable {
-  case noTokensAvailable
-  #if compiler(>=5.3) && $NonescapableTypes
-  public var errorDescription: Swift.String? {
-    get
-  }
-  #endif
-  public static func == (a: CROSSxCoreSDK.TokenStoreError, b: CROSSxCoreSDK.TokenStoreError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
 }
 public enum SDKSignInProvider : Swift.Equatable, Swift.Sendable {
   case all
@@ -1733,8 +1717,6 @@ extension CROSSxCoreSDK.TransactionConfirmationDetails.ActionType : Swift.Hashab
 extension CROSSxCoreSDK.HTTPMethod : Swift.Equatable {}
 extension CROSSxCoreSDK.HTTPMethod : Swift.Hashable {}
 extension CROSSxCoreSDK.HTTPMethod : Swift.RawRepresentable {}
-extension CROSSxCoreSDK.TokenStoreError : Swift.Equatable {}
-extension CROSSxCoreSDK.TokenStoreError : Swift.Hashable {}
 extension CROSSxCoreSDK.SDKSignInProvider : Swift.Hashable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.Equatable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.Hashable {}
