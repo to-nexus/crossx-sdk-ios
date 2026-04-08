@@ -49601,7 +49601,7 @@
       "kind": "StringLiteral",
       "offset": 443,
       "length": 8,
-      "value": "\"1.3.11\""
+      "value": "\"1.3.12\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
