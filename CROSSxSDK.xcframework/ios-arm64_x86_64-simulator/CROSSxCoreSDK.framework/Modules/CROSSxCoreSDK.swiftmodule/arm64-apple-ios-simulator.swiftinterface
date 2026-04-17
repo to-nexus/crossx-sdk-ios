@@ -495,7 +495,6 @@ final public class WalletRepositoryAdapter : CROSSxCoreSDK.WalletRepositoryPort 
   #endif
   final public func getAddress(password: Swift.String, index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetAddressResponse
   final public func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
-  final public func setAddressNames(_ names: [CROSSxCoreSDK.AddressNameEntry]) async throws
   final public func prepare(_ request: CROSSxCoreSDK.PrepareRequest) async throws -> CROSSxCoreSDK.PrepareResponse
   final public func signTransaction(uuid: Swift.String, password: Swift.String, unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTransactionResponse
   final public func sendTransaction(uuid: Swift.String, password: Swift.String, unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String) async throws -> CROSSxCoreSDK.SendTransactionResponse
@@ -704,7 +703,6 @@ public protocol WalletRepositoryPort : Swift.Sendable {
   #endif
   func getAddress(password: Swift.String, index: Swift.Int) async throws -> CROSSxCoreSDK.GetAddressResponse
   func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
-  func setAddressNames(_ names: [CROSSxCoreSDK.AddressNameEntry]) async throws
   func prepare(_ request: CROSSxCoreSDK.PrepareRequest) async throws -> CROSSxCoreSDK.PrepareResponse
   func signTransaction(uuid: Swift.String, password: Swift.String, unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String) async throws -> CROSSxCoreSDK.SignTransactionResponse
   func sendTransaction(uuid: Swift.String, password: Swift.String, unsignedTx: CROSSxCoreSDK.UnsignedTransaction, chainId: Swift.String) async throws -> CROSSxCoreSDK.SendTransactionResponse
@@ -1010,7 +1008,6 @@ public enum CROSSxError : Foundation.LocalizedError, Swift.Sendable {
   case migrationRequired
   case migrationPinLocked(CROSSxCoreSDK.PinLockInfo)
   case migrationMaxIndexExceeded(Swift.String)
-  case invalidAddressName(Swift.String)
   case passwordWrong
   case passwordTooWeak
   case passwordRepeatedPattern
@@ -1387,23 +1384,13 @@ public struct GetAddressResponse : Swift.Codable, Swift.Sendable {
 public struct WalletAddressInfo : Swift.Codable, Swift.Sendable {
   public let address: Swift.String
   public let index: Swift.Int
-  public let name: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(address: Swift.String, index: Swift.Int, name: Swift.String? = nil)
-  #endif
+  public init(address: Swift.String, index: Swift.Int)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct GetAddressesResponse : Swift.Codable, Swift.Sendable {
   public let addresses: [CROSSxCoreSDK.WalletAddressInfo]
   public init(addresses: [CROSSxCoreSDK.WalletAddressInfo])
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct AddressNameEntry : Swift.Codable, Swift.Sendable {
-  public let address: Swift.String
-  public let name: Swift.String
-  public init(address: Swift.String, name: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1567,9 +1554,9 @@ public class ChainManagementUseCase {
   @objc deinit
 }
 public class JWTSignInUseCase {
-  public init(crypto: any CROSSxCoreSDK.CryptoPort, storage: any CROSSxCoreSDK.StoragePort, tokenStore: CROSSxCoreSDK.TokenStore)
+  public init(apiBaseUrl: Swift.String, crypto: any CROSSxCoreSDK.CryptoPort, storage: any CROSSxCoreSDK.StoragePort, network: any CROSSxCoreSDK.NetworkPort, tokenStore: CROSSxCoreSDK.TokenStore)
   #if compiler(>=5.3) && $NonescapableTypes
-  public func execute(accessToken: Swift.String, refreshToken: Swift.String? = nil) async throws -> CROSSxCoreSDK.AuthResult
+  public func execute(idToken: Swift.String, providerSub: Swift.String?, provider: Swift.String?) async throws -> CROSSxCoreSDK.AuthResult
   #endif
   @objc deinit
 }
@@ -1605,7 +1592,6 @@ final public class WalletManagementUseCase : @unchecked Swift.Sendable {
   #endif
   final public func getAddress(password: Swift.String, index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetAddressResponse
   final public func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
-  final public func setAddressNames(_ names: [CROSSxCoreSDK.AddressNameEntry]) async throws
   final public func recoverWallet(password: Swift.String, shareC: Swift.String) async throws -> CROSSxCoreSDK.RecoverWalletResponse
   final public func getShareC(password: Swift.String) async throws -> CROSSxCoreSDK.GetShareCResponse
   final public func prepare(_ request: CROSSxCoreSDK.PrepareRequest) async throws -> CROSSxCoreSDK.PrepareResponse
@@ -1646,7 +1632,7 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   final public func signInAgain() async throws -> CROSSxCoreSDK.AuthResult
   final public func signInWithCreate(provider: CROSSxCoreSDK.SDKSignInProvider = .all) async throws -> CROSSxCoreSDK.AuthResult
   #if compiler(>=5.3) && $NonescapableTypes
-  final public func signInWithJWT(accessToken: Swift.String, refreshToken: Swift.String? = nil) async throws -> CROSSxCoreSDK.AuthResult
+  final public func signInWithJWT(idToken: Swift.String, providerSub: Swift.String? = nil, provider: Swift.String? = nil) async throws -> CROSSxCoreSDK.AuthResult
   #endif
   final public func signOut() async throws
   final public func refreshToken() async throws -> Swift.String
@@ -1664,7 +1650,6 @@ public class WithdrawUseCase : @unchecked Swift.Sendable {
   final public func createWallet(migrateAutomatically: Swift.Bool = true) async throws -> CROSSxCoreSDK.CreateWalletResponse
   final public func getAddress(index: Swift.Int = 0) async throws -> CROSSxCoreSDK.GetAddressResponse
   final public func getAddresses() async throws -> CROSSxCoreSDK.GetAddressesResponse
-  final public func setAddressNames(_ names: [CROSSxCoreSDK.AddressNameEntry]) async throws
   #if compiler(>=5.3) && $NonescapableTypes
   final public func selectWallet(currentAddress: Swift.String? = nil) async throws -> CROSSxCoreSDK.WalletAddressInfo?
   #endif
