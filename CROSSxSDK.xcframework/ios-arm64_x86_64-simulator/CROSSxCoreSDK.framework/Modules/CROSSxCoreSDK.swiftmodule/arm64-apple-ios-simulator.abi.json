@@ -48632,15 +48632,8 @@
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/KeychainPasswordStoreAdapter.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1811,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Adapters\/Password\/KeychainPasswordStoreAdapter.swift",
       "kind": "IntegerLiteral",
-      "offset": 2130,
+      "offset": 1952,
       "length": 1,
       "value": "0"
     },
@@ -50196,7 +50189,7 @@
       "kind": "StringLiteral",
       "offset": 443,
       "length": 7,
-      "value": "\"2.0.1\""
+      "value": "\"2.0.2\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
