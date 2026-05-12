@@ -58,7 +58,7 @@ The sample app demonstrates the following features:
 
 | Feature | API |
 |---------|-----|
-| SDK Initialization | `SDKConfig.fromInfoPlist(projectId:)` |
+| SDK Initialization | `SDKConfig.fromInfoPlist(projectId:appName:)` |
 | Session Restore | `sdk.initialize()` |
 | OAuth Sign-In | `sdk.signIn()` |
 | Sign Out | `sdk.signOut()` |
@@ -85,7 +85,7 @@ end
 For production projects, specify a version instead of `:path`:
 
 ```ruby
-pod 'CROSSxSDK', '~> 1.0'
+pod 'CROSSxSDK', '~> 2.0'
 ```
 
 ## Configuration
@@ -158,4 +158,5 @@ pod install
 
 ---
 
-**Version**: 1.0
+**Version**: 2.0.3
+**Last updated**: 2026-05-12

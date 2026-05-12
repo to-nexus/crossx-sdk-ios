@@ -185,7 +185,7 @@ class MainViewController: UIViewController {
         activityIndicator.startAnimating()
         
         do {
-            let config = try SDKConfig.fromInfoPlist(projectId: "6ef9a259932d5e77cb1751e9dfcbe031")
+            let config = try SDKConfig.fromInfoPlist(projectId: "6ef9a259932d5e77cb1751e9dfcbe031", appName: "CROSSx Sample")
             sdk = try CROSSxSDK(config: config)
             AppDelegate.sdk = sdk
             
