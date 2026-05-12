@@ -238,18 +238,6 @@ The SDK uses Apple-standard `.strings` resources via `Bundle.module`.
 | English  | `en` | Default |
 | Korean   | `ko` | Supported |
 
-To force the SDK UI language regardless of the app/system language, pass `locale` to `SDKConfig`:
-
-```swift
-let sdk = try CROSSxSDK(config: SDKConfig(
-    projectId: "your-project-id",
-    appName: "Your App Name",
-    locale: .ko // or .en
-))
-```
-
-If `locale` is omitted or `nil`, the SDK follows Apple's standard localization fallback rules.
-
 To add a new language, place a `.lproj` folder in `Sources/CROSSxCoreSDK/Resources/` — no code changes required:
 
 ```
