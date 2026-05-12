@@ -32231,6 +32231,364 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "SDKLocale",
+        "printedName": "SDKLocale",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "en",
+            "printedName": "en",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.SDKLocale.Type) -> CROSSxCoreSDK.SDKLocale",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKLocale",
+                    "printedName": "CROSSxCoreSDK.SDKLocale",
+                    "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.SDKLocale.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SDKLocale",
+                        "printedName": "CROSSxCoreSDK.SDKLocale",
+                        "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK9SDKLocaleO2enyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO2enyA2CmF",
+            "moduleName": "CROSSxCoreSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "ko",
+            "printedName": "ko",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CROSSxCoreSDK.SDKLocale.Type) -> CROSSxCoreSDK.SDKLocale",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKLocale",
+                    "printedName": "CROSSxCoreSDK.SDKLocale",
+                    "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CROSSxCoreSDK.SDKLocale.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SDKLocale",
+                        "printedName": "CROSSxCoreSDK.SDKLocale",
+                        "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13CROSSxCoreSDK9SDKLocaleO2koyA2CmF",
+            "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO2koyA2CmF",
+            "moduleName": "CROSSxCoreSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "identifier",
+            "printedName": "identifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK9SDKLocaleO10identifierSSvp",
+            "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO10identifierSSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK9SDKLocaleO10identifierSSvg",
+                "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO10identifierSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CROSSxCoreSDK.SDKLocale?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKLocale",
+                    "printedName": "CROSSxCoreSDK.SDKLocale",
+                    "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13CROSSxCoreSDK9SDKLocaleO8rawValueACSgSS_tcfc",
+            "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO8rawValueACSgSS_tcfc",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK9SDKLocaleO8rawValueSSvp",
+            "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO8rawValueSSvp",
+            "moduleName": "CROSSxCoreSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK9SDKLocaleO8rawValueSSvg",
+                "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO8rawValueSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CROSSxCoreSDK.SDKLocale]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKLocale",
+                    "printedName": "CROSSxCoreSDK.SDKLocale",
+                    "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK9SDKLocaleO8allCasesSayACGvpZ",
+            "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO8allCasesSayACGvpZ",
+            "moduleName": "CROSSxCoreSDK",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CROSSxCoreSDK.SDKLocale]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SDKLocale",
+                        "printedName": "CROSSxCoreSDK.SDKLocale",
+                        "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK9SDKLocaleO8allCasesSayACGvgZ",
+                "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO8allCasesSayACGvgZ",
+                "moduleName": "CROSSxCoreSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13CROSSxCoreSDK9SDKLocaleO",
+        "mangledName": "$s13CROSSxCoreSDK9SDKLocaleO",
+        "moduleName": "CROSSxCoreSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CROSSxCoreSDK.SDKLocale]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SDKLocale",
+                        "printedName": "CROSSxCoreSDK.SDKLocale",
+                        "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "SDKConfig",
         "printedName": "SDKConfig",
         "children": [
@@ -32363,6 +32721,67 @@
                 "declKind": "Accessor",
                 "usr": "s:13CROSSxCoreSDK9SDKConfigV7appNameSSvg",
                 "mangledName": "$s13CROSSxCoreSDK9SDKConfigV7appNameSSvg",
+                "moduleName": "CROSSxCoreSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "locale",
+            "printedName": "locale",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CROSSxCoreSDK.SDKLocale?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKLocale",
+                    "printedName": "CROSSxCoreSDK.SDKLocale",
+                    "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13CROSSxCoreSDK9SDKConfigV6localeAA9SDKLocaleOSgvp",
+            "mangledName": "$s13CROSSxCoreSDK9SDKConfigV6localeAA9SDKLocaleOSgvp",
+            "moduleName": "CROSSxCoreSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CROSSxCoreSDK.SDKLocale?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SDKLocale",
+                        "printedName": "CROSSxCoreSDK.SDKLocale",
+                        "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13CROSSxCoreSDK9SDKConfigV6localeAA9SDKLocaleOSgvg",
+                "mangledName": "$s13CROSSxCoreSDK9SDKConfigV6localeAA9SDKLocaleOSgvg",
                 "moduleName": "CROSSxCoreSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -32629,7 +33048,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(bundle:projectId:appName:callbackScheme:httpNetwork:theme:themeTokens:debug:)",
+            "printedName": "init(bundle:projectId:appName:locale:callbackScheme:httpNetwork:theme:themeTokens:debug:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -32655,6 +33074,21 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CROSSxCoreSDK.SDKLocale?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKLocale",
+                    "printedName": "CROSSxCoreSDK.SDKLocale",
+                    "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -32717,8 +33151,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13CROSSxCoreSDK9SDKConfigV6bundle9projectId7appName14callbackScheme11httpNetwork5theme0N6Tokens5debugACSo8NSBundleC_S3SSgAA17HTTPNetworkConfigVSgAA12SDKThemeModeOAA0tO0VSgSbtcfc",
-            "mangledName": "$s13CROSSxCoreSDK9SDKConfigV6bundle9projectId7appName14callbackScheme11httpNetwork5theme0N6Tokens5debugACSo8NSBundleC_S3SSgAA17HTTPNetworkConfigVSgAA12SDKThemeModeOAA0tO0VSgSbtcfc",
+            "usr": "s:13CROSSxCoreSDK9SDKConfigV6bundle9projectId7appName6locale14callbackScheme11httpNetwork5theme0O6Tokens5debugACSo8NSBundleC_S2SAA9SDKLocaleOSgSSSgAA17HTTPNetworkConfigVSgAA12SDKThemeModeOAA0vP0VSgSbtcfc",
+            "mangledName": "$s13CROSSxCoreSDK9SDKConfigV6bundle9projectId7appName6locale14callbackScheme11httpNetwork5theme0O6Tokens5debugACSo8NSBundleC_S2SAA9SDKLocaleOSgSSSgAA17HTTPNetworkConfigVSgAA12SDKThemeModeOAA0vP0VSgSbtcfc",
             "moduleName": "CROSSxCoreSDK",
             "declAttributes": [
               "AccessControl",
@@ -32729,7 +33163,7 @@
           {
             "kind": "Function",
             "name": "fromInfoPlist",
-            "printedName": "fromInfoPlist(projectId:appName:bundle:httpNetwork:)",
+            "printedName": "fromInfoPlist(projectId:appName:bundle:locale:httpNetwork:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -32759,6 +33193,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "CROSSxCoreSDK.SDKLocale?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKLocale",
+                    "printedName": "CROSSxCoreSDK.SDKLocale",
+                    "usr": "s:13CROSSxCoreSDK9SDKLocaleO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "CROSSxCoreSDK.HTTPNetworkConfig?",
                 "children": [
                   {
@@ -32773,8 +33222,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13CROSSxCoreSDK9SDKConfigV13fromInfoPlist9projectId7appName6bundle11httpNetworkACSS_SSSo8NSBundleCAA17HTTPNetworkConfigVSgtKFZ",
-            "mangledName": "$s13CROSSxCoreSDK9SDKConfigV13fromInfoPlist9projectId7appName6bundle11httpNetworkACSS_SSSo8NSBundleCAA17HTTPNetworkConfigVSgtKFZ",
+            "usr": "s:13CROSSxCoreSDK9SDKConfigV13fromInfoPlist9projectId7appName6bundle6locale11httpNetworkACSS_SSSo8NSBundleCAA9SDKLocaleOSgAA17HTTPNetworkConfigVSgtKFZ",
+            "mangledName": "$s13CROSSxCoreSDK9SDKConfigV13fromInfoPlist9projectId7appName6bundle6locale11httpNetworkACSS_SSSo8NSBundleCAA9SDKLocaleOSgAA17HTTPNetworkConfigVSgtKFZ",
             "moduleName": "CROSSxCoreSDK",
             "static": true,
             "declAttributes": [
@@ -49956,21 +50405,21 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/SDKConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 4295,
+      "offset": 5072,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/SDKConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 6808,
+      "offset": 7770,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/Core\/Types\/SDKConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 6830,
+      "offset": 7792,
       "length": 1,
       "value": "3"
     },
@@ -50236,182 +50685,182 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "Array",
-      "offset": 12784,
+      "offset": 12860,
       "length": 12,
       "value": "[1007, 1008]"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "Array",
-      "offset": 12919,
+      "offset": 12995,
       "length": 16,
       "value": "[100, 101, 1001]"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 26542,
+      "offset": 26618,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 33616,
+      "offset": 33692,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 35588,
+      "offset": 35664,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 44309,
+      "offset": 44385,
       "length": 12,
       "value": "\"0x3B9ACA00\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 44394,
+      "offset": 44470,
       "length": 12,
       "value": "\"0x77359400\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 58207,
+      "offset": 58283,
       "length": 6,
       "value": "30000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 58245,
+      "offset": 58321,
       "length": 5,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 59490,
+      "offset": 59566,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 61114,
+      "offset": 61190,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 62390,
+      "offset": 62466,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 64058,
+      "offset": 64134,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 65005,
+      "offset": 65081,
       "length": 9,
       "value": "\"Account\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 67889,
+      "offset": 67965,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 69005,
+      "offset": 69081,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 70365,
+      "offset": 70441,
       "length": 9,
       "value": "\"pending\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 73633,
+      "offset": 73709,
       "length": 22,
       "value": "\"eth_getBlockByNumber\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 73686,
+      "offset": 73762,
       "length": 8,
       "value": "\"latest\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 73703,
+      "offset": 73779,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 73879,
+      "offset": 73955,
       "length": 59,
       "value": "\"getBaseFeePerGas failed: [\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 73919,
+      "offset": 73995,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 73937,
+      "offset": 74013,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "StringLiteral",
-      "offset": 74050,
+      "offset": 74126,
       "length": 37,
       "value": "\"getBaseFeePerGas returned no result\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 78272,
+      "offset": 78348,
       "length": 6,
       "value": "30000"
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 78310,
+      "offset": 78386,
       "length": 5,
       "value": "1000"
     }

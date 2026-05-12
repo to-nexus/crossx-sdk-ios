@@ -1242,20 +1242,39 @@ public struct PinLockInfo : Swift.Codable, Swift.Sendable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum SDKLocale : Swift.String, Swift.Sendable, Swift.CaseIterable {
+  case en
+  case ko
+  public var identifier: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias AllCases = [CROSSxCoreSDK.SDKLocale]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [CROSSxCoreSDK.SDKLocale] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public struct SDKConfig : Swift.Sendable {
   public let bundle: Foundation.Bundle
   public let projectId: Swift.String
   public let appName: Swift.String
+  public let locale: CROSSxCoreSDK.SDKLocale?
   public let callbackScheme: Swift.String
   public let httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig?
   public let theme: CROSSxCoreSDK.SDKThemeMode
   public let themeTokens: CROSSxCoreSDK.SDKThemeTokens?
   public let debug: Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(bundle: Foundation.Bundle = .main, projectId: Swift.String, appName: Swift.String, callbackScheme: Swift.String? = nil, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil, theme: CROSSxCoreSDK.SDKThemeMode = .system, themeTokens: CROSSxCoreSDK.SDKThemeTokens? = nil, debug: Swift.Bool = true)
+  public init(bundle: Foundation.Bundle = .main, projectId: Swift.String, appName: Swift.String, locale: CROSSxCoreSDK.SDKLocale? = nil, callbackScheme: Swift.String? = nil, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil, theme: CROSSxCoreSDK.SDKThemeMode = .system, themeTokens: CROSSxCoreSDK.SDKThemeTokens? = nil, debug: Swift.Bool = true)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public static func fromInfoPlist(projectId: Swift.String, appName: Swift.String, bundle: Foundation.Bundle = .main, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil) throws -> CROSSxCoreSDK.SDKConfig
+  public static func fromInfoPlist(projectId: Swift.String, appName: Swift.String, bundle: Foundation.Bundle = .main, locale: CROSSxCoreSDK.SDKLocale? = nil, httpNetwork: CROSSxCoreSDK.HTTPNetworkConfig? = nil) throws -> CROSSxCoreSDK.SDKConfig
   #endif
   public static func defaultScheme(for projectId: Swift.String) -> Swift.String
 }
@@ -1743,6 +1762,9 @@ extension CROSSxCoreSDK.SDKSignInProvider : Swift.Hashable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.Equatable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.Hashable {}
 extension CROSSxCoreSDK.PrepareAction : Swift.RawRepresentable {}
+extension CROSSxCoreSDK.SDKLocale : Swift.Equatable {}
+extension CROSSxCoreSDK.SDKLocale : Swift.Hashable {}
+extension CROSSxCoreSDK.SDKLocale : Swift.RawRepresentable {}
 extension CROSSxCoreSDK.SDKThemeMode : Swift.Equatable {}
 extension CROSSxCoreSDK.SDKThemeMode : Swift.Hashable {}
 extension CROSSxCoreSDK.SDKThemeMode : Swift.RawRepresentable {}
