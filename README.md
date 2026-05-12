@@ -6,7 +6,7 @@
 
 > 한국어 문서: [README.ko.md](README.ko.md)
 
-CROSSx iOS SDK provides OAuth-based authentication and Embedded Wallet functionality for iOS applications.
+CROSSx iOS SDK is a Swift SDK that provides OAuth-based authentication and Embedded Wallet functionality.
 
 ## Features
 
@@ -20,6 +20,7 @@ CROSSx iOS SDK provides OAuth-based authentication and Embedded Wallet functiona
 - **Biometric Authentication** — Face ID / Touch ID support for wallet unlock
 - **Theme Customization** — Light/Dark mode with custom color token overrides
 - **Localization (i18n)** — English (default) and Korean; extend with any `.lproj`
+- **Clean Architecture** — Testable and maintainable code structure
 - **Swift Concurrency** — Full async/await support
 - **Zero Dependencies** — Pure Swift/Foundation implementation
 
@@ -48,7 +49,7 @@ CROSSx iOS SDK provides OAuth-based authentication and Embedded Wallet functiona
 
 1. Open your project in Xcode
 2. Go to **File → Add Packages…**
-3. Enter the repository URL:
+3. Enter the distribution repository URL:
    ```
    https://github.com/to-nexus/crossx-sdk-ios
    ```
@@ -61,38 +62,6 @@ dependencies: [
     .package(url: "https://github.com/to-nexus/crossx-sdk-ios", from: "2.0.0")
 ]
 ```
-
-Then add the dependency to your target:
-
-```swift
-.target(
-    name: "YourApp",
-    dependencies: [
-        .product(name: "CROSSxSDK", package: "crossx-sdk-ios")
-    ]
-)
-```
-
-### CocoaPods
-
-Add the following to your `Podfile`:
-
-```ruby
-platform :ios, '15.0'
-
-target 'YourApp' do
-  use_frameworks!
-  pod 'CROSSxSDK'
-end
-```
-
-Then run:
-
-```bash
-pod install
-```
-
-> **Note**: After installation, always open the `.xcworkspace` file instead of `.xcodeproj`.
 
 ## Quick Start
 
@@ -194,7 +163,7 @@ let chainId = ChainId.ethereumMainnet // "eip155:1"
 
 ### 7. Transaction Confirmation Dialog
 
-When calling `signTransaction()`, `sendTransaction()`, or `sendTransactionAndWait()`, the SDK automatically displays a user approval dialog. There is no public API to bypass this.
+`signTransaction()`, `sendTransaction()`, and `sendTransactionAndWait()` automatically display a user approval dialog. There is no public API to bypass this.
 
 ```swift
 do {
@@ -213,7 +182,9 @@ do {
 try await sdk.signOut()
 ```
 
-## Biometric Authentication
+## Additional APIs
+
+### Biometric Authentication
 
 ```swift
 let available = sdk.canUseBiometric()
@@ -221,7 +192,13 @@ let enabled = sdk.isBiometricEnabled()
 try await sdk.setBiometricEnabled(true)
 ```
 
-## Theme Customization
+### Token Refresh
+
+```swift
+let newAccessToken = try await sdk.refreshToken()
+```
+
+### Theme Customization
 
 ```swift
 let sdk = try CROSSxSDK(config: SDKConfig(
@@ -238,6 +215,20 @@ let sdk = try CROSSxSDK(config: SDKConfig(
 sdk.applyTheme(.dark)
 ```
 
+## OAuth Flow
+
+```
+iOS SDK → Open ASWebAuthenticationSession
+  URL: {oauthServiceUrl}/google?redirectScheme={callbackScheme}
+
+OAuth Server → Callback via Deep Link
+  {callbackScheme}://{oauthHost}/?status=success&data={base64}
+
+SDK → base64 decode → extract token → JWT verification → done
+```
+
+> On web, `window.open()` + `postMessage` is used instead.
+
 ## Localization (i18n)
 
 The SDK uses Apple-standard `.strings` resources via `Bundle.module`.
@@ -247,17 +238,38 @@ The SDK uses Apple-standard `.strings` resources via `Bundle.module`.
 | English  | `en` | Default |
 | Korean   | `ko` | Supported |
 
-To add a new language, place a `.lproj` folder in the SDK's `Resources/` directory — no code changes required.
+To add a new language, place a `.lproj` folder in `Sources/CROSSxCoreSDK/Resources/` — no code changes required:
 
-## Token Refresh
-
-```swift
-let newAccessToken = try await sdk.refreshToken()
+```
+Sources/CROSSxCoreSDK/Resources/
+  ├── en.lproj/Localizable.strings
+  ├── ko.lproj/Localizable.strings
+  └── ja.lproj/Localizable.strings   ← add new language here
 ```
 
-## Example Apps
+## Architecture
 
-**Swift Package Manager / Tuist:**
+CROSSx SDK uses **Clean Architecture + Hexagonal Architecture (Ports & Adapters)**.
+
+```
+Sources/CROSSxCoreSDK/
+ ├─ Core/          # Pure business logic
+ │   ├─ UseCases/  # Use Cases
+ │   ├─ Ports/     # Protocols (Ports)
+ │   └─ Types/     # Domain types
+ │
+ ├─ Adapters/      # Platform implementations
+ │   ├─ Crypto/
+ │   ├─ Storage/
+ │   ├─ OAuth/
+ │   └─ ...
+ │
+ └─ SDK/           # Public API
+     └─ CROSSxSDK.swift
+```
+
+## Example App
+
 ```bash
 cd Examples/CROSSxSample
 tuist install
@@ -265,14 +277,81 @@ tuist generate
 open CROSSxSample.xcworkspace
 ```
 
-**CocoaPods:**
+See [Examples/CROSSxSample/README.md](Examples/CROSSxSample/README.md) for details.
+
+## Documentation
+
+- [Architecture Guide](doc/01-architecture.md)
+- [Authentication](doc/02-authentication.md)
+- [Token Management](doc/03-token-management.md)
+- [Chain & Network](doc/04-chain-network.md)
+- [Wallet & Transaction](doc/05-wallet-transaction.md)
+- [Gas & Fee](doc/06-gas-fee.md)
+- [API Reference](doc/07-api-reference.md)
+- [Cross-Platform](doc/08-cross-platform.md)
+- [Environment Config](doc/09-environment-config.md)
+- [CrossWebAuthKit Relationship](doc/10-crosswebauth-relationship.md)
+- [Password & Private SDK](doc/11-password-private-sdk.md)
+- [Localization (i18n)](doc/12-localization-i18n.md)
+
+## Release
+
+### Repository Structure
+
+| Repository | Role |
+|---|---|
+| `crossy-sdk-ios-develop` | Source development, tests, CI/CD (this repo) |
+| `crossx-sdk-ios` | xcframework binary distribution (SPM / CocoaPods) |
+
+### Release Process
+
+#### 1. Update CHANGELOG.md
+
+Move the `[Unreleased]` section content to a versioned release entry.
+
+#### 2. Update version constant and commit
+
 ```bash
-cd Examples/CROSSxSampleCocoapods
-ruby setup.rb
-pod install
-open CROSSxSampleCocoapods.xcworkspace
+# Sources/CROSSxCoreSDK/SDK/CROSSxSDK.swift
+public static let version = "x.y.z"
 ```
+
+```bash
+git add -A && git commit -m "chore: version x.y.z"
+```
+
+#### 3. Create and push a release tag
+
+```bash
+./scripts/tag-release.sh patch    # x.y.0 → x.y.1
+./scripts/tag-release.sh minor    # x.0.z → x.1.0
+./scripts/tag-release.sh x.y.z   # explicit version
+./scripts/tag-release.sh beta     # auto-increment beta (e.g. 2.0.3-beta.2)
+./scripts/tag-release.sh 2.0.3-beta.1  # explicit beta
+```
+
+After the tag is pushed, GitHub Actions automatically:
+1. Runs all tests (`CROSSxCoreSDK` + `CrossWebAuthKit`)
+2. Builds xcframeworks (`CROSSxSDK.xcframework`, `CrossWebAuthKit.xcframework`)
+3. Copies xcframeworks to the distribution repo (`crossx-sdk-ios`) and updates version
+4. Creates GitHub Releases in both repositories
+
+Beta tags are created as GitHub prereleases and are not marked as the latest release. When installing a beta, specify the exact version in both Swift Package Manager and CocoaPods.
+
+> See [DEPLOYMENT.md](DEPLOYMENT.md) for full details.
+
+### Scripts
+
+| Script | Description |
+|---|---|
+| `./scripts/tag-release.sh [patch\|minor\|major\|beta\|x.y.z]` | Create and push a release/beta tag |
+| `./scripts/update-version.sh <version> <deploy_repo>` | Batch version update + xcframework copy (CI use) |
 
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+**Version**: 2.0.3
+**Last updated**: 2026-05-12

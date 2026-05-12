@@ -4,13 +4,13 @@ import PackageDescription
 let package = Package(
     name: "CROSSxSDK",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v15),
         .macOS(.v12)
     ],
     products: [
         .library(
             name: "CROSSxSDK",
-            targets: ["CROSSxCoreSDK", "CrossWebAuthKit"]
+            targets: ["CROSSxCoreSDK", "CROSSxCoreSDKResources", "CrossWebAuthKit"]
         ),
         .library(
             name: "CrossWebAuthKit",
@@ -21,6 +21,13 @@ let package = Package(
         .binaryTarget(
             name: "CROSSxCoreSDK",
             path: "CROSSxSDK.xcframework"
+        ),
+        .target(
+            name: "CROSSxCoreSDKResources",
+            path: "Resources/CROSSxCoreSDKResources",
+            resources: [
+                .process("Resources")
+            ]
         ),
         .binaryTarget(
             name: "CrossWebAuthKit",
