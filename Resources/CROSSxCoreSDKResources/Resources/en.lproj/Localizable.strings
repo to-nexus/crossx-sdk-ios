@@ -4,19 +4,19 @@
 // MARK: - Wallet Selector
 // =============================================================================
 
-"wallet_selector.title" = "Select Connected Wallet";
+"wallet_selector.title" = "Select Wallet";
 "wallet_selector.description" = "Please select the wallet you previously used for this game to continue.";
 "wallet_selector.close" = "Close";
 "wallet_selector.info_title" = "Why do I need to select a wallet?";
 "wallet_selector.info_description" = "Identifying your previously linked wallet ensures your game progress and assets are synced correctly.";
 "wallet_selector.selected_badge" = "Selected";
-"wallet_selector.add_wallet" = "add a wallet";
+"wallet_selector.add_wallet" = "Add Wallet";
 
 // =============================================================================
 // MARK: - Transaction Confirm
 // =============================================================================
 
-"tx_confirm.approve_title" = "Approve transaction";
+"tx_confirm.approve_title" = "Send Transaction";
 "tx_confirm.approve_description_format" = "%@ wants your permission to approve the following transaction.";
 "tx_confirm.approve_button" = "Approve";
 "tx_confirm.label_to" = "To";
@@ -43,7 +43,7 @@
 "tx_flow.sending_message" = "Processing your transaction...";
 "tx_flow.waiting_title" = "Waiting for confirmation";
 "tx_flow.waiting_message" = "Waiting for transaction receipt...";
-"tx_flow.complete_title" = "Transaction complete";
+"tx_flow.complete_title" = "Transaction completed";
 "tx_flow.failed_title" = "Transaction failed";
 "tx_flow.done_button" = "Done";
 "tx_flow.all_done_button" = "All Done";
@@ -110,15 +110,15 @@
 // MARK: - Migration
 // =============================================================================
 
-"migration.found_title" = "Wallet Found on Social Account 🎉";
-"migration.found_subtitle" = "We found a wallet linked to your social account.\nEnter your 4-digit PIN to restore your assets.";
+"migration.found_title" = "Existing Wallet Found";
+"migration.found_subtitle" = "An existing CROSSx wallet was found. Would you like to recover it?";
 "migration.recovery_title" = "What is a Recovery Wallet?";
 "migration.recovery_description" = "It safely restores and integrates all your previous assets. Simply verify your PIN to get started.";
-"migration.recover_button" = "Import from Social Backup";
-"migration.skip_button" = "Skip for Now";
-"migration.pin_title" = "Recover My Wallet";
+"migration.recover_button" = "Recover";
+"migration.skip_button" = "Skip";
+"migration.pin_title" = "Enter PIN";
 "migration.pin_loading" = "Recovering wallet...";
-"migration.pin_helper" = "Enter your 4-digit PIN to recover your wallet.";
+"migration.pin_helper" = "Enter your 4-digit PIN";
 "migration.pin_incorrect" = "Incorrect PIN. Please try again.";
 "migration.pin_remaining_attempts" = "Incorrect PIN. %d attempt(s) remaining.";
 "migration.pin_failure_warning" = "Your account will be locked after further failures.";
