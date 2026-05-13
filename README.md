@@ -238,6 +238,18 @@ The SDK uses Apple-standard `.strings` resources via `Bundle.module`.
 | English  | `en` | Default |
 | Korean   | `ko` | Supported |
 
+To force the SDK UI language regardless of the app/system language, pass `locale` to `SDKConfig`:
+
+```swift
+let sdk = try CROSSxSDK(config: SDKConfig(
+    projectId: "your-project-id",
+    appName: "Your App Name",
+    locale: .ko // or .en
+))
+```
+
+If `locale` is omitted or `nil`, the SDK follows Apple's standard localization fallback rules.
+
 To add a new language, place a `.lproj` folder in `Sources/CROSSxCoreSDK/Resources/` — no code changes required:
 
 ```
@@ -327,6 +339,7 @@ git add -A && git commit -m "chore: version x.y.z"
 ./scripts/tag-release.sh minor    # x.0.z → x.1.0
 ./scripts/tag-release.sh x.y.z   # explicit version
 ./scripts/tag-release.sh beta     # auto-increment beta (e.g. 2.0.3-beta.2)
+./scripts/tag-release.sh 2.0.4 beta  # auto-increment beta for a specific base version
 ./scripts/tag-release.sh 2.0.3-beta.1  # explicit beta
 ```
 
@@ -344,7 +357,7 @@ Beta tags are created as GitHub prereleases and are not marked as the latest rel
 
 | Script | Description |
 |---|---|
-| `./scripts/tag-release.sh [patch\|minor\|major\|beta\|x.y.z]` | Create and push a release/beta tag |
+| `./scripts/tag-release.sh [patch\|minor\|major\|beta\|x.y.z\|x.y.z beta]` | Create and push a release/beta tag |
 | `./scripts/update-version.sh <version> <deploy_repo>` | Batch version update + xcframework copy (CI use) |
 
 ## License

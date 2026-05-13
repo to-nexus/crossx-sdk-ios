@@ -8,7 +8,7 @@
 "wallet_selector.description" = "Please select the wallet you previously used for this game to continue.";
 "wallet_selector.close" = "Close";
 "wallet_selector.info_title" = "Why do I need to select a wallet?";
-"wallet_selector.info_description" = "Identifying your previously linked wallet ensures your game progress and assets are synced correctly.";
+"wallet_selector.info_description" = "Identifying your previously linked wallet ensures your data and assets are synced correctly.";
 "wallet_selector.selected_badge" = "Selected";
 "wallet_selector.add_wallet" = "Add Wallet";
 
