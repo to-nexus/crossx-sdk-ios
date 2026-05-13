@@ -48879,35 +48879,35 @@
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1182,
+      "offset": 1088,
       "length": 30,
       "value": "\"PACKAGE_RESOURCE_BUNDLE_PATH\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1808,
+      "offset": 1714,
       "length": 12,
       "value": "\".framework\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1898,
+      "offset": 1804,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2557,
+      "offset": 2378,
       "length": 9,
       "value": "\".bundle\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Derived\/Sources\/TuistBundle+CROSSxCoreSDK.swift",
       "kind": "StringLiteral",
-      "offset": 2709,
+      "offset": 2530,
       "length": 58,
       "value": "\"unable to find bundle named crossx-sdk-ios_CROSSxCoreSDK\""
     },
@@ -50792,7 +50792,7 @@
       "kind": "StringLiteral",
       "offset": 443,
       "length": 14,
-      "value": "\"2.2.0-beta.5\""
+      "value": "\"2.2.0-beta.6\""
     },
     {
       "filePath": "\/Users\/cross\/cicd\/actions-runner\/_work\/crossy-sdk-ios-develop\/crossy-sdk-ios-develop\/Sources\/CROSSxCoreSDK\/SDK\/CROSSxSDK.swift",
