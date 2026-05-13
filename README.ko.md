@@ -247,6 +247,18 @@ SDK는 `Bundle.module` 기반의 Apple 표준 `.strings` 리소스를 사용합�
 | English | `en` | 기본 언어 |
 | 한국어 | `ko` | 지원 |
 
+앱/시스템 언어와 관계없이 SDK UI 언어를 고정하려면 `SDKConfig`에 `locale`을 지정하세요.
+
+```swift
+let sdk = try CROSSxSDK(config: SDKConfig(
+    projectId: "your-project-id",
+    appName: "Your App Name",
+    locale: .ko // 또는 .en
+))
+```
+
+`locale`을 생략하거나 `nil`로 두면 Apple 표준 localization fallback 규칙을 따릅니다.
+
 새 언어 추가는 SDK의 `Resources/` 디렉터리에 `.lproj` 폴더만 추가하면 됩니다 — 코드 변경 불필요.
 
 ## 토큰 갱신

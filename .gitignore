@@ -13,14 +13,15 @@ xcuserdata/
 *.mode2v3
 *.perspectivev3
 
-# Tuist
-Examples/CROSSxSample/
-
 # CocoaPods (example app)
 Examples/CROSSxSampleCocoapods/Pods/
 Examples/CROSSxSampleCocoapods/*.xcodeproj
 Examples/CROSSxSampleCocoapods/*.xcworkspace
 Examples/CROSSxSampleCocoapods/Podfile.lock
+
+# Generated example artifacts
+Examples/**/Derived/
+Examples/**/.tuist-generated
 
 # macOS
 .DS_Store
