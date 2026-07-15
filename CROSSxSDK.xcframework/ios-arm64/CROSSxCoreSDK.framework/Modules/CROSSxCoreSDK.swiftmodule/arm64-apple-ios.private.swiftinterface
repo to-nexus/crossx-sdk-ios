@@ -46,6 +46,9 @@ public enum L10n {
   public static var txConfirmApproveButton: Swift.String {
     get
   }
+  public static var txConfirmConfirmButton: Swift.String {
+    get
+  }
   public static var txConfirmLabelTo: Swift.String {
     get
   }

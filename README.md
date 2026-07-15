@@ -33,8 +33,8 @@ CROSSx iOS SDK is a Swift SDK that provides OAuth-based authentication and Embed
 ## Supported Networks
 
 ### Cross Network
-- **Cross Mainnet** (eip155:612055) — Production
-- **Cross Testnet** (eip155:612044) — Development (default)
+- **ONEchain Mainnet** (eip155:612055) — Production
+- **ONEchain Testnet** (eip155:612044) — Development (default)
 
 ### Other EVM Chains
 - Ethereum Mainnet, Sepolia
